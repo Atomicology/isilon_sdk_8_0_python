@@ -1,4 +1,4 @@
-# isi_sdk.SyncPoliciesApi
+# isi_sdk_8_0.SyncPoliciesApi
 
 All URIs are relative to *https://localhost*
 
@@ -14,27 +14,30 @@ Method | HTTP request | Description
 
 Reset a SyncIQ policy incremental state and force a full sync/copy.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncPoliciesApi()
-policy_reset_item = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.SyncPoliciesApi(isi_sdk_8_0.ApiClient(configuration))
+policy_reset_item = isi_sdk_8_0.Empty() # Empty | 
 policy = 'policy_example' # str | 
 
-try: 
+try:
     api_response = api_instance.create_policy_reset_item(policy_reset_item, policy)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncPoliciesApi->create_policy_reset_item: %s\n" % e
+    print("Exception when calling SyncPoliciesApi->create_policy_reset_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -50,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

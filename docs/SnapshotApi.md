@@ -1,15 +1,15 @@
-# isi_sdk.SnapshotApi
+# isi_sdk_8_0.SnapshotApi
 
 All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_snapshot_aliase**](SnapshotApi.md#create_snapshot_aliase) | **POST** /platform/1/snapshot/aliases | 
+[**create_snapshot_alias**](SnapshotApi.md#create_snapshot_alias) | **POST** /platform/1/snapshot/aliases | 
 [**create_snapshot_changelist**](SnapshotApi.md#create_snapshot_changelist) | **POST** /platform/1/snapshot/changelists | 
 [**create_snapshot_repstate**](SnapshotApi.md#create_snapshot_repstate) | **POST** /platform/1/snapshot/repstates | 
 [**create_snapshot_schedule**](SnapshotApi.md#create_snapshot_schedule) | **POST** /platform/3/snapshot/schedules | 
 [**create_snapshot_snapshot**](SnapshotApi.md#create_snapshot_snapshot) | **POST** /platform/1/snapshot/snapshots | 
-[**delete_snapshot_aliase**](SnapshotApi.md#delete_snapshot_aliase) | **DELETE** /platform/1/snapshot/aliases/{SnapshotAliaseId} | 
+[**delete_snapshot_alias**](SnapshotApi.md#delete_snapshot_alias) | **DELETE** /platform/1/snapshot/aliases/{SnapshotAliasId} | 
 [**delete_snapshot_aliases**](SnapshotApi.md#delete_snapshot_aliases) | **DELETE** /platform/1/snapshot/aliases | 
 [**delete_snapshot_changelist**](SnapshotApi.md#delete_snapshot_changelist) | **DELETE** /platform/1/snapshot/changelists/{SnapshotChangelistId} | 
 [**delete_snapshot_repstate**](SnapshotApi.md#delete_snapshot_repstate) | **DELETE** /platform/1/snapshot/repstates/{SnapshotRepstateId} | 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 [**delete_snapshot_schedules**](SnapshotApi.md#delete_snapshot_schedules) | **DELETE** /platform/3/snapshot/schedules | 
 [**delete_snapshot_snapshot**](SnapshotApi.md#delete_snapshot_snapshot) | **DELETE** /platform/1/snapshot/snapshots/{SnapshotSnapshotId} | 
 [**delete_snapshot_snapshots**](SnapshotApi.md#delete_snapshot_snapshots) | **DELETE** /platform/1/snapshot/snapshots | 
-[**get_snapshot_aliase**](SnapshotApi.md#get_snapshot_aliase) | **GET** /platform/1/snapshot/aliases/{SnapshotAliaseId} | 
+[**get_snapshot_alias**](SnapshotApi.md#get_snapshot_alias) | **GET** /platform/1/snapshot/aliases/{SnapshotAliasId} | 
 [**get_snapshot_changelist**](SnapshotApi.md#get_snapshot_changelist) | **GET** /platform/1/snapshot/changelists/{SnapshotChangelistId} | 
 [**get_snapshot_license**](SnapshotApi.md#get_snapshot_license) | **GET** /platform/1/snapshot/license | 
 [**get_snapshot_pending**](SnapshotApi.md#get_snapshot_pending) | **GET** /platform/1/snapshot/pending | 
@@ -31,54 +31,57 @@ Method | HTTP request | Description
 [**list_snapshot_repstates**](SnapshotApi.md#list_snapshot_repstates) | **GET** /platform/1/snapshot/repstates | 
 [**list_snapshot_schedules**](SnapshotApi.md#list_snapshot_schedules) | **GET** /platform/3/snapshot/schedules | 
 [**list_snapshot_snapshots**](SnapshotApi.md#list_snapshot_snapshots) | **GET** /platform/1/snapshot/snapshots | 
-[**update_snapshot_aliase**](SnapshotApi.md#update_snapshot_aliase) | **PUT** /platform/1/snapshot/aliases/{SnapshotAliaseId} | 
+[**update_snapshot_alias**](SnapshotApi.md#update_snapshot_alias) | **PUT** /platform/1/snapshot/aliases/{SnapshotAliasId} | 
 [**update_snapshot_schedule**](SnapshotApi.md#update_snapshot_schedule) | **PUT** /platform/3/snapshot/schedules/{SnapshotScheduleId} | 
 [**update_snapshot_settings**](SnapshotApi.md#update_snapshot_settings) | **PUT** /platform/1/snapshot/settings | 
 [**update_snapshot_snapshot**](SnapshotApi.md#update_snapshot_snapshot) | **PUT** /platform/1/snapshot/snapshots/{SnapshotSnapshotId} | 
 
 
-# **create_snapshot_aliase**
-> CreateSnapshotAliaseResponse create_snapshot_aliase(snapshot_aliase)
+# **create_snapshot_alias**
+> CreateSnapshotAliasResponse create_snapshot_alias(snapshot_alias)
 
 
 
 Create a new snapshot alias.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_aliase = isi_sdk.SnapshotAliaseCreateParams() # SnapshotAliaseCreateParams | 
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_alias = isi_sdk_8_0.SnapshotAliasCreateParams() # SnapshotAliasCreateParams | 
 
-try: 
-    api_response = api_instance.create_snapshot_aliase(snapshot_aliase)
+try:
+    api_response = api_instance.create_snapshot_alias(snapshot_alias)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->create_snapshot_aliase: %s\n" % e
+    print("Exception when calling SnapshotApi->create_snapshot_alias: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **snapshot_aliase** | [**SnapshotAliaseCreateParams**](SnapshotAliaseCreateParams.md)|  | 
+ **snapshot_alias** | [**SnapshotAliasCreateParams**](SnapshotAliasCreateParams.md)|  | 
 
 ### Return type
 
-[**CreateSnapshotAliaseResponse**](CreateSnapshotAliaseResponse.md)
+[**CreateSnapshotAliasResponse**](CreateSnapshotAliasResponse.md)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -94,26 +97,29 @@ Name | Type | Description  | Notes
 
 Create a new changelist.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_changelist = isi_sdk.SnapshotChangelists() # SnapshotChangelists | 
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_changelist = isi_sdk_8_0.SnapshotChangelists() # SnapshotChangelists | 
 
-try: 
+try:
     api_response = api_instance.create_snapshot_changelist(snapshot_changelist)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->create_snapshot_changelist: %s\n" % e
+    print("Exception when calling SnapshotApi->create_snapshot_changelist: %s\n" % e)
 ```
 
 ### Parameters
@@ -128,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -144,26 +150,29 @@ Name | Type | Description  | Notes
 
 Create a new repstates.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_repstate = isi_sdk.SnapshotRepstates() # SnapshotRepstates | 
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_repstate = isi_sdk_8_0.SnapshotRepstates() # SnapshotRepstates | 
 
-try: 
+try:
     api_response = api_instance.create_snapshot_repstate(snapshot_repstate)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->create_snapshot_repstate: %s\n" % e
+    print("Exception when calling SnapshotApi->create_snapshot_repstate: %s\n" % e)
 ```
 
 ### Parameters
@@ -178,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -194,26 +203,29 @@ Name | Type | Description  | Notes
 
 Create a new schedule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_schedule = isi_sdk.SnapshotScheduleCreateParams() # SnapshotScheduleCreateParams | 
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_schedule = isi_sdk_8_0.SnapshotScheduleCreateParams() # SnapshotScheduleCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_snapshot_schedule(snapshot_schedule)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->create_snapshot_schedule: %s\n" % e
+    print("Exception when calling SnapshotApi->create_snapshot_schedule: %s\n" % e)
 ```
 
 ### Parameters
@@ -228,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -244,26 +256,29 @@ Name | Type | Description  | Notes
 
 Create a new snapshot.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_snapshot = isi_sdk.SnapshotSnapshotCreateParams() # SnapshotSnapshotCreateParams | 
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_snapshot = isi_sdk_8_0.SnapshotSnapshotCreateParams() # SnapshotSnapshotCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_snapshot_snapshot(snapshot_snapshot)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->create_snapshot_snapshot: %s\n" % e
+    print("Exception when calling SnapshotApi->create_snapshot_snapshot: %s\n" % e)
 ```
 
 ### Parameters
@@ -278,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -287,39 +302,42 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_snapshot_aliase**
-> delete_snapshot_aliase(snapshot_aliase_id)
+# **delete_snapshot_alias**
+> delete_snapshot_alias(snapshot_alias_id)
 
 
 
 Delete the snapshot alias
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_aliase_id = 'snapshot_aliase_id_example' # str | Delete the snapshot alias
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_alias_id = 'snapshot_alias_id_example' # str | Delete the snapshot alias
 
-try: 
-    api_instance.delete_snapshot_aliase(snapshot_aliase_id)
+try:
+    api_instance.delete_snapshot_alias(snapshot_alias_id)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->delete_snapshot_aliase: %s\n" % e
+    print("Exception when calling SnapshotApi->delete_snapshot_alias: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **snapshot_aliase_id** | **str**| Delete the snapshot alias | 
+ **snapshot_alias_id** | **str**| Delete the snapshot alias | 
 
 ### Return type
 
@@ -327,7 +345,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -343,24 +361,27 @@ void (empty response body)
 
 Delete all or matching snapshot aliases.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_instance.delete_snapshot_aliases()
 except ApiException as e:
-    print "Exception when calling SnapshotApi->delete_snapshot_aliases: %s\n" % e
+    print("Exception when calling SnapshotApi->delete_snapshot_aliases: %s\n" % e)
 ```
 
 ### Parameters
@@ -372,7 +393,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -388,25 +409,28 @@ void (empty response body)
 
 Delete the specified changelist.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_changelist_id = 'snapshot_changelist_id_example' # str | Delete the specified changelist.
 
-try: 
+try:
     api_instance.delete_snapshot_changelist(snapshot_changelist_id)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->delete_snapshot_changelist: %s\n" % e
+    print("Exception when calling SnapshotApi->delete_snapshot_changelist: %s\n" % e)
 ```
 
 ### Parameters
@@ -421,7 +445,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -437,25 +461,28 @@ void (empty response body)
 
 Delete the specified repstate.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_repstate_id = 'snapshot_repstate_id_example' # str | Delete the specified repstate.
 
-try: 
+try:
     api_instance.delete_snapshot_repstate(snapshot_repstate_id)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->delete_snapshot_repstate: %s\n" % e
+    print("Exception when calling SnapshotApi->delete_snapshot_repstate: %s\n" % e)
 ```
 
 ### Parameters
@@ -470,7 +497,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -486,25 +513,28 @@ void (empty response body)
 
 Delete the schedule. This does not affect already created snapshots.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_schedule_id = 'snapshot_schedule_id_example' # str | Delete the schedule. This does not affect already created snapshots.
 
-try: 
+try:
     api_instance.delete_snapshot_schedule(snapshot_schedule_id)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->delete_snapshot_schedule: %s\n" % e
+    print("Exception when calling SnapshotApi->delete_snapshot_schedule: %s\n" % e)
 ```
 
 ### Parameters
@@ -519,7 +549,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -535,24 +565,27 @@ void (empty response body)
 
 Delete all snapshot schedules.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_instance.delete_snapshot_schedules()
 except ApiException as e:
-    print "Exception when calling SnapshotApi->delete_snapshot_schedules: %s\n" % e
+    print("Exception when calling SnapshotApi->delete_snapshot_schedules: %s\n" % e)
 ```
 
 ### Parameters
@@ -564,7 +597,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -580,25 +613,28 @@ void (empty response body)
 
 Delete the snapshot. Deleted snapshots will be placed into a deleting state until the system can reclaim the space used by the snapshot.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_snapshot_id = 'snapshot_snapshot_id_example' # str | Delete the snapshot. Deleted snapshots will be placed into a deleting state until the system can reclaim the space used by the snapshot.
 
-try: 
+try:
     api_instance.delete_snapshot_snapshot(snapshot_snapshot_id)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->delete_snapshot_snapshot: %s\n" % e
+    print("Exception when calling SnapshotApi->delete_snapshot_snapshot: %s\n" % e)
 ```
 
 ### Parameters
@@ -613,7 +649,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -629,26 +665,29 @@ void (empty response body)
 
 Delete all or matching snapshots.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 type = 'type_example' # str | Only list snapshots matching this type. (optional)
 schedule = 'schedule_example' # str | Only list snapshots created by this schedule. (optional)
 
-try: 
+try:
     api_instance.delete_snapshot_snapshots(type=type, schedule=schedule)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->delete_snapshot_snapshots: %s\n" % e
+    print("Exception when calling SnapshotApi->delete_snapshot_snapshots: %s\n" % e)
 ```
 
 ### Parameters
@@ -664,7 +703,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -673,40 +712,43 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_snapshot_aliase**
-> SnapshotAliases get_snapshot_aliase(snapshot_aliase_id)
+# **get_snapshot_alias**
+> SnapshotAliases get_snapshot_alias(snapshot_alias_id)
 
 
 
 Retrieve snapshot alias information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_aliase_id = 'snapshot_aliase_id_example' # str | Retrieve snapshot alias information.
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_alias_id = 'snapshot_alias_id_example' # str | Retrieve snapshot alias information.
 
-try: 
-    api_response = api_instance.get_snapshot_aliase(snapshot_aliase_id)
+try:
+    api_response = api_instance.get_snapshot_alias(snapshot_alias_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_aliase: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_alias: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **snapshot_aliase_id** | **str**| Retrieve snapshot alias information. | 
+ **snapshot_alias_id** | **str**| Retrieve snapshot alias information. | 
 
 ### Return type
 
@@ -714,7 +756,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -730,26 +772,29 @@ Name | Type | Description  | Notes
 
 Retrieve basic information on a changelist.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_changelist_id = 'snapshot_changelist_id_example' # str | Retrieve basic information on a changelist.
 
-try: 
+try:
     api_response = api_instance.get_snapshot_changelist(snapshot_changelist_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_changelist: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_changelist: %s\n" % e)
 ```
 
 ### Parameters
@@ -764,7 +809,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -780,25 +825,28 @@ Name | Type | Description  | Notes
 
 Retrieve license information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_snapshot_license()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_license: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_license: %s\n" % e)
 ```
 
 ### Parameters
@@ -810,7 +858,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -826,30 +874,33 @@ This endpoint does not need any parameter.
 
 Return list of snapshots to be taken.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 limit = 56 # int | Return no more than this many result at once (see resume). (optional)
 begin = 56 # int | Unix Epoch time to start generating matches. Default is now. (optional)
 schedule = 'schedule_example' # str | Limit output only to the named schedule. (optional)
 end = 56 # int | Unix Epoch time to end generating matches. Default is forever. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.get_snapshot_pending(limit=limit, begin=begin, schedule=schedule, end=end, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_pending: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_pending: %s\n" % e)
 ```
 
 ### Parameters
@@ -868,7 +919,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -884,26 +935,29 @@ Name | Type | Description  | Notes
 
 Retrieve basic information on a repstate.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_repstate_id = 'snapshot_repstate_id_example' # str | Retrieve basic information on a repstate.
 
-try: 
+try:
     api_response = api_instance.get_snapshot_repstate(snapshot_repstate_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_repstate: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_repstate: %s\n" % e)
 ```
 
 ### Parameters
@@ -918,7 +972,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -934,26 +988,29 @@ Name | Type | Description  | Notes
 
 Retrieve the schedule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_schedule_id = 'snapshot_schedule_id_example' # str | Retrieve the schedule.
 
-try: 
+try:
     api_response = api_instance.get_snapshot_schedule(snapshot_schedule_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_schedule: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_schedule: %s\n" % e)
 ```
 
 ### Parameters
@@ -968,7 +1025,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -984,25 +1041,28 @@ Name | Type | Description  | Notes
 
 List all settings
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_snapshot_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_settings: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1014,7 +1074,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1030,26 +1090,29 @@ This endpoint does not need any parameter.
 
 Retrieve snapshot information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_snapshot_id = 'snapshot_snapshot_id_example' # str | Retrieve snapshot information.
 
-try: 
+try:
     api_response = api_instance.get_snapshot_snapshot(snapshot_snapshot_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_snapshot: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_snapshot: %s\n" % e)
 ```
 
 ### Parameters
@@ -1064,7 +1127,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1080,25 +1143,28 @@ Name | Type | Description  | Notes
 
 Return summary information about snapshots.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_snapshot_snapshots_summary()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->get_snapshot_snapshots_summary: %s\n" % e
+    print("Exception when calling SnapshotApi->get_snapshot_snapshots_summary: %s\n" % e)
 ```
 
 ### Parameters
@@ -1110,7 +1176,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1126,29 +1192,32 @@ This endpoint does not need any parameter.
 
 List all or matching snapshot aliases.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting.  Choices are id, name, snapshot, and created.  Default is id. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_snapshot_aliases(sort=sort, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->list_snapshot_aliases: %s\n" % e
+    print("Exception when calling SnapshotApi->list_snapshot_aliases: %s\n" % e)
 ```
 
 ### Parameters
@@ -1166,7 +1235,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1182,25 +1251,28 @@ Name | Type | Description  | Notes
 
 List all changelists.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_snapshot_changelists()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->list_snapshot_changelists: %s\n" % e
+    print("Exception when calling SnapshotApi->list_snapshot_changelists: %s\n" % e)
 ```
 
 ### Parameters
@@ -1212,7 +1284,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1228,25 +1300,28 @@ This endpoint does not need any parameter.
 
 List all repstates.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_snapshot_repstates()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->list_snapshot_repstates: %s\n" % e
+    print("Exception when calling SnapshotApi->list_snapshot_repstates: %s\n" % e)
 ```
 
 ### Parameters
@@ -1258,7 +1333,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1274,29 +1349,32 @@ This endpoint does not need any parameter.
 
 List all or matching schedules.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting.  Choices are id, name, path, pattern, schedule, duration, alias, next_run, and next_snapshot.  Default is id. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_snapshot_schedules(sort=sort, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->list_snapshot_schedules: %s\n" % e
+    print("Exception when calling SnapshotApi->list_snapshot_schedules: %s\n" % e)
 ```
 
 ### Parameters
@@ -1314,7 +1392,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1330,19 +1408,22 @@ Name | Type | Description  | Notes
 
 List all or matching snapshots.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting.  Choices are id, name, path, created, expires, size, has_locks, schedule, alias_target, alias_target_name, pct_filesystem, pct_reserve, and state.  Default is id. (optional)
 schedule = 'schedule_example' # str | Only list snapshots created by this schedule. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
@@ -1351,11 +1432,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 type = 'type_example' # str | Only list snapshots matching this type. (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.list_snapshot_snapshots(sort=sort, schedule=schedule, resume=resume, state=state, limit=limit, type=type, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->list_snapshot_snapshots: %s\n" % e
+    print("Exception when calling SnapshotApi->list_snapshot_snapshots: %s\n" % e)
 ```
 
 ### Parameters
@@ -1376,7 +1457,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1385,41 +1466,44 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_snapshot_aliase**
-> update_snapshot_aliase(snapshot_aliase, snapshot_aliase_id)
+# **update_snapshot_alias**
+> update_snapshot_alias(snapshot_alias, snapshot_alias_id)
 
 
 
 Modify snapshot alias. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_aliase = isi_sdk.SnapshotAliase() # SnapshotAliase | 
-snapshot_aliase_id = 'snapshot_aliase_id_example' # str | Modify snapshot alias. All input fields are optional, but one or more must be supplied.
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_alias = isi_sdk_8_0.SnapshotAlias() # SnapshotAlias | 
+snapshot_alias_id = 'snapshot_alias_id_example' # str | Modify snapshot alias. All input fields are optional, but one or more must be supplied.
 
-try: 
-    api_instance.update_snapshot_aliase(snapshot_aliase, snapshot_aliase_id)
+try:
+    api_instance.update_snapshot_alias(snapshot_alias, snapshot_alias_id)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->update_snapshot_aliase: %s\n" % e
+    print("Exception when calling SnapshotApi->update_snapshot_alias: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **snapshot_aliase** | [**SnapshotAliase**](SnapshotAliase.md)|  | 
- **snapshot_aliase_id** | **str**| Modify snapshot alias. All input fields are optional, but one or more must be supplied. | 
+ **snapshot_alias** | [**SnapshotAlias**](SnapshotAlias.md)|  | 
+ **snapshot_alias_id** | **str**| Modify snapshot alias. All input fields are optional, but one or more must be supplied. | 
 
 ### Return type
 
@@ -1427,7 +1511,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1443,26 +1527,29 @@ void (empty response body)
 
 Modify the schedule. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_schedule = isi_sdk.SnapshotSchedule() # SnapshotSchedule | 
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_schedule = isi_sdk_8_0.SnapshotSchedule() # SnapshotSchedule | 
 snapshot_schedule_id = 'snapshot_schedule_id_example' # str | Modify the schedule. All input fields are optional, but one or more must be supplied.
 
-try: 
+try:
     api_instance.update_snapshot_schedule(snapshot_schedule, snapshot_schedule_id)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->update_snapshot_schedule: %s\n" % e
+    print("Exception when calling SnapshotApi->update_snapshot_schedule: %s\n" % e)
 ```
 
 ### Parameters
@@ -1478,7 +1565,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1494,25 +1581,28 @@ void (empty response body)
 
 Modify one or more settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_settings = isi_sdk.SnapshotSettingsExtended() # SnapshotSettingsExtended | 
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_settings = isi_sdk_8_0.SnapshotSettingsExtended() # SnapshotSettingsExtended | 
 
-try: 
+try:
     api_instance.update_snapshot_settings(snapshot_settings)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->update_snapshot_settings: %s\n" % e
+    print("Exception when calling SnapshotApi->update_snapshot_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1527,7 +1617,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1543,26 +1633,29 @@ void (empty response body)
 
 Modify snapshot. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotApi()
-snapshot_snapshot = isi_sdk.SnapshotSnapshot() # SnapshotSnapshot | 
+api_instance = isi_sdk_8_0.SnapshotApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_snapshot = isi_sdk_8_0.SnapshotSnapshot() # SnapshotSnapshot | 
 snapshot_snapshot_id = 'snapshot_snapshot_id_example' # str | Modify snapshot. All input fields are optional, but one or more must be supplied.
 
-try: 
+try:
     api_instance.update_snapshot_snapshot(snapshot_snapshot, snapshot_snapshot_id)
 except ApiException as e:
-    print "Exception when calling SnapshotApi->update_snapshot_snapshot: %s\n" % e
+    print("Exception when calling SnapshotApi->update_snapshot_snapshot: %s\n" % e)
 ```
 
 ### Parameters
@@ -1578,7 +1671,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

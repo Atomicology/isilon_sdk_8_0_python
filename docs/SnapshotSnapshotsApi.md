@@ -1,4 +1,4 @@
-# isi_sdk.SnapshotSnapshotsApi
+# isi_sdk_8_0.SnapshotSnapshotsApi
 
 All URIs are relative to *https://localhost*
 
@@ -19,27 +19,30 @@ Method | HTTP request | Description
 
 Create a new lock on this snapshot.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotSnapshotsApi()
-snapshot_lock = isi_sdk.SnapshotLockCreateParams() # SnapshotLockCreateParams | 
+api_instance = isi_sdk_8_0.SnapshotSnapshotsApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_lock = isi_sdk_8_0.SnapshotLockCreateParams() # SnapshotLockCreateParams | 
 sid = 'sid_example' # str | 
 
-try: 
+try:
     api_response = api_instance.create_snapshot_lock(snapshot_lock, sid)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotSnapshotsApi->create_snapshot_lock: %s\n" % e
+    print("Exception when calling SnapshotSnapshotsApi->create_snapshot_lock: %s\n" % e)
 ```
 
 ### Parameters
@@ -55,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -71,26 +74,29 @@ Name | Type | Description  | Notes
 
 Delete the snapshot lock.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotSnapshotsApi()
+api_instance = isi_sdk_8_0.SnapshotSnapshotsApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_lock_id = 'snapshot_lock_id_example' # str | Delete the snapshot lock.
 sid = 'sid_example' # str | 
 
-try: 
+try:
     api_instance.delete_snapshot_lock(snapshot_lock_id, sid)
 except ApiException as e:
-    print "Exception when calling SnapshotSnapshotsApi->delete_snapshot_lock: %s\n" % e
+    print("Exception when calling SnapshotSnapshotsApi->delete_snapshot_lock: %s\n" % e)
 ```
 
 ### Parameters
@@ -106,7 +112,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -122,25 +128,28 @@ void (empty response body)
 
 Delete all locks. Will try to drain count of recursively held locks so that the snapshot can be deleted.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotSnapshotsApi()
+api_instance = isi_sdk_8_0.SnapshotSnapshotsApi(isi_sdk_8_0.ApiClient(configuration))
 sid = 'sid_example' # str | 
 
-try: 
+try:
     api_instance.delete_snapshot_locks(sid)
 except ApiException as e:
-    print "Exception when calling SnapshotSnapshotsApi->delete_snapshot_locks: %s\n" % e
+    print("Exception when calling SnapshotSnapshotsApi->delete_snapshot_locks: %s\n" % e)
 ```
 
 ### Parameters
@@ -155,7 +164,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -171,27 +180,30 @@ void (empty response body)
 
 Retrieve lock information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotSnapshotsApi()
+api_instance = isi_sdk_8_0.SnapshotSnapshotsApi(isi_sdk_8_0.ApiClient(configuration))
 snapshot_lock_id = 'snapshot_lock_id_example' # str | Retrieve lock information.
 sid = 'sid_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_snapshot_lock(snapshot_lock_id, sid)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotSnapshotsApi->get_snapshot_lock: %s\n" % e
+    print("Exception when calling SnapshotSnapshotsApi->get_snapshot_lock: %s\n" % e)
 ```
 
 ### Parameters
@@ -207,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -223,30 +235,33 @@ Name | Type | Description  | Notes
 
 List all locks.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotSnapshotsApi()
+api_instance = isi_sdk_8_0.SnapshotSnapshotsApi(isi_sdk_8_0.ApiClient(configuration))
 sid = 'sid_example' # str | 
 sort = 'sort_example' # str | The field that will be used for sorting.  Choices are id, expires, and comment.  Default is id. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_snapshot_locks(sid, sort=sort, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotSnapshotsApi->list_snapshot_locks: %s\n" % e
+    print("Exception when calling SnapshotSnapshotsApi->list_snapshot_locks: %s\n" % e)
 ```
 
 ### Parameters
@@ -265,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -281,27 +296,30 @@ Name | Type | Description  | Notes
 
 Modify lock. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotSnapshotsApi()
-snapshot_lock = isi_sdk.SnapshotLock() # SnapshotLock | 
+api_instance = isi_sdk_8_0.SnapshotSnapshotsApi(isi_sdk_8_0.ApiClient(configuration))
+snapshot_lock = isi_sdk_8_0.SnapshotLock() # SnapshotLock | 
 snapshot_lock_id = 'snapshot_lock_id_example' # str | Modify lock. All input fields are optional, but one or more must be supplied.
 sid = 'sid_example' # str | 
 
-try: 
+try:
     api_instance.update_snapshot_lock(snapshot_lock, snapshot_lock_id, sid)
 except ApiException as e:
-    print "Exception when calling SnapshotSnapshotsApi->update_snapshot_lock: %s\n" % e
+    print("Exception when calling SnapshotSnapshotsApi->update_snapshot_lock: %s\n" % e)
 ```
 
 ### Parameters
@@ -318,7 +336,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

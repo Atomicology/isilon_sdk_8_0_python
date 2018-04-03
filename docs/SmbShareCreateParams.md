@@ -13,6 +13,8 @@ Name | Type | Description | Notes
 **ca_timeout** | **int** | Persistent open timeout for the share. | [optional] 
 **ca_write_integrity** | **str** | Specify the level of write-integrity on continuously available shares. | [optional] 
 **change_notify** | **str** | Level of change notification alerts on the share. | [optional] 
+**continuously_available** | **bool** | Specify if persistent opens are allowed on the share. | [optional] 
+**create_path** | **bool** | Create path if does not exist. | [optional] 
 **create_permissions** | **str** | Create permissions for new files and directories in share. | [optional] 
 **csc_policy** | **str** | Client-side caching policy for the shares. | [optional] 
 **description** | **str** | Description for this SMB share. | [optional] 
@@ -30,18 +32,16 @@ Name | Type | Description | Notes
 **inheritable_path_acl** | **bool** | Set the inheritable ACL on the share path. | [optional] 
 **mangle_byte_start** | **int** | Specifies the wchar_t starting point for automatic byte mangling. | [optional] 
 **mangle_map** | **list[str]** | Character mangle map. | [optional] 
-**name** | **str** | Share name. | [optional] 
+**name** | **str** | Share name. | 
 **ntfs_acl_support** | **bool** | Support NTFS ACLs on files and directories. | [optional] 
 **oplocks** | **bool** | Support oplocks. | [optional] 
-**path** | **str** | Path of share within /ifs. | [optional] 
+**path** | **str** | Path of share within /ifs. | 
 **permissions** | [**list[SmbSharePermission]**](SmbSharePermission.md) | Specifies an ordered list of permission modifications. | [optional] 
 **run_as_root** | [**list[GroupMember]**](GroupMember.md) | Allow account to run as root. | [optional] 
 **strict_ca_lockout** | **bool** | Specifies if persistent opens would do strict lockout on the share. | [optional] 
 **strict_flush** | **bool** | Handle SMB flush operations. | [optional] 
 **strict_locking** | **bool** | Specifies whether byte range locks contend against SMB I/O. | [optional] 
 **zone** | **str** | Name of the access zone to which to move this SMB share | [optional] 
-**continuously_available** | **bool** | Specify if persistent opens are allowed on the share. | [optional] 
-**create_path** | **bool** | Create path if does not exist. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

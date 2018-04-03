@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **max_file_size** | **int** | Specifies the maximum file size for any file accessed from the export. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] 
 **name_max_size** | **int** | Specifies the reported maximum length of a file name. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] 
 **no_truncate** | **bool** | True if long file names result in an error. This parameter does not affect server behavior, but is included to accommodate legacy client requirements. | [optional] 
-**paths** | **list[str]** | Specifies the paths under /ifs that are exported. | [optional] 
+**paths** | **list[str]** | Specifies the paths under /ifs that are exported. | 
 **read_only** | **bool** | True if the export is set to read-only. | [optional] 
 **read_only_clients** | **list[str]** | Specifies the clients with read-only access to the export. | [optional] 
 **read_transfer_max_size** | **int** | Specifies the maximum buffer size that clients should use on NFS read requests. This value is used to advise the client of optimal settings for the server, but is not enforced. | [optional] 

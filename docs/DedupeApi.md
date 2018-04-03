@@ -1,4 +1,4 @@
-# isi_sdk.DedupeApi
+# isi_sdk_8_0.DedupeApi
 
 All URIs are relative to *https://localhost*
 
@@ -18,25 +18,28 @@ Method | HTTP request | Description
 
 Return summary information about dedupe.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.DedupeApi()
+api_instance = isi_sdk_8_0.DedupeApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_dedupe_dedupe_summary()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling DedupeApi->get_dedupe_dedupe_summary: %s\n" % e
+    print("Exception when calling DedupeApi->get_dedupe_dedupe_summary: %s\n" % e)
 ```
 
 ### Parameters
@@ -48,7 +51,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -64,27 +67,30 @@ This endpoint does not need any parameter.
 
 Retrieve a report for a single dedupe job.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.DedupeApi()
+api_instance = isi_sdk_8_0.DedupeApi(isi_sdk_8_0.ApiClient(configuration))
 dedupe_report_id = 'dedupe_report_id_example' # str | Retrieve a report for a single dedupe job.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_dedupe_report(dedupe_report_id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling DedupeApi->get_dedupe_report: %s\n" % e
+    print("Exception when calling DedupeApi->get_dedupe_report: %s\n" % e)
 ```
 
 ### Parameters
@@ -100,7 +106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -116,19 +122,22 @@ Name | Type | Description  | Notes
 
 List dedupe reports.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.DedupeApi()
+api_instance = isi_sdk_8_0.DedupeApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 begin = 56 # int | Restrict the query to reports at or after the given time, in seconds since the Epoch. (optional)
 end = 56 # int | Restrict the query to reports at or before the given time, in seconds since the Epoch. (optional)
@@ -138,11 +147,11 @@ job_type = 'job_type_example' # str | Restrict the query to the given job type. 
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.get_dedupe_reports(sort=sort, begin=begin, end=end, job_id=job_id, resume=resume, job_type=job_type, limit=limit, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling DedupeApi->get_dedupe_reports: %s\n" % e
+    print("Exception when calling DedupeApi->get_dedupe_reports: %s\n" % e)
 ```
 
 ### Parameters
@@ -164,7 +173,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -180,25 +189,28 @@ Name | Type | Description  | Notes
 
 Retrieve the dedupe settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.DedupeApi()
+api_instance = isi_sdk_8_0.DedupeApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_dedupe_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling DedupeApi->get_dedupe_settings: %s\n" % e
+    print("Exception when calling DedupeApi->get_dedupe_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -210,7 +222,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -226,25 +238,28 @@ This endpoint does not need any parameter.
 
 Modify the dedupe settings. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.DedupeApi()
-dedupe_settings = isi_sdk.DedupeSettingsExtended() # DedupeSettingsExtended | 
+api_instance = isi_sdk_8_0.DedupeApi(isi_sdk_8_0.ApiClient(configuration))
+dedupe_settings = isi_sdk_8_0.DedupeSettingsExtended() # DedupeSettingsExtended | 
 
-try: 
+try:
     api_instance.update_dedupe_settings(dedupe_settings)
 except ApiException as e:
-    print "Exception when calling DedupeApi->update_dedupe_settings: %s\n" % e
+    print("Exception when calling DedupeApi->update_dedupe_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -259,7 +274,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

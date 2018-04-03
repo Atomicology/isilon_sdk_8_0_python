@@ -1,4 +1,4 @@
-# isi_sdk.SnapshotChangelistsApi
+# isi_sdk_8_0.SnapshotChangelistsApi
 
 All URIs are relative to *https://localhost*
 
@@ -15,27 +15,30 @@ Method | HTTP request | Description
 
 Get a single entry from the changelist.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotChangelistsApi()
+api_instance = isi_sdk_8_0.SnapshotChangelistsApi(isi_sdk_8_0.ApiClient(configuration))
 changelist_lin_id = 56 # int | Get a single entry from the changelist.
 changelist = 'changelist_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_changelist_lin(changelist_lin_id, changelist)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotChangelistsApi->get_changelist_lin: %s\n" % e
+    print("Exception when calling SnapshotChangelistsApi->get_changelist_lin: %s\n" % e)
 ```
 
 ### Parameters
@@ -51,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -67,26 +70,29 @@ Name | Type | Description  | Notes
 
 Get entries from a changelist.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SnapshotChangelistsApi()
+api_instance = isi_sdk_8_0.SnapshotChangelistsApi(isi_sdk_8_0.ApiClient(configuration))
 changelist = 'changelist_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_changelist_lins(changelist)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SnapshotChangelistsApi->get_changelist_lins: %s\n" % e
+    print("Exception when calling SnapshotChangelistsApi->get_changelist_lins: %s\n" % e)
 ```
 
 ### Parameters
@@ -101,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

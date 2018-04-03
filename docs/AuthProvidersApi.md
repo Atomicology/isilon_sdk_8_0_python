@@ -1,4 +1,4 @@
-# isi_sdk.AuthProvidersApi
+# isi_sdk_8_0.AuthProvidersApi
 
 All URIs are relative to *https://localhost*
 
@@ -17,26 +17,29 @@ Method | HTTP request | Description
 
 List all ADS controllers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthProvidersApi()
+api_instance = isi_sdk_8_0.AuthProvidersApi(isi_sdk_8_0.ApiClient(configuration))
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_ads_provider_controllers(id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthProvidersApi->get_ads_provider_controllers: %s\n" % e
+    print("Exception when calling AuthProvidersApi->get_ads_provider_controllers: %s\n" % e)
 ```
 
 ### Parameters
@@ -51,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -67,27 +70,30 @@ Name | Type | Description  | Notes
 
 Retrieve the ADS domain information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthProvidersApi()
+api_instance = isi_sdk_8_0.AuthProvidersApi(isi_sdk_8_0.ApiClient(configuration))
 ads_provider_domain_id = 'ads_provider_domain_id_example' # str | Retrieve the ADS domain information.
 id = 'id_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_ads_provider_domain(ads_provider_domain_id, id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthProvidersApi->get_ads_provider_domain: %s\n" % e
+    print("Exception when calling AuthProvidersApi->get_ads_provider_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -103,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -119,27 +125,30 @@ Name | Type | Description  | Notes
 
 List all ADS domains.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthProvidersApi()
+api_instance = isi_sdk_8_0.AuthProvidersApi(isi_sdk_8_0.ApiClient(configuration))
 id = 'id_example' # str | 
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_ads_provider_domains(id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthProvidersApi->get_ads_provider_domains: %s\n" % e
+    print("Exception when calling AuthProvidersApi->get_ads_provider_domains: %s\n" % e)
 ```
 
 ### Parameters
@@ -155,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -171,19 +180,22 @@ Name | Type | Description  | Notes
 
 Retrieve search results.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthProvidersApi()
+api_instance = isi_sdk_8_0.AuthProvidersApi(isi_sdk_8_0.ApiClient(configuration))
 id = 'id_example' # str | 
 domain = 'domain_example' # str | The domain to search in. (optional)
 description = 'description_example' # str | The user or group description to search for. (optional)
@@ -195,11 +207,11 @@ user = 'user_example' # str | The user name for the domain if untrusted. (option
 password = 'password_example' # str | The password for the domain if untrusted. (optional)
 search_groups = true # bool | If true, search for groups. (optional)
 
-try: 
+try:
     api_response = api_instance.get_ads_provider_search(id, domain=domain, description=description, resume=resume, search_users=search_users, filter=filter, limit=limit, user=user, password=password, search_groups=search_groups)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthProvidersApi->get_ads_provider_search: %s\n" % e
+    print("Exception when calling AuthProvidersApi->get_ads_provider_search: %s\n" % e)
 ```
 
 ### Parameters
@@ -223,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

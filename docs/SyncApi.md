@@ -1,4 +1,4 @@
-# isi_sdk.SyncApi
+# isi_sdk_8_0.SyncApi
 
 All URIs are relative to *https://localhost*
 
@@ -45,26 +45,29 @@ Method | HTTP request | Description
 
 Start a SyncIQ job.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
-sync_job = isi_sdk.SyncJobCreateParams() # SyncJobCreateParams | 
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
+sync_job = isi_sdk_8_0.SyncJobCreateParams() # SyncJobCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_sync_job(sync_job)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->create_sync_job: %s\n" % e
+    print("Exception when calling SyncApi->create_sync_job: %s\n" % e)
 ```
 
 ### Parameters
@@ -79,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -95,26 +98,29 @@ Name | Type | Description  | Notes
 
 Create a SyncIQ policy.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
-sync_policy = isi_sdk.SyncPolicyCreateParams() # SyncPolicyCreateParams | 
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
+sync_policy = isi_sdk_8_0.SyncPolicyCreateParams() # SyncPolicyCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_sync_policy(sync_policy)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->create_sync_policy: %s\n" % e
+    print("Exception when calling SyncApi->create_sync_policy: %s\n" % e)
 ```
 
 ### Parameters
@@ -129,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -145,26 +151,29 @@ Name | Type | Description  | Notes
 
 Rotate the records in the database(s).
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
-sync_reports_rotate_item = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
+sync_reports_rotate_item = isi_sdk_8_0.Empty() # Empty | 
 
-try: 
+try:
     api_response = api_instance.create_sync_reports_rotate_item(sync_reports_rotate_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->create_sync_reports_rotate_item: %s\n" % e
+    print("Exception when calling SyncApi->create_sync_reports_rotate_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -179,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -195,26 +204,29 @@ Name | Type | Description  | Notes
 
 Create a new SyncIQ performance rule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
-sync_rule = isi_sdk.SyncRuleCreateParams() # SyncRuleCreateParams | 
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
+sync_rule = isi_sdk_8_0.SyncRuleCreateParams() # SyncRuleCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_sync_rule(sync_rule)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->create_sync_rule: %s\n" % e
+    print("Exception when calling SyncApi->create_sync_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -229,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -245,26 +257,29 @@ Name | Type | Description  | Notes
 
 Delete all SyncIQ policies.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 local_only = true # bool | Skip deleting the policy association on the target. (optional)
 force = true # bool | Ignore any running jobs when preparing to delete a policy. (optional)
 
-try: 
+try:
     api_instance.delete_sync_policies(local_only=local_only, force=force)
 except ApiException as e:
-    print "Exception when calling SyncApi->delete_sync_policies: %s\n" % e
+    print("Exception when calling SyncApi->delete_sync_policies: %s\n" % e)
 ```
 
 ### Parameters
@@ -280,7 +295,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -296,27 +311,30 @@ void (empty response body)
 
 Delete a single SyncIQ policy.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sync_policy_id = 'sync_policy_id_example' # str | Delete a single SyncIQ policy.
 local_only = true # bool | Skip deleting the policy association on the target. (optional)
 force = true # bool | Ignore any running jobs when preparing to delete a policy. (optional)
 
-try: 
+try:
     api_instance.delete_sync_policy(sync_policy_id, local_only=local_only, force=force)
 except ApiException as e:
-    print "Exception when calling SyncApi->delete_sync_policy: %s\n" % e
+    print("Exception when calling SyncApi->delete_sync_policy: %s\n" % e)
 ```
 
 ### Parameters
@@ -333,7 +351,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -349,25 +367,28 @@ void (empty response body)
 
 Delete a single SyncIQ performance rule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sync_rule_id = 'sync_rule_id_example' # str | Delete a single SyncIQ performance rule.
 
-try: 
+try:
     api_instance.delete_sync_rule(sync_rule_id)
 except ApiException as e:
-    print "Exception when calling SyncApi->delete_sync_rule: %s\n" % e
+    print("Exception when calling SyncApi->delete_sync_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -382,7 +403,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -398,25 +419,28 @@ void (empty response body)
 
 Delete all SyncIQ performance rules or all rules of a specified type.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 type = 'type_example' # str | Delete all rules of the specified rule type only. (optional)
 
-try: 
+try:
     api_instance.delete_sync_rules(type=type)
 except ApiException as e:
-    print "Exception when calling SyncApi->delete_sync_rules: %s\n" % e
+    print("Exception when calling SyncApi->delete_sync_rules: %s\n" % e)
 ```
 
 ### Parameters
@@ -431,7 +455,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -447,26 +471,29 @@ void (empty response body)
 
 Break the target association with this cluster for this policy.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 target_policy_id = 'target_policy_id_example' # str | Break the target association with this cluster for this policy.
 force = true # bool | Ignore any running jobs when preparing to delete the policy target association. (optional)
 
-try: 
+try:
     api_instance.delete_target_policy(target_policy_id, force=force)
 except ApiException as e:
-    print "Exception when calling SyncApi->delete_target_policy: %s\n" % e
+    print("Exception when calling SyncApi->delete_target_policy: %s\n" % e)
 ```
 
 ### Parameters
@@ -482,7 +509,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -498,27 +525,30 @@ void (empty response body)
 
 List cpu performance data.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 begin = 56 # int | Begin timestamp for time-series report. (optional)
 end = 56 # int | End timestamp for time-series report. (optional)
 
-try: 
+try:
     api_response = api_instance.get_history_cpu(begin=begin, end=end)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_history_cpu: %s\n" % e
+    print("Exception when calling SyncApi->get_history_cpu: %s\n" % e)
 ```
 
 ### Parameters
@@ -534,7 +564,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -550,27 +580,30 @@ Name | Type | Description  | Notes
 
 List file operations performance data.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 begin = 56 # int | Begin timestamp for time-series report. (optional)
 end = 56 # int | End timestamp for time-series report. (optional)
 
-try: 
+try:
     api_response = api_instance.get_history_file(begin=begin, end=end)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_history_file: %s\n" % e
+    print("Exception when calling SyncApi->get_history_file: %s\n" % e)
 ```
 
 ### Parameters
@@ -586,7 +619,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -602,27 +635,30 @@ Name | Type | Description  | Notes
 
 List network operations performance data.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 begin = 56 # int | Begin timestamp for time-series report. (optional)
 end = 56 # int | End timestamp for time-series report. (optional)
 
-try: 
+try:
     api_response = api_instance.get_history_network(begin=begin, end=end)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_history_network: %s\n" % e
+    print("Exception when calling SyncApi->get_history_network: %s\n" % e)
 ```
 
 ### Parameters
@@ -638,7 +674,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -654,27 +690,30 @@ Name | Type | Description  | Notes
 
 List worker performance data.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 begin = 56 # int | Begin timestamp for time-series report. (optional)
 end = 56 # int | End timestamp for time-series report. (optional)
 
-try: 
+try:
     api_response = api_instance.get_history_worker(begin=begin, end=end)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_history_worker: %s\n" % e
+    print("Exception when calling SyncApi->get_history_worker: %s\n" % e)
 ```
 
 ### Parameters
@@ -690,7 +729,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -706,26 +745,29 @@ Name | Type | Description  | Notes
 
 View a single SyncIQ job.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sync_job_id = 'sync_job_id_example' # str | View a single SyncIQ job.
 
-try: 
+try:
     api_response = api_instance.get_sync_job(sync_job_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_sync_job: %s\n" % e
+    print("Exception when calling SyncApi->get_sync_job: %s\n" % e)
 ```
 
 ### Parameters
@@ -740,7 +782,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -756,25 +798,28 @@ Name | Type | Description  | Notes
 
 Retrieve license information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_sync_license()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_sync_license: %s\n" % e
+    print("Exception when calling SyncApi->get_sync_license: %s\n" % e)
 ```
 
 ### Parameters
@@ -786,7 +831,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -802,26 +847,29 @@ This endpoint does not need any parameter.
 
 View a single SyncIQ policy.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sync_policy_id = 'sync_policy_id_example' # str | View a single SyncIQ policy.
 
-try: 
+try:
     api_response = api_instance.get_sync_policy(sync_policy_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_sync_policy: %s\n" % e
+    print("Exception when calling SyncApi->get_sync_policy: %s\n" % e)
 ```
 
 ### Parameters
@@ -836,7 +884,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -852,26 +900,29 @@ Name | Type | Description  | Notes
 
 View a single SyncIQ report.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sync_report_id = 'sync_report_id_example' # str | View a single SyncIQ report.
 
-try: 
+try:
     api_response = api_instance.get_sync_report(sync_report_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_sync_report: %s\n" % e
+    print("Exception when calling SyncApi->get_sync_report: %s\n" % e)
 ```
 
 ### Parameters
@@ -886,7 +937,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -902,19 +953,22 @@ Name | Type | Description  | Notes
 
 Get a list of SyncIQ reports.  By default 10 reports are returned per policy, unless otherwise specified by 'reports_per_policy'.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 newer_than = 56 # int | Filter the returned reports to include only those whose jobs started more recently than the specified number of days ago. (optional)
@@ -924,11 +978,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 reports_per_policy = 56 # int | If specified, only the N most recent reports will be returned per policy.  If no other query args are present this argument defaults to 10.  (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.get_sync_reports(sort=sort, resume=resume, newer_than=newer_than, policy_name=policy_name, state=state, limit=limit, reports_per_policy=reports_per_policy, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_sync_reports: %s\n" % e
+    print("Exception when calling SyncApi->get_sync_reports: %s\n" % e)
 ```
 
 ### Parameters
@@ -950,7 +1004,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -966,26 +1020,29 @@ Name | Type | Description  | Notes
 
 View a single SyncIQ performance rule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sync_rule_id = 'sync_rule_id_example' # str | View a single SyncIQ performance rule.
 
-try: 
+try:
     api_response = api_instance.get_sync_rule(sync_rule_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_sync_rule: %s\n" % e
+    print("Exception when calling SyncApi->get_sync_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -1000,7 +1057,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1016,25 +1073,28 @@ Name | Type | Description  | Notes
 
 Retrieve the global SyncIQ settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_sync_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_sync_settings: %s\n" % e
+    print("Exception when calling SyncApi->get_sync_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1046,7 +1106,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1062,30 +1122,33 @@ This endpoint does not need any parameter.
 
 List all SyncIQ target policies.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 target_path = 'target_path_example' # str | Filter the returned policies to include only those with this target path. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.get_target_policies(sort=sort, target_path=target_path, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_target_policies: %s\n" % e
+    print("Exception when calling SyncApi->get_target_policies: %s\n" % e)
 ```
 
 ### Parameters
@@ -1104,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1120,26 +1183,29 @@ Name | Type | Description  | Notes
 
 View a single SyncIQ target policy.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 target_policy_id = 'target_policy_id_example' # str | View a single SyncIQ target policy.
 
-try: 
+try:
     api_response = api_instance.get_target_policy(target_policy_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_target_policy: %s\n" % e
+    print("Exception when calling SyncApi->get_target_policy: %s\n" % e)
 ```
 
 ### Parameters
@@ -1154,7 +1220,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1170,26 +1236,29 @@ Name | Type | Description  | Notes
 
 View a single SyncIQ target report.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 target_report_id = 'target_report_id_example' # str | View a single SyncIQ target report.
 
-try: 
+try:
     api_response = api_instance.get_target_report(target_report_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_target_report: %s\n" % e
+    print("Exception when calling SyncApi->get_target_report: %s\n" % e)
 ```
 
 ### Parameters
@@ -1204,7 +1273,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1220,19 +1289,22 @@ Name | Type | Description  | Notes
 
 Get a list of SyncIQ target reports.  By default 10 reports are returned per policy, unless otherwise specified by 'reports_per_policy'.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 newer_than = 56 # int | Filter the returned reports to include only those whose jobs started more recently than the specified number of days ago. (optional)
@@ -1242,11 +1314,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 reports_per_policy = 56 # int | If specified, only the N most recent reports will be returned per policy.  If no other query args are present this argument defaults to 10.  (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.get_target_reports(sort=sort, resume=resume, newer_than=newer_than, policy_name=policy_name, state=state, limit=limit, reports_per_policy=reports_per_policy, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->get_target_reports: %s\n" % e
+    print("Exception when calling SyncApi->get_target_reports: %s\n" % e)
 ```
 
 ### Parameters
@@ -1268,7 +1340,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1284,30 +1356,33 @@ Name | Type | Description  | Notes
 
 Get a list of SyncIQ jobs.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 state = 'state_example' # str | The state of the job. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_sync_jobs(sort=sort, state=state, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->list_sync_jobs: %s\n" % e
+    print("Exception when calling SyncApi->list_sync_jobs: %s\n" % e)
 ```
 
 ### Parameters
@@ -1326,7 +1401,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1336,36 +1411,40 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_sync_policies**
-> SyncPoliciesExtended list_sync_policies(sort=sort, scope=scope, limit=limit, dir=dir, resume=resume)
+> SyncPoliciesExtended list_sync_policies(sort=sort, resume=resume, summary=summary, limit=limit, scope=scope, dir=dir)
 
 
 
 List all SyncIQ policies.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
-scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
-limit = 56 # int | Return no more than this many results at once (see resume). (optional)
-dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
+summary = true # bool | Show only summary properties (optional)
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
+dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
-    api_response = api_instance.list_sync_policies(sort=sort, scope=scope, limit=limit, dir=dir, resume=resume)
+try:
+    api_response = api_instance.list_sync_policies(sort=sort, resume=resume, summary=summary, limit=limit, scope=scope, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->list_sync_policies: %s\n" % e
+    print("Exception when calling SyncApi->list_sync_policies: %s\n" % e)
 ```
 
 ### Parameters
@@ -1373,10 +1452,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **str**| The field that will be used for sorting. | [optional] 
- **scope** | **str**| If specified as \&quot;effective\&quot; or not specified, all fields are returned.  If specified as \&quot;user\&quot;, only fields with non-default values are shown.  If specified as \&quot;default\&quot;, the original values are returned. | [optional] 
- **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
- **dir** | **str**| The direction of the sort. | [optional] 
  **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
+ **summary** | **bool**| Show only summary properties | [optional] 
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **scope** | **str**| If specified as \&quot;effective\&quot; or not specified, all fields are returned.  If specified as \&quot;user\&quot;, only fields with non-default values are shown.  If specified as \&quot;default\&quot;, the original values are returned. | [optional] 
+ **dir** | **str**| The direction of the sort. | [optional] 
 
 ### Return type
 
@@ -1384,7 +1464,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1400,25 +1480,28 @@ Name | Type | Description  | Notes
 
 Whether the rotation is still running or not.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_sync_reports_rotate()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->list_sync_reports_rotate: %s\n" % e
+    print("Exception when calling SyncApi->list_sync_reports_rotate: %s\n" % e)
 ```
 
 ### Parameters
@@ -1430,7 +1513,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1446,30 +1529,33 @@ This endpoint does not need any parameter.
 
 List all SyncIQ performance rules.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 type = 'type_example' # str | Filter the returned rules to include only those with this rule type. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_sync_rules(sort=sort, type=type, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling SyncApi->list_sync_rules: %s\n" % e
+    print("Exception when calling SyncApi->list_sync_rules: %s\n" % e)
 ```
 
 ### Parameters
@@ -1488,7 +1574,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1504,26 +1590,29 @@ Name | Type | Description  | Notes
 
 Perform an action (pause, cancel, etc...) on a single job.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
-sync_job = isi_sdk.SyncJob() # SyncJob | 
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
+sync_job = isi_sdk_8_0.SyncJob() # SyncJob | 
 sync_job_id = 'sync_job_id_example' # str | Perform an action (pause, cancel, etc...) on a single job.
 
-try: 
+try:
     api_instance.update_sync_job(sync_job, sync_job_id)
 except ApiException as e:
-    print "Exception when calling SyncApi->update_sync_job: %s\n" % e
+    print("Exception when calling SyncApi->update_sync_job: %s\n" % e)
 ```
 
 ### Parameters
@@ -1539,7 +1628,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1555,26 +1644,29 @@ void (empty response body)
 
 Modify a single SyncIQ policy.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
-sync_policy = isi_sdk.SyncPolicy() # SyncPolicy | 
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
+sync_policy = isi_sdk_8_0.SyncPolicy() # SyncPolicy | 
 sync_policy_id = 'sync_policy_id_example' # str | Modify a single SyncIQ policy.
 
-try: 
+try:
     api_instance.update_sync_policy(sync_policy, sync_policy_id)
 except ApiException as e:
-    print "Exception when calling SyncApi->update_sync_policy: %s\n" % e
+    print("Exception when calling SyncApi->update_sync_policy: %s\n" % e)
 ```
 
 ### Parameters
@@ -1590,7 +1682,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1606,26 +1698,29 @@ void (empty response body)
 
 Modify a single SyncIQ performance rule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
-sync_rule = isi_sdk.SyncRule() # SyncRule | 
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
+sync_rule = isi_sdk_8_0.SyncRule() # SyncRule | 
 sync_rule_id = 'sync_rule_id_example' # str | Modify a single SyncIQ performance rule.
 
-try: 
+try:
     api_instance.update_sync_rule(sync_rule, sync_rule_id)
 except ApiException as e:
-    print "Exception when calling SyncApi->update_sync_rule: %s\n" % e
+    print("Exception when calling SyncApi->update_sync_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -1641,7 +1736,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1657,25 +1752,28 @@ void (empty response body)
 
 Modify the global SyncIQ settings.  All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.SyncApi()
-sync_settings = isi_sdk.SyncSettingsExtended() # SyncSettingsExtended | 
+api_instance = isi_sdk_8_0.SyncApi(isi_sdk_8_0.ApiClient(configuration))
+sync_settings = isi_sdk_8_0.SyncSettingsExtended() # SyncSettingsExtended | 
 
-try: 
+try:
     api_instance.update_sync_settings(sync_settings)
 except ApiException as e:
-    print "Exception when calling SyncApi->update_sync_settings: %s\n" % e
+    print("Exception when calling SyncApi->update_sync_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1690,7 +1788,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

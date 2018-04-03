@@ -1,4 +1,4 @@
-# isi_sdk.ZonesApi
+# isi_sdk_8_0.ZonesApi
 
 All URIs are relative to *https://localhost*
 
@@ -18,26 +18,29 @@ Method | HTTP request | Description
 
 Create a new access zone.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ZonesApi()
-zone = isi_sdk.ZoneCreateParams() # ZoneCreateParams | 
+api_instance = isi_sdk_8_0.ZonesApi(isi_sdk_8_0.ApiClient(configuration))
+zone = isi_sdk_8_0.ZoneCreateParams() # ZoneCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_zone(zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ZonesApi->create_zone: %s\n" % e
+    print("Exception when calling ZonesApi->create_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -52,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -68,25 +71,28 @@ Name | Type | Description  | Notes
 
 Delete the access zone.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ZonesApi()
+api_instance = isi_sdk_8_0.ZonesApi(isi_sdk_8_0.ApiClient(configuration))
 zone_id = 56 # int | Delete the access zone.
 
-try: 
+try:
     api_instance.delete_zone(zone_id)
 except ApiException as e:
-    print "Exception when calling ZonesApi->delete_zone: %s\n" % e
+    print("Exception when calling ZonesApi->delete_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -101,7 +107,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -117,26 +123,29 @@ void (empty response body)
 
 Retrieve the access zone information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ZonesApi()
+api_instance = isi_sdk_8_0.ZonesApi(isi_sdk_8_0.ApiClient(configuration))
 zone_id = 56 # int | Retrieve the access zone information.
 
-try: 
+try:
     api_response = api_instance.get_zone(zone_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ZonesApi->get_zone: %s\n" % e
+    print("Exception when calling ZonesApi->get_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -151,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -167,25 +176,28 @@ Name | Type | Description  | Notes
 
 List all access zones.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ZonesApi()
+api_instance = isi_sdk_8_0.ZonesApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_zones()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ZonesApi->list_zones: %s\n" % e
+    print("Exception when calling ZonesApi->list_zones: %s\n" % e)
 ```
 
 ### Parameters
@@ -197,7 +209,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -213,26 +225,29 @@ This endpoint does not need any parameter.
 
 Modify the access zone. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ZonesApi()
-zone = isi_sdk.Zone() # Zone | 
+api_instance = isi_sdk_8_0.ZonesApi(isi_sdk_8_0.ApiClient(configuration))
+zone = isi_sdk_8_0.Zone() # Zone | 
 zone_id = 56 # int | Modify the access zone. All input fields are optional, but one or more must be supplied.
 
-try: 
+try:
     api_instance.update_zone(zone, zone_id)
 except ApiException as e:
-    print "Exception when calling ZonesApi->update_zone: %s\n" % e
+    print("Exception when calling ZonesApi->update_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -248,7 +263,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

@@ -1,4 +1,4 @@
-# isi_sdk.AuthApi
+# isi_sdk_8_0.AuthApi
 
 All URIs are relative to *https://localhost*
 
@@ -92,34 +92,38 @@ Method | HTTP request | Description
 
 
 # **create_auth_group**
-> CreateResponse create_auth_group(auth_group, zone=zone, provider=provider)
+> CreateResponse create_auth_group(auth_group, force=force, zone=zone, provider=provider)
 
 
 
 Create a new group.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-auth_group = isi_sdk.AuthGroupCreateParams() # AuthGroupCreateParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+auth_group = isi_sdk_8_0.AuthGroupCreateParams() # AuthGroupCreateParams | 
+force = true # bool | Skip validation checks when creating a group. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 provider = 'provider_example' # str | Optional provider type. (optional)
 
-try: 
-    api_response = api_instance.create_auth_group(auth_group, zone=zone, provider=provider)
+try:
+    api_response = api_instance.create_auth_group(auth_group, force=force, zone=zone, provider=provider)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_auth_group: %s\n" % e
+    print("Exception when calling AuthApi->create_auth_group: %s\n" % e)
 ```
 
 ### Parameters
@@ -127,6 +131,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_group** | [**AuthGroupCreateParams**](AuthGroupCreateParams.md)|  | 
+ **force** | **bool**| Skip validation checks when creating a group. | [optional] 
  **zone** | **str**| Optional zone. | [optional] 
  **provider** | **str**| Optional provider type. | [optional] 
 
@@ -136,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -152,26 +157,29 @@ Name | Type | Description  | Notes
 
 Refresh the authentication service configuration.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-auth_refresh_item = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+auth_refresh_item = isi_sdk_8_0.Empty() # Empty | 
 
-try: 
+try:
     api_response = api_instance.create_auth_refresh_item(auth_refresh_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_auth_refresh_item: %s\n" % e
+    print("Exception when calling AuthApi->create_auth_refresh_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -186,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -202,26 +210,29 @@ Name | Type | Description  | Notes
 
 Create a new role.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-auth_role = isi_sdk.AuthRoleCreateParams() # AuthRoleCreateParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+auth_role = isi_sdk_8_0.AuthRoleCreateParams() # AuthRoleCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_auth_role(auth_role)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_auth_role: %s\n" % e
+    print("Exception when calling AuthApi->create_auth_role: %s\n" % e)
 ```
 
 ### Parameters
@@ -236,7 +247,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -246,34 +257,38 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_auth_user**
-> CreateResponse create_auth_user(auth_user, zone=zone, provider=provider)
+> CreateResponse create_auth_user(auth_user, force=force, zone=zone, provider=provider)
 
 
 
 Create a new user.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-auth_user = isi_sdk.AuthUserCreateParams() # AuthUserCreateParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+auth_user = isi_sdk_8_0.AuthUserCreateParams() # AuthUserCreateParams | 
+force = true # bool | Skip validation checks when creating user. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 provider = 'provider_example' # str | Optional provider type. (optional)
 
-try: 
-    api_response = api_instance.create_auth_user(auth_user, zone=zone, provider=provider)
+try:
+    api_response = api_instance.create_auth_user(auth_user, force=force, zone=zone, provider=provider)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_auth_user: %s\n" % e
+    print("Exception when calling AuthApi->create_auth_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -281,6 +296,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_user** | [**AuthUserCreateParams**](AuthUserCreateParams.md)|  | 
+ **force** | **bool**| Skip validation checks when creating user. | [optional] 
  **zone** | **str**| Optional zone. | [optional] 
  **provider** | **str**| Optional provider type. | [optional] 
 
@@ -290,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -306,29 +322,32 @@ Name | Type | Description  | Notes
 
 Manually set or modify a mapping between two personae.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-mapping_identity = isi_sdk.MappingIdentityCreateParams() # MappingIdentityCreateParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+mapping_identity = isi_sdk_8_0.MappingIdentityCreateParams() # MappingIdentityCreateParams | 
 _2way = true # bool | Create a bi-directional mapping from source to target and target to source. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 replace = true # bool | Replace existing mappings. (optional)
 
-try: 
+try:
     api_response = api_instance.create_mapping_identity(mapping_identity, _2way=_2way, zone=zone, replace=replace)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_mapping_identity: %s\n" % e
+    print("Exception when calling AuthApi->create_mapping_identity: %s\n" % e)
 ```
 
 ### Parameters
@@ -346,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -356,34 +375,38 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_mapping_identity_0**
-> MappingIdentities create_mapping_identity_0(mapping_identity, type=type, zone=zone)
+> MappingIdentities create_mapping_identity_0(mapping_identity, mapping_identity_id, type=type, zone=zone)
 
 
 
 Manually set or modify a mapping between two personae.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-mapping_identity = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+mapping_identity = isi_sdk_8_0.Empty() # Empty | 
+mapping_identity_id = 'mapping_identity_id_example' # str | Manually set or modify a mapping between two personae.
 type = 'type_example' # str | Desired mapping target to fetch/generate. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 
-try: 
-    api_response = api_instance.create_mapping_identity_0(mapping_identity, type=type, zone=zone)
+try:
+    api_response = api_instance.create_mapping_identity_0(mapping_identity, mapping_identity_id, type=type, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_mapping_identity_0: %s\n" % e
+    print("Exception when calling AuthApi->create_mapping_identity_0: %s\n" % e)
 ```
 
 ### Parameters
@@ -391,6 +414,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapping_identity** | [**Empty**](Empty.md)|  | 
+ **mapping_identity_id** | **str**| Manually set or modify a mapping between two personae. | 
  **type** | **str**| Desired mapping target to fetch/generate. | [optional] 
  **zone** | **str**| Optional zone. | [optional] 
 
@@ -400,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -416,26 +440,29 @@ Name | Type | Description  | Notes
 
 Create a new ADS provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_ads_item = isi_sdk.ProvidersAdsItem() # ProvidersAdsItem | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_ads_item = isi_sdk_8_0.ProvidersAdsItem() # ProvidersAdsItem | 
 
-try: 
+try:
     api_response = api_instance.create_providers_ads_item(providers_ads_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_providers_ads_item: %s\n" % e
+    print("Exception when calling AuthApi->create_providers_ads_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -450,7 +477,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -466,26 +493,29 @@ Name | Type | Description  | Notes
 
 Create a new file provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_file_item = isi_sdk.ProvidersFileItem() # ProvidersFileItem | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_file_item = isi_sdk_8_0.ProvidersFileItem() # ProvidersFileItem | 
 
-try: 
+try:
     api_response = api_instance.create_providers_file_item(providers_file_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_providers_file_item: %s\n" % e
+    print("Exception when calling AuthApi->create_providers_file_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -500,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -516,26 +546,29 @@ Name | Type | Description  | Notes
 
 Create a new KRB5 provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_krb5_item = isi_sdk.ProvidersKrb5Item() # ProvidersKrb5Item | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_krb5_item = isi_sdk_8_0.ProvidersKrb5Item() # ProvidersKrb5Item | 
 
-try: 
+try:
     api_response = api_instance.create_providers_krb5_item(providers_krb5_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_providers_krb5_item: %s\n" % e
+    print("Exception when calling AuthApi->create_providers_krb5_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -550,7 +583,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -560,32 +593,36 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_providers_ldap_item**
-> CreateResponse create_providers_ldap_item(providers_ldap_item)
+> CreateResponse create_providers_ldap_item(providers_ldap_item, force=force)
 
 
 
 Create a new LDAP provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_ldap_item = isi_sdk.ProvidersLdapItem() # ProvidersLdapItem | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_ldap_item = isi_sdk_8_0.ProvidersLdapItem() # ProvidersLdapItem | 
+force = true # bool | Ignore unresolvable server URIs. (optional)
 
-try: 
-    api_response = api_instance.create_providers_ldap_item(providers_ldap_item)
+try:
+    api_response = api_instance.create_providers_ldap_item(providers_ldap_item, force=force)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_providers_ldap_item: %s\n" % e
+    print("Exception when calling AuthApi->create_providers_ldap_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -593,6 +630,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **providers_ldap_item** | [**ProvidersLdapItem**](ProvidersLdapItem.md)|  | 
+ **force** | **bool**| Ignore unresolvable server URIs. | [optional] 
 
 ### Return type
 
@@ -600,7 +638,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -616,26 +654,29 @@ Name | Type | Description  | Notes
 
 Create a new NIS provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_nis_item = isi_sdk.ProvidersNisItem() # ProvidersNisItem | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_nis_item = isi_sdk_8_0.ProvidersNisItem() # ProvidersNisItem | 
 
-try: 
+try:
     api_response = api_instance.create_providers_nis_item(providers_nis_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_providers_nis_item: %s\n" % e
+    print("Exception when calling AuthApi->create_providers_nis_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -650,7 +691,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -666,26 +707,29 @@ Name | Type | Description  | Notes
 
 Create a new krb5 domain.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-settings_krb5_domain = isi_sdk.SettingsKrb5DomainCreateParams() # SettingsKrb5DomainCreateParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+settings_krb5_domain = isi_sdk_8_0.SettingsKrb5DomainCreateParams() # SettingsKrb5DomainCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_settings_krb5_domain(settings_krb5_domain)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_settings_krb5_domain: %s\n" % e
+    print("Exception when calling AuthApi->create_settings_krb5_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -700,7 +744,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -716,26 +760,29 @@ Name | Type | Description  | Notes
 
 Create a new krb5 realm.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-settings_krb5_realm = isi_sdk.SettingsKrb5RealmCreateParams() # SettingsKrb5RealmCreateParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+settings_krb5_realm = isi_sdk_8_0.SettingsKrb5RealmCreateParams() # SettingsKrb5RealmCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_settings_krb5_realm(settings_krb5_realm)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->create_settings_krb5_realm: %s\n" % e
+    print("Exception when calling AuthApi->create_settings_krb5_realm: %s\n" % e)
 ```
 
 ### Parameters
@@ -750,7 +797,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -766,28 +813,31 @@ Name | Type | Description  | Notes
 
 Delete the group.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_group_id = 'auth_group_id_example' # str | Delete the group.
 cached = true # bool | If true, flush the group from the cache. (optional)
 zone = 'zone_example' # str | Filter groups by zone. (optional)
 provider = 'provider_example' # str | Filter groups by provider. (optional)
 
-try: 
+try:
     api_instance.delete_auth_group(auth_group_id, cached=cached, zone=zone, provider=provider)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_auth_group: %s\n" % e
+    print("Exception when calling AuthApi->delete_auth_group: %s\n" % e)
 ```
 
 ### Parameters
@@ -805,7 +855,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -821,27 +871,30 @@ void (empty response body)
 
 Flush the groups cache.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 cached = true # bool | If true, only flush cached objects. (optional)
 zone = 'zone_example' # str | Filter groups by zone. (optional)
 provider = 'provider_example' # str | Filter groups by provider. (optional)
 
-try: 
+try:
     api_instance.delete_auth_groups(cached=cached, zone=zone, provider=provider)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_auth_groups: %s\n" % e
+    print("Exception when calling AuthApi->delete_auth_groups: %s\n" % e)
 ```
 
 ### Parameters
@@ -858,7 +911,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -874,25 +927,28 @@ void (empty response body)
 
 Delete the role.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_role_id = 'auth_role_id_example' # str | Delete the role.
 
-try: 
+try:
     api_instance.delete_auth_role(auth_role_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_auth_role: %s\n" % e
+    print("Exception when calling AuthApi->delete_auth_role: %s\n" % e)
 ```
 
 ### Parameters
@@ -907,7 +963,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -923,28 +979,31 @@ void (empty response body)
 
 Delete the user.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_user_id = 'auth_user_id_example' # str | Delete the user.
 cached = true # bool | If true, flush the user from the cache. (optional)
 zone = 'zone_example' # str | Filter users by zone. (optional)
 provider = 'provider_example' # str | Filter users by provider. (optional)
 
-try: 
+try:
     api_instance.delete_auth_user(auth_user_id, cached=cached, zone=zone, provider=provider)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_auth_user: %s\n" % e
+    print("Exception when calling AuthApi->delete_auth_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -962,7 +1021,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -978,27 +1037,30 @@ void (empty response body)
 
 Flush the users cache.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 cached = true # bool | If true, only flush cached objects. (optional)
 zone = 'zone_example' # str | Filter users by zone. (optional)
 provider = 'provider_example' # str | Filter users by provider. (optional)
 
-try: 
+try:
     api_instance.delete_auth_users(cached=cached, zone=zone, provider=provider)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_auth_users: %s\n" % e
+    print("Exception when calling AuthApi->delete_auth_users: %s\n" % e)
 ```
 
 ### Parameters
@@ -1015,7 +1077,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1031,27 +1093,30 @@ void (empty response body)
 
 Flush the entire idmap cache.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 filter = 'filter_example' # str | Filter to apply when deleting identity mappings. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 remove = true # bool | Delete mapping instead of flush mapping cache. (optional)
 
-try: 
+try:
     api_instance.delete_mapping_identities(filter=filter, zone=zone, remove=remove)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_mapping_identities: %s\n" % e
+    print("Exception when calling AuthApi->delete_mapping_identities: %s\n" % e)
 ```
 
 ### Parameters
@@ -1068,7 +1133,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1084,29 +1149,32 @@ void (empty response body)
 
 Flush the entire idmap cache.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 mapping_identity_id = 'mapping_identity_id_example' # str | Flush the entire idmap cache.
 zone = 'zone_example' # str | Optional zone. (optional)
 _2way = true # bool | Delete the bi-directional mapping from source to target and target to source. (optional)
 target = 'target_example' # str | Target identity persona. (optional)
 remove = true # bool | Delete mapping instead of flush mapping from cache. (optional)
 
-try: 
+try:
     api_instance.delete_mapping_identity(mapping_identity_id, zone=zone, _2way=_2way, target=target, remove=remove)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_mapping_identity: %s\n" % e
+    print("Exception when calling AuthApi->delete_mapping_identity: %s\n" % e)
 ```
 
 ### Parameters
@@ -1125,7 +1193,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1141,25 +1209,28 @@ void (empty response body)
 
 Delete the ADS provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_ads_id = 'providers_ads_id_example' # str | Delete the ADS provider.
 
-try: 
+try:
     api_instance.delete_providers_ads_by_id(providers_ads_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_providers_ads_by_id: %s\n" % e
+    print("Exception when calling AuthApi->delete_providers_ads_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -1174,7 +1245,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1190,25 +1261,28 @@ void (empty response body)
 
 Delete the file provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_file_id = 'providers_file_id_example' # str | Delete the file provider.
 
-try: 
+try:
     api_instance.delete_providers_file_by_id(providers_file_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_providers_file_by_id: %s\n" % e
+    print("Exception when calling AuthApi->delete_providers_file_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -1223,7 +1297,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1239,25 +1313,28 @@ void (empty response body)
 
 Delete the KRB5 provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_krb5_id = 'providers_krb5_id_example' # str | Delete the KRB5 provider.
 
-try: 
+try:
     api_instance.delete_providers_krb5_by_id(providers_krb5_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_providers_krb5_by_id: %s\n" % e
+    print("Exception when calling AuthApi->delete_providers_krb5_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -1272,7 +1349,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1288,25 +1365,28 @@ void (empty response body)
 
 Delete the LDAP provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_ldap_id = 'providers_ldap_id_example' # str | Delete the LDAP provider.
 
-try: 
+try:
     api_instance.delete_providers_ldap_by_id(providers_ldap_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_providers_ldap_by_id: %s\n" % e
+    print("Exception when calling AuthApi->delete_providers_ldap_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -1321,7 +1401,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1337,25 +1417,28 @@ void (empty response body)
 
 Delete the local provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_local_id = 'providers_local_id_example' # str | Delete the local provider.
 
-try: 
+try:
     api_instance.delete_providers_local_by_id(providers_local_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_providers_local_by_id: %s\n" % e
+    print("Exception when calling AuthApi->delete_providers_local_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -1370,7 +1453,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1386,25 +1469,28 @@ void (empty response body)
 
 Delete the NIS provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_nis_id = 'providers_nis_id_example' # str | Delete the NIS provider.
 
-try: 
+try:
     api_instance.delete_providers_nis_by_id(providers_nis_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_providers_nis_by_id: %s\n" % e
+    print("Exception when calling AuthApi->delete_providers_nis_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -1419,7 +1505,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1435,25 +1521,28 @@ void (empty response body)
 
 Remove a krb5 domain.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 settings_krb5_domain_id = 'settings_krb5_domain_id_example' # str | Remove a krb5 domain.
 
-try: 
+try:
     api_instance.delete_settings_krb5_domain(settings_krb5_domain_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_settings_krb5_domain: %s\n" % e
+    print("Exception when calling AuthApi->delete_settings_krb5_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -1468,7 +1557,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1484,25 +1573,28 @@ void (empty response body)
 
 Remove a realm.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 settings_krb5_realm_id = 'settings_krb5_realm_id_example' # str | Remove a realm.
 
-try: 
+try:
     api_instance.delete_settings_krb5_realm(settings_krb5_realm_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->delete_settings_krb5_realm: %s\n" % e
+    print("Exception when calling AuthApi->delete_settings_krb5_realm: %s\n" % e)
 ```
 
 ### Parameters
@@ -1517,7 +1609,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1533,29 +1625,32 @@ void (empty response body)
 
 Determine user's access rights to a file
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_access_user = 'auth_access_user_example' # str | Determine user's access rights to a file
 path = 'path_example' # str | Path to the file. Must be within /ifs. (optional)
 zone = 'zone_example' # str | Access zone the user is in. (optional)
 numeric = true # bool | Show the user's numeric identifier. (optional)
 
-try: 
+try:
     api_response = api_instance.get_auth_access_user(auth_access_user, path=path, zone=zone, numeric=numeric)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_access_user: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_access_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -1573,7 +1668,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1583,36 +1678,40 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_auth_group**
-> AuthGroups get_auth_group(auth_group_id, cached=cached, resolve_names=resolve_names, zone=zone, provider=provider)
+> AuthGroups get_auth_group(auth_group_id, cached=cached, resolve_names=resolve_names, query_member_of=query_member_of, zone=zone, provider=provider)
 
 
 
 Retrieve the group information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_group_id = 'auth_group_id_example' # str | Retrieve the group information.
 cached = true # bool | If true, only return cached objects. (optional)
 resolve_names = true # bool | Resolve names of personas. (optional)
+query_member_of = true # bool | Enumerate all groups that a group is a member of. (optional)
 zone = 'zone_example' # str | Filter groups by zone. (optional)
 provider = 'provider_example' # str | Filter groups by provider. (optional)
 
-try: 
-    api_response = api_instance.get_auth_group(auth_group_id, cached=cached, resolve_names=resolve_names, zone=zone, provider=provider)
+try:
+    api_response = api_instance.get_auth_group(auth_group_id, cached=cached, resolve_names=resolve_names, query_member_of=query_member_of, zone=zone, provider=provider)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_group: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_group: %s\n" % e)
 ```
 
 ### Parameters
@@ -1622,6 +1721,7 @@ Name | Type | Description  | Notes
  **auth_group_id** | **str**| Retrieve the group information. | 
  **cached** | **bool**| If true, only return cached objects. | [optional] 
  **resolve_names** | **bool**| Resolve names of personas. | [optional] 
+ **query_member_of** | **bool**| Enumerate all groups that a group is a member of. | [optional] 
  **zone** | **str**| Filter groups by zone. | [optional] 
  **provider** | **str**| Filter groups by provider. | [optional] 
 
@@ -1631,7 +1731,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1647,25 +1747,28 @@ Name | Type | Description  | Notes
 
 Retrieve the current security token.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_auth_id()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_id: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -1677,7 +1780,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1693,25 +1796,28 @@ This endpoint does not need any parameter.
 
 Get the current authentications service and netlogon logging level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_auth_log_level()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_log_level: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_log_level: %s\n" % e)
 ```
 
 ### Parameters
@@ -1723,7 +1829,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1739,30 +1845,33 @@ This endpoint does not need any parameter.
 
 Retrieve the user information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_netgroup_id = 'auth_netgroup_id_example' # str | Retrieve the user information.
 ignore_errors = true # bool | Ignore netgroup errors. (optional)
 recursive = true # bool | Perform recursive search. (optional)
 zone = 'zone_example' # str | Filter users by zone. (optional)
 provider = 'provider_example' # str | Filter users by provider. (optional)
 
-try: 
+try:
     api_response = api_instance.get_auth_netgroup(auth_netgroup_id, ignore_errors=ignore_errors, recursive=recursive, zone=zone, provider=provider)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_netgroup: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_netgroup: %s\n" % e)
 ```
 
 ### Parameters
@@ -1781,7 +1890,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1797,25 +1906,28 @@ Name | Type | Description  | Notes
 
 List all privileges.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_auth_privileges()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_privileges: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_privileges: %s\n" % e)
 ```
 
 ### Parameters
@@ -1827,7 +1939,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1843,27 +1955,30 @@ This endpoint does not need any parameter.
 
 Retrieve the role information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_role_id = 'auth_role_id_example' # str | Retrieve the role information.
 resolve_names = true # bool | Resolve names of personas. (optional)
 
-try: 
+try:
     api_response = api_instance.get_auth_role(auth_role_id, resolve_names=resolve_names)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_role: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_role: %s\n" % e)
 ```
 
 ### Parameters
@@ -1879,7 +1994,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1895,25 +2010,28 @@ Name | Type | Description  | Notes
 
 List all shells.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_auth_shells()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_shells: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_shells: %s\n" % e)
 ```
 
 ### Parameters
@@ -1925,7 +2043,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1935,36 +2053,40 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_auth_user**
-> AuthUsers get_auth_user(auth_user_id, cached=cached, resolve_names=resolve_names, zone=zone, provider=provider)
+> AuthUsers get_auth_user(auth_user_id, cached=cached, resolve_names=resolve_names, query_member_of=query_member_of, zone=zone, provider=provider)
 
 
 
 Retrieve the user information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_user_id = 'auth_user_id_example' # str | Retrieve the user information.
 cached = true # bool | If true, only return cached objects. (optional)
 resolve_names = true # bool | Resolve names of personas. (optional)
+query_member_of = true # bool | Enumerate all users that a group is a member of. (optional)
 zone = 'zone_example' # str | Filter users by zone. (optional)
 provider = 'provider_example' # str | Filter users by provider. (optional)
 
-try: 
-    api_response = api_instance.get_auth_user(auth_user_id, cached=cached, resolve_names=resolve_names, zone=zone, provider=provider)
+try:
+    api_response = api_instance.get_auth_user(auth_user_id, cached=cached, resolve_names=resolve_names, query_member_of=query_member_of, zone=zone, provider=provider)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_user: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -1974,6 +2096,7 @@ Name | Type | Description  | Notes
  **auth_user_id** | **str**| Retrieve the user information. | 
  **cached** | **bool**| If true, only return cached objects. | [optional] 
  **resolve_names** | **bool**| Resolve names of personas. | [optional] 
+ **query_member_of** | **bool**| Enumerate all users that a group is a member of. | [optional] 
  **zone** | **str**| Filter users by zone. | [optional] 
  **provider** | **str**| Filter users by provider. | [optional] 
 
@@ -1983,7 +2106,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1999,27 +2122,30 @@ Name | Type | Description  | Notes
 
 Retrieve the wellknown persona.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 auth_wellknown_id = 'auth_wellknown_id_example' # str | Retrieve the wellknown persona.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_auth_wellknown(auth_wellknown_id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_wellknown: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_wellknown: %s\n" % e)
 ```
 
 ### Parameters
@@ -2035,7 +2161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2051,25 +2177,28 @@ Name | Type | Description  | Notes
 
 List all wellknown personas.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_auth_wellknowns()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_auth_wellknowns: %s\n" % e
+    print("Exception when calling AuthApi->get_auth_wellknowns: %s\n" % e)
 ```
 
 ### Parameters
@@ -2081,7 +2210,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2097,27 +2226,30 @@ This endpoint does not need any parameter.
 
 Retrieve all identity mappings (uid, gid, sid, and on-disk) for the supplied source persona.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 nocreate = true # bool | Idmap should attempt to create missing identity mappings. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 
-try: 
+try:
     api_response = api_instance.get_mapping_dump(nocreate=nocreate, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_mapping_dump: %s\n" % e
+    print("Exception when calling AuthApi->get_mapping_dump: %s\n" % e)
 ```
 
 ### Parameters
@@ -2133,7 +2265,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2149,28 +2281,31 @@ Name | Type | Description  | Notes
 
 Retrieve all identity mappings (uid, gid, sid, and on-disk) for the supplied source persona.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 mapping_identity_id = 'mapping_identity_id_example' # str | Retrieve all identity mappings (uid, gid, sid, and on-disk) for the supplied source persona.
 nocreate = true # bool | Idmap should attempt to create missing identity mappings. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 
-try: 
+try:
     api_response = api_instance.get_mapping_identity(mapping_identity_id, nocreate=nocreate, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_mapping_identity: %s\n" % e
+    print("Exception when calling AuthApi->get_mapping_identity: %s\n" % e)
 ```
 
 ### Parameters
@@ -2187,7 +2322,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2203,19 +2338,22 @@ Name | Type | Description  | Notes
 
 Retrieve the user information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 primary_gid = 56 # int | The user's primary group ID. (optional)
 uid = 56 # int | The user ID. (optional)
 zone = 'zone_example' # str | The zone the user belongs to. (optional)
@@ -2223,11 +2361,11 @@ gid = [56] # list[int] | The IDs of the groups that the user belongs to. (option
 user = 'user_example' # str | The user name. (optional)
 kerberos_principal = 'kerberos_principal_example' # str | The Kerberos principal name, of the form user@realm. (optional)
 
-try: 
+try:
     api_response = api_instance.get_mapping_users_lookup(primary_gid=primary_gid, uid=uid, zone=zone, gid=gid, user=user, kerberos_principal=kerberos_principal)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_mapping_users_lookup: %s\n" % e
+    print("Exception when calling AuthApi->get_mapping_users_lookup: %s\n" % e)
 ```
 
 ### Parameters
@@ -2247,7 +2385,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2263,26 +2401,29 @@ Name | Type | Description  | Notes
 
 Retrieve the user mapping rules.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 zone = 'zone_example' # str | The zone to which the user mapping applies. (optional)
 
-try: 
+try:
     api_response = api_instance.get_mapping_users_rules(zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_mapping_users_rules: %s\n" % e
+    print("Exception when calling AuthApi->get_mapping_users_rules: %s\n" % e)
 ```
 
 ### Parameters
@@ -2297,7 +2438,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2313,27 +2454,30 @@ Name | Type | Description  | Notes
 
 Retrieve the ADS provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_ads_id = 'providers_ads_id_example' # str | Retrieve the ADS provider.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_providers_ads_by_id(providers_ads_id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_providers_ads_by_id: %s\n" % e
+    print("Exception when calling AuthApi->get_providers_ads_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -2349,7 +2493,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2365,27 +2509,30 @@ Name | Type | Description  | Notes
 
 Retrieve the file provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_file_id = 'providers_file_id_example' # str | Retrieve the file provider.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_providers_file_by_id(providers_file_id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_providers_file_by_id: %s\n" % e
+    print("Exception when calling AuthApi->get_providers_file_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -2401,7 +2548,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2417,27 +2564,30 @@ Name | Type | Description  | Notes
 
 Retrieve the KRB5 provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_krb5_id = 'providers_krb5_id_example' # str | Retrieve the KRB5 provider.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_providers_krb5_by_id(providers_krb5_id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_providers_krb5_by_id: %s\n" % e
+    print("Exception when calling AuthApi->get_providers_krb5_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -2453,7 +2603,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2469,27 +2619,30 @@ Name | Type | Description  | Notes
 
 Retrieve the LDAP provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_ldap_id = 'providers_ldap_id_example' # str | Retrieve the LDAP provider.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_providers_ldap_by_id(providers_ldap_id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_providers_ldap_by_id: %s\n" % e
+    print("Exception when calling AuthApi->get_providers_ldap_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -2505,7 +2658,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2521,26 +2674,29 @@ Name | Type | Description  | Notes
 
 List all local providers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_providers_local(scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_providers_local: %s\n" % e
+    print("Exception when calling AuthApi->get_providers_local: %s\n" % e)
 ```
 
 ### Parameters
@@ -2555,7 +2711,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2571,27 +2727,30 @@ Name | Type | Description  | Notes
 
 Retrieve the local provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_local_id = 'providers_local_id_example' # str | Retrieve the local provider.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_providers_local_by_id(providers_local_id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_providers_local_by_id: %s\n" % e
+    print("Exception when calling AuthApi->get_providers_local_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -2607,7 +2766,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2623,27 +2782,30 @@ Name | Type | Description  | Notes
 
 Retrieve the NIS provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 providers_nis_id = 'providers_nis_id_example' # str | Retrieve the NIS provider.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_providers_nis_by_id(providers_nis_id, scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_providers_nis_by_id: %s\n" % e
+    print("Exception when calling AuthApi->get_providers_nis_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -2659,7 +2821,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2669,35 +2831,44 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_providers_summary**
-> ProvidersSummary get_providers_summary()
+> ProvidersSummary get_providers_summary(groupnet=groupnet, zone=zone)
 
 
 
 Retrieve the summary information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+groupnet = 'groupnet_example' # str | Filter providers by groupnet. (optional)
+zone = 'zone_example' # str | Filter providers by zone. (optional)
 
-try: 
-    api_response = api_instance.get_providers_summary()
+try:
+    api_response = api_instance.get_providers_summary(groupnet=groupnet, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_providers_summary: %s\n" % e
+    print("Exception when calling AuthApi->get_providers_summary: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupnet** | **str**| Filter providers by groupnet. | [optional] 
+ **zone** | **str**| Filter providers by zone. | [optional] 
 
 ### Return type
 
@@ -2705,7 +2876,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2721,26 +2892,29 @@ This endpoint does not need any parameter.
 
 Retrieve the ACL policy settings and preset configurations.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 preset = 'preset_example' # str | If specified the preset configuration values for all applicable ACL policies are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_settings_acls(preset=preset)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_settings_acls: %s\n" % e
+    print("Exception when calling AuthApi->get_settings_acls: %s\n" % e)
 ```
 
 ### Parameters
@@ -2755,7 +2929,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2771,27 +2945,30 @@ Name | Type | Description  | Notes
 
 Retrieve the global settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 zone = 'zone_example' # str | Zone which contains any per-zone settings. (optional)
 
-try: 
+try:
     api_response = api_instance.get_settings_global(scope=scope, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_settings_global: %s\n" % e
+    print("Exception when calling AuthApi->get_settings_global: %s\n" % e)
 ```
 
 ### Parameters
@@ -2807,7 +2984,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2823,25 +3000,28 @@ Name | Type | Description  | Notes
 
 Retrieve the krb5 settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_settings_krb5_defaults()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_settings_krb5_defaults: %s\n" % e
+    print("Exception when calling AuthApi->get_settings_krb5_defaults: %s\n" % e)
 ```
 
 ### Parameters
@@ -2853,7 +3033,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2869,26 +3049,29 @@ This endpoint does not need any parameter.
 
 View the krb5 domain settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 settings_krb5_domain_id = 'settings_krb5_domain_id_example' # str | View the krb5 domain settings.
 
-try: 
+try:
     api_response = api_instance.get_settings_krb5_domain(settings_krb5_domain_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_settings_krb5_domain: %s\n" % e
+    print("Exception when calling AuthApi->get_settings_krb5_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -2903,7 +3086,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2919,26 +3102,29 @@ Name | Type | Description  | Notes
 
 Retrieve the krb5 settings for realms.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 settings_krb5_realm_id = 'settings_krb5_realm_id_example' # str | Retrieve the krb5 settings for realms.
 
-try: 
+try:
     api_response = api_instance.get_settings_krb5_realm(settings_krb5_realm_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_settings_krb5_realm: %s\n" % e
+    print("Exception when calling AuthApi->get_settings_krb5_realm: %s\n" % e)
 ```
 
 ### Parameters
@@ -2953,7 +3139,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2969,27 +3155,30 @@ Name | Type | Description  | Notes
 
 Retrieve the mapping settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 zone = 'zone_example' # str | Access zone which contains mapping settings. (optional)
 
-try: 
+try:
     api_response = api_instance.get_settings_mapping(scope=scope, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->get_settings_mapping: %s\n" % e
+    print("Exception when calling AuthApi->get_settings_mapping: %s\n" % e)
 ```
 
 ### Parameters
@@ -3005,7 +3194,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3021,19 +3210,22 @@ Name | Type | Description  | Notes
 
 List all groups.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 domain = 'domain_example' # str | Filter groups by domain. (optional)
 zone = 'zone_example' # str | Filter groups by zone. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
@@ -3044,11 +3236,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 provider = 'provider_example' # str | Filter groups by provider. (optional)
 query_member_of = true # bool | Enumerate all groups that a group is a member of. (optional)
 
-try: 
+try:
     api_response = api_instance.list_auth_groups(domain=domain, zone=zone, resume=resume, cached=cached, resolve_names=resolve_names, filter=filter, limit=limit, provider=provider, query_member_of=query_member_of)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_auth_groups: %s\n" % e
+    print("Exception when calling AuthApi->list_auth_groups: %s\n" % e)
 ```
 
 ### Parameters
@@ -3071,7 +3263,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3081,34 +3273,39 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_auth_roles**
-> AuthRolesExtended list_auth_roles(sort=sort, resolve_names=resolve_names, dir=dir)
+> AuthRolesExtended list_auth_roles(sort=sort, resolve_names=resolve_names, limit=limit, dir=dir, resume=resume)
 
 
 
 List all roles.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 resolve_names = true # bool | Filter users by zone. (optional)
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
+resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
-    api_response = api_instance.list_auth_roles(sort=sort, resolve_names=resolve_names, dir=dir)
+try:
+    api_response = api_instance.list_auth_roles(sort=sort, resolve_names=resolve_names, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_auth_roles: %s\n" % e
+    print("Exception when calling AuthApi->list_auth_roles: %s\n" % e)
 ```
 
 ### Parameters
@@ -3117,7 +3314,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **str**| The field that will be used for sorting. | [optional] 
  **resolve_names** | **bool**| Filter users by zone. | [optional] 
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
  **dir** | **str**| The direction of the sort. | [optional] 
+ **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
 
 ### Return type
 
@@ -3125,7 +3324,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3141,19 +3340,22 @@ Name | Type | Description  | Notes
 
 List all users.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 domain = 'domain_example' # str | Filter users by domain. (optional)
 zone = 'zone_example' # str | Filter users by zone. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
@@ -3164,11 +3366,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 provider = 'provider_example' # str | Filter users by provider. (optional)
 query_member_of = true # bool | Enumerate all users that a group is a member of. (optional)
 
-try: 
+try:
     api_response = api_instance.list_auth_users(domain=domain, zone=zone, resume=resume, cached=cached, resolve_names=resolve_names, filter=filter, limit=limit, provider=provider, query_member_of=query_member_of)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_auth_users: %s\n" % e
+    print("Exception when calling AuthApi->list_auth_users: %s\n" % e)
 ```
 
 ### Parameters
@@ -3191,7 +3393,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3207,26 +3409,29 @@ Name | Type | Description  | Notes
 
 List all ADS providers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.list_providers_ads(scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_providers_ads: %s\n" % e
+    print("Exception when calling AuthApi->list_providers_ads: %s\n" % e)
 ```
 
 ### Parameters
@@ -3241,7 +3446,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3257,26 +3462,29 @@ Name | Type | Description  | Notes
 
 List all file providers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.list_providers_file(scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_providers_file: %s\n" % e
+    print("Exception when calling AuthApi->list_providers_file: %s\n" % e)
 ```
 
 ### Parameters
@@ -3291,7 +3499,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3307,26 +3515,29 @@ Name | Type | Description  | Notes
 
 List all KRB5 providers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.list_providers_krb5(scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_providers_krb5: %s\n" % e
+    print("Exception when calling AuthApi->list_providers_krb5: %s\n" % e)
 ```
 
 ### Parameters
@@ -3341,7 +3552,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3357,26 +3568,29 @@ Name | Type | Description  | Notes
 
 List all LDAP providers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.list_providers_ldap(scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_providers_ldap: %s\n" % e
+    print("Exception when calling AuthApi->list_providers_ldap: %s\n" % e)
 ```
 
 ### Parameters
@@ -3391,7 +3605,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3407,26 +3621,29 @@ Name | Type | Description  | Notes
 
 List all NIS providers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.list_providers_nis(scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_providers_nis: %s\n" % e
+    print("Exception when calling AuthApi->list_providers_nis: %s\n" % e)
 ```
 
 ### Parameters
@@ -3441,7 +3658,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3457,25 +3674,28 @@ Name | Type | Description  | Notes
 
 Retrieve the krb5 settings for domains.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_settings_krb5_domains()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_settings_krb5_domains: %s\n" % e
+    print("Exception when calling AuthApi->list_settings_krb5_domains: %s\n" % e)
 ```
 
 ### Parameters
@@ -3487,7 +3707,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3503,25 +3723,28 @@ This endpoint does not need any parameter.
 
 Retrieve the krb5 settings for realms.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_settings_krb5_realms()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling AuthApi->list_settings_krb5_realms: %s\n" % e
+    print("Exception when calling AuthApi->list_settings_krb5_realms: %s\n" % e)
 ```
 
 ### Parameters
@@ -3533,7 +3756,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3543,34 +3766,38 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_auth_group**
-> update_auth_group(auth_group, auth_group_id, zone=zone, provider=provider)
+> update_auth_group(auth_group, auth_group_id, force=force, zone=zone, provider=provider)
 
 
 
 Modify the group.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-auth_group = isi_sdk.AuthGroup() # AuthGroup | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+auth_group = isi_sdk_8_0.AuthGroup() # AuthGroup | 
 auth_group_id = 'auth_group_id_example' # str | Modify the group.
+force = true # bool | Changes to the group ID can result in loss of access to the file system. To mitigate this risk of lost access, the force option is required for group ID changes. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 provider = 'provider_example' # str | Optional provider type. (optional)
 
-try: 
-    api_instance.update_auth_group(auth_group, auth_group_id, zone=zone, provider=provider)
+try:
+    api_instance.update_auth_group(auth_group, auth_group_id, force=force, zone=zone, provider=provider)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_auth_group: %s\n" % e
+    print("Exception when calling AuthApi->update_auth_group: %s\n" % e)
 ```
 
 ### Parameters
@@ -3579,6 +3806,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_group** | [**AuthGroup**](AuthGroup.md)|  | 
  **auth_group_id** | **str**| Modify the group. | 
+ **force** | **bool**| Changes to the group ID can result in loss of access to the file system. To mitigate this risk of lost access, the force option is required for group ID changes. | [optional] 
  **zone** | **str**| Optional zone. | [optional] 
  **provider** | **str**| Optional provider type. | [optional] 
 
@@ -3588,7 +3816,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3604,25 +3832,28 @@ void (empty response body)
 
 Set the current authentication service and netlogon logging level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-auth_log_level = isi_sdk.AuthLogLevelExtended() # AuthLogLevelExtended | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+auth_log_level = isi_sdk_8_0.AuthLogLevelExtended() # AuthLogLevelExtended | 
 
-try: 
+try:
     api_instance.update_auth_log_level(auth_log_level)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_auth_log_level: %s\n" % e
+    print("Exception when calling AuthApi->update_auth_log_level: %s\n" % e)
 ```
 
 ### Parameters
@@ -3637,7 +3868,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3653,26 +3884,29 @@ void (empty response body)
 
 Modify the role.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-auth_role = isi_sdk.AuthRole() # AuthRole | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+auth_role = isi_sdk_8_0.AuthRole() # AuthRole | 
 auth_role_id = 'auth_role_id_example' # str | Modify the role.
 
-try: 
+try:
     api_instance.update_auth_role(auth_role, auth_role_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_auth_role: %s\n" % e
+    print("Exception when calling AuthApi->update_auth_role: %s\n" % e)
 ```
 
 ### Parameters
@@ -3688,7 +3922,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3698,34 +3932,38 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_auth_user**
-> update_auth_user(auth_user, auth_user_id, zone=zone, provider=provider)
+> update_auth_user(auth_user, auth_user_id, force=force, zone=zone, provider=provider)
 
 
 
 Modify the user.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-auth_user = isi_sdk.AuthUser() # AuthUser | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+auth_user = isi_sdk_8_0.AuthUser() # AuthUser | 
 auth_user_id = 'auth_user_id_example' # str | Modify the user.
+force = true # bool | Changes to the user ID can result in loss of access to the file system. To mitigate this risk of lost access, the force option is required for user ID changes. (optional)
 zone = 'zone_example' # str | Optional zone. (optional)
 provider = 'provider_example' # str | Optional provider type. (optional)
 
-try: 
-    api_instance.update_auth_user(auth_user, auth_user_id, zone=zone, provider=provider)
+try:
+    api_instance.update_auth_user(auth_user, auth_user_id, force=force, zone=zone, provider=provider)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_auth_user: %s\n" % e
+    print("Exception when calling AuthApi->update_auth_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -3734,6 +3972,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **auth_user** | [**AuthUser**](AuthUser.md)|  | 
  **auth_user_id** | **str**| Modify the user. | 
+ **force** | **bool**| Changes to the user ID can result in loss of access to the file system. To mitigate this risk of lost access, the force option is required for user ID changes. | [optional] 
  **zone** | **str**| Optional zone. | [optional] 
  **provider** | **str**| Optional provider type. | [optional] 
 
@@ -3743,7 +3982,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3759,27 +3998,30 @@ void (empty response body)
 
 Set or update a list of mappings between two personae.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-mapping_import = isi_sdk.MappingImport() # MappingImport | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+mapping_import = isi_sdk_8_0.MappingImport() # MappingImport | 
 zone = 'zone_example' # str | Optional zone. (optional)
 replace = true # bool | Specify whether existing mappings should be replaced. The default behavior is to leave existing mappings intact and return an error. (optional)
 
-try: 
+try:
     api_instance.update_mapping_import(mapping_import, zone=zone, replace=replace)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_mapping_import: %s\n" % e
+    print("Exception when calling AuthApi->update_mapping_import: %s\n" % e)
 ```
 
 ### Parameters
@@ -3796,7 +4038,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3806,31 +4048,35 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_mapping_users_rules**
-> update_mapping_users_rules(mapping_users_rules)
+> update_mapping_users_rules(mapping_users_rules, zone=zone)
 
 
 
 Modify the user mapping rules.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-mapping_users_rules = isi_sdk.MappingUsersRulesExtended() # MappingUsersRulesExtended | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+mapping_users_rules = isi_sdk_8_0.MappingUsersRulesExtended() # MappingUsersRulesExtended | 
+zone = 'zone_example' # str | The zone to which the user mapping applies. (optional)
 
-try: 
-    api_instance.update_mapping_users_rules(mapping_users_rules)
+try:
+    api_instance.update_mapping_users_rules(mapping_users_rules, zone=zone)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_mapping_users_rules: %s\n" % e
+    print("Exception when calling AuthApi->update_mapping_users_rules: %s\n" % e)
 ```
 
 ### Parameters
@@ -3838,6 +4084,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **mapping_users_rules** | [**MappingUsersRulesExtended**](MappingUsersRulesExtended.md)|  | 
+ **zone** | **str**| The zone to which the user mapping applies. | [optional] 
 
 ### Return type
 
@@ -3845,7 +4092,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3861,26 +4108,29 @@ void (empty response body)
 
 Modify the ADS provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_ads_id_params = isi_sdk.ProvidersAdsIdParams() # ProvidersAdsIdParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_ads_id_params = isi_sdk_8_0.ProvidersAdsIdParams() # ProvidersAdsIdParams | 
 providers_ads_id = 'providers_ads_id_example' # str | Modify the ADS provider.
 
-try: 
+try:
     api_instance.update_providers_ads_by_id(providers_ads_id_params, providers_ads_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_providers_ads_by_id: %s\n" % e
+    print("Exception when calling AuthApi->update_providers_ads_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -3896,7 +4146,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3912,26 +4162,29 @@ void (empty response body)
 
 Modify the file provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_file_id_params = isi_sdk.ProvidersFileIdParams() # ProvidersFileIdParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_file_id_params = isi_sdk_8_0.ProvidersFileIdParams() # ProvidersFileIdParams | 
 providers_file_id = 'providers_file_id_example' # str | Modify the file provider.
 
-try: 
+try:
     api_instance.update_providers_file_by_id(providers_file_id_params, providers_file_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_providers_file_by_id: %s\n" % e
+    print("Exception when calling AuthApi->update_providers_file_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -3947,7 +4200,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3963,26 +4216,29 @@ void (empty response body)
 
 Modify the KRB5 provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_krb5_id_params = isi_sdk.ProvidersKrb5IdParams() # ProvidersKrb5IdParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_krb5_id_params = isi_sdk_8_0.ProvidersKrb5IdParams() # ProvidersKrb5IdParams | 
 providers_krb5_id = 'providers_krb5_id_example' # str | Modify the KRB5 provider.
 
-try: 
+try:
     api_instance.update_providers_krb5_by_id(providers_krb5_id_params, providers_krb5_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_providers_krb5_by_id: %s\n" % e
+    print("Exception when calling AuthApi->update_providers_krb5_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -3998,7 +4254,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4008,32 +4264,36 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_providers_ldap_by_id**
-> update_providers_ldap_by_id(providers_ldap_id_params, providers_ldap_id)
+> update_providers_ldap_by_id(providers_ldap_id_params, providers_ldap_id, force=force)
 
 
 
 Modify the LDAP provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_ldap_id_params = isi_sdk.ProvidersLdapIdParams() # ProvidersLdapIdParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_ldap_id_params = isi_sdk_8_0.ProvidersLdapIdParams() # ProvidersLdapIdParams | 
 providers_ldap_id = 'providers_ldap_id_example' # str | Modify the LDAP provider.
+force = true # bool | Ignore unresolvable server URIs. (optional)
 
-try: 
-    api_instance.update_providers_ldap_by_id(providers_ldap_id_params, providers_ldap_id)
+try:
+    api_instance.update_providers_ldap_by_id(providers_ldap_id_params, providers_ldap_id, force=force)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_providers_ldap_by_id: %s\n" % e
+    print("Exception when calling AuthApi->update_providers_ldap_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -4042,6 +4302,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **providers_ldap_id_params** | [**ProvidersLdapIdParams**](ProvidersLdapIdParams.md)|  | 
  **providers_ldap_id** | **str**| Modify the LDAP provider. | 
+ **force** | **bool**| Ignore unresolvable server URIs. | [optional] 
 
 ### Return type
 
@@ -4049,7 +4310,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4065,26 +4326,29 @@ void (empty response body)
 
 Modify the local provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_local_id_params = isi_sdk.ProvidersLocalIdParams() # ProvidersLocalIdParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_local_id_params = isi_sdk_8_0.ProvidersLocalIdParams() # ProvidersLocalIdParams | 
 providers_local_id = 'providers_local_id_example' # str | Modify the local provider.
 
-try: 
+try:
     api_instance.update_providers_local_by_id(providers_local_id_params, providers_local_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_providers_local_by_id: %s\n" % e
+    print("Exception when calling AuthApi->update_providers_local_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -4100,7 +4364,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4116,26 +4380,29 @@ void (empty response body)
 
 Modify the NIS provider.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-providers_nis_id_params = isi_sdk.ProvidersNisIdParams() # ProvidersNisIdParams | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+providers_nis_id_params = isi_sdk_8_0.ProvidersNisIdParams() # ProvidersNisIdParams | 
 providers_nis_id = 'providers_nis_id_example' # str | Modify the NIS provider.
 
-try: 
+try:
     api_instance.update_providers_nis_by_id(providers_nis_id_params, providers_nis_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_providers_nis_by_id: %s\n" % e
+    print("Exception when calling AuthApi->update_providers_nis_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -4151,7 +4418,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4167,32 +4434,35 @@ void (empty response body)
 
 Modify cluster ACL policy settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-settings_acls = isi_sdk.SettingsAclsAclPolicySettings() # SettingsAclsAclPolicySettings | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+settings_acls = isi_sdk_8_0.SettingsAclsExtended() # SettingsAclsExtended | 
 
-try: 
+try:
     api_instance.update_settings_acls(settings_acls)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_settings_acls: %s\n" % e
+    print("Exception when calling AuthApi->update_settings_acls: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **settings_acls** | [**SettingsAclsAclPolicySettings**](SettingsAclsAclPolicySettings.md)|  | 
+ **settings_acls** | [**SettingsAclsExtended**](SettingsAclsExtended.md)|  | 
 
 ### Return type
 
@@ -4200,7 +4470,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4216,26 +4486,29 @@ void (empty response body)
 
 Modify the global settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-settings_global = isi_sdk.SettingsGlobalGlobalSettings() # SettingsGlobalGlobalSettings | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+settings_global = isi_sdk_8_0.SettingsGlobalGlobalSettings() # SettingsGlobalGlobalSettings | 
 zone = 'zone_example' # str | Zone which contains any per-zone settings. (optional)
 
-try: 
+try:
     api_instance.update_settings_global(settings_global, zone=zone)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_settings_global: %s\n" % e
+    print("Exception when calling AuthApi->update_settings_global: %s\n" % e)
 ```
 
 ### Parameters
@@ -4251,7 +4524,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4267,25 +4540,28 @@ void (empty response body)
 
 Modify the krb5 settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-settings_krb5_defaults = isi_sdk.SettingsKrb5DefaultsKrb5Settings() # SettingsKrb5DefaultsKrb5Settings | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+settings_krb5_defaults = isi_sdk_8_0.SettingsKrb5DefaultsKrb5Settings() # SettingsKrb5DefaultsKrb5Settings | 
 
-try: 
+try:
     api_instance.update_settings_krb5_defaults(settings_krb5_defaults)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_settings_krb5_defaults: %s\n" % e
+    print("Exception when calling AuthApi->update_settings_krb5_defaults: %s\n" % e)
 ```
 
 ### Parameters
@@ -4300,7 +4576,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4316,26 +4592,29 @@ void (empty response body)
 
 Modify the krb5 domain settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-settings_krb5_domain = isi_sdk.SettingsKrb5Domain() # SettingsKrb5Domain | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+settings_krb5_domain = isi_sdk_8_0.SettingsKrb5Domain() # SettingsKrb5Domain | 
 settings_krb5_domain_id = 'settings_krb5_domain_id_example' # str | Modify the krb5 domain settings.
 
-try: 
+try:
     api_instance.update_settings_krb5_domain(settings_krb5_domain, settings_krb5_domain_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_settings_krb5_domain: %s\n" % e
+    print("Exception when calling AuthApi->update_settings_krb5_domain: %s\n" % e)
 ```
 
 ### Parameters
@@ -4351,7 +4630,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4367,26 +4646,29 @@ void (empty response body)
 
 Modify the krb5 realm settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-settings_krb5_realm = isi_sdk.SettingsKrb5Realm() # SettingsKrb5Realm | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+settings_krb5_realm = isi_sdk_8_0.SettingsKrb5Realm() # SettingsKrb5Realm | 
 settings_krb5_realm_id = 'settings_krb5_realm_id_example' # str | Modify the krb5 realm settings.
 
-try: 
+try:
     api_instance.update_settings_krb5_realm(settings_krb5_realm, settings_krb5_realm_id)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_settings_krb5_realm: %s\n" % e
+    print("Exception when calling AuthApi->update_settings_krb5_realm: %s\n" % e)
 ```
 
 ### Parameters
@@ -4402,7 +4684,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4418,26 +4700,29 @@ void (empty response body)
 
 Modify the mapping settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.AuthApi()
-settings_mapping = isi_sdk.SettingsMappingMappingSettings() # SettingsMappingMappingSettings | 
+api_instance = isi_sdk_8_0.AuthApi(isi_sdk_8_0.ApiClient(configuration))
+settings_mapping = isi_sdk_8_0.SettingsMappingMappingSettings() # SettingsMappingMappingSettings | 
 zone = 'zone_example' # str | Access zone which contains mapping settings. (optional)
 
-try: 
+try:
     api_instance.update_settings_mapping(settings_mapping, zone=zone)
 except ApiException as e:
-    print "Exception when calling AuthApi->update_settings_mapping: %s\n" % e
+    print("Exception when calling AuthApi->update_settings_mapping: %s\n" % e)
 ```
 
 ### Parameters
@@ -4453,7 +4738,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

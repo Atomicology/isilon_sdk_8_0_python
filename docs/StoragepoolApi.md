@@ -1,4 +1,4 @@
-# isi_sdk.StoragepoolApi
+# isi_sdk_8_0.StoragepoolApi
 
 All URIs are relative to *https://localhost*
 
@@ -41,26 +41,29 @@ Method | HTTP request | Description
 
 Create a new compatibility
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
-compatibilities_class_active_item = isi_sdk.CompatibilitiesClassActiveItem() # CompatibilitiesClassActiveItem | 
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
+compatibilities_class_active_item = isi_sdk_8_0.CompatibilitiesClassActiveItem() # CompatibilitiesClassActiveItem | 
 
-try: 
+try:
     api_response = api_instance.create_compatibilities_class_active_item(compatibilities_class_active_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->create_compatibilities_class_active_item: %s\n" % e
+    print("Exception when calling StoragepoolApi->create_compatibilities_class_active_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -75,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -91,26 +94,29 @@ Name | Type | Description  | Notes
 
 Create a new ssd compatibility
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
-compatibilities_ssd_active_item = isi_sdk.CompatibilitiesSsdActiveItem() # CompatibilitiesSsdActiveItem | 
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
+compatibilities_ssd_active_item = isi_sdk_8_0.CompatibilitiesSsdActiveItem() # CompatibilitiesSsdActiveItem | 
 
-try: 
+try:
     api_response = api_instance.create_compatibilities_ssd_active_item(compatibilities_ssd_active_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->create_compatibilities_ssd_active_item: %s\n" % e
+    print("Exception when calling StoragepoolApi->create_compatibilities_ssd_active_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -125,7 +131,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -141,26 +147,29 @@ Name | Type | Description  | Notes
 
 Create a new node pool.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
-storagepool_nodepool = isi_sdk.StoragepoolNodepoolCreateParams() # StoragepoolNodepoolCreateParams | 
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
+storagepool_nodepool = isi_sdk_8_0.StoragepoolNodepoolCreateParams() # StoragepoolNodepoolCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_storagepool_nodepool(storagepool_nodepool)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->create_storagepool_nodepool: %s\n" % e
+    print("Exception when calling StoragepoolApi->create_storagepool_nodepool: %s\n" % e)
 ```
 
 ### Parameters
@@ -175,7 +184,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -191,26 +200,29 @@ Name | Type | Description  | Notes
 
 Create a new tier.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
-storagepool_tier = isi_sdk.StoragepoolTierCreateParams() # StoragepoolTierCreateParams | 
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
+storagepool_tier = isi_sdk_8_0.StoragepoolTierCreateParams() # StoragepoolTierCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_storagepool_tier(storagepool_tier)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->create_storagepool_tier: %s\n" % e
+    print("Exception when calling StoragepoolApi->create_storagepool_tier: %s\n" % e)
 ```
 
 ### Parameters
@@ -225,7 +237,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -241,25 +253,28 @@ Name | Type | Description  | Notes
 
 Delete an active compatibility by id
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 compatibilities_class_active_id = 'compatibilities_class_active_id_example' # str | Delete an active compatibility by id
 
-try: 
+try:
     api_instance.delete_compatibilities_class_active_by_id(compatibilities_class_active_id)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->delete_compatibilities_class_active_by_id: %s\n" % e
+    print("Exception when calling StoragepoolApi->delete_compatibilities_class_active_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -274,7 +289,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -290,25 +305,28 @@ void (empty response body)
 
 Delete an active ssd compatibility by id
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 compatibilities_ssd_active_id = 'compatibilities_ssd_active_id_example' # str | Delete an active ssd compatibility by id
 
-try: 
+try:
     api_instance.delete_compatibilities_ssd_active_by_id(compatibilities_ssd_active_id)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->delete_compatibilities_ssd_active_by_id: %s\n" % e
+    print("Exception when calling StoragepoolApi->delete_compatibilities_ssd_active_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -323,7 +341,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -339,25 +357,28 @@ void (empty response body)
 
 Delete node pool.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 storagepool_nodepool_id = 'storagepool_nodepool_id_example' # str | Delete node pool.
 
-try: 
+try:
     api_instance.delete_storagepool_nodepool(storagepool_nodepool_id)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->delete_storagepool_nodepool: %s\n" % e
+    print("Exception when calling StoragepoolApi->delete_storagepool_nodepool: %s\n" % e)
 ```
 
 ### Parameters
@@ -372,7 +393,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -388,25 +409,28 @@ void (empty response body)
 
 Delete tier.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 storagepool_tier_id = 'storagepool_tier_id_example' # str | Delete tier.
 
-try: 
+try:
     api_instance.delete_storagepool_tier(storagepool_tier_id)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->delete_storagepool_tier: %s\n" % e
+    print("Exception when calling StoragepoolApi->delete_storagepool_tier: %s\n" % e)
 ```
 
 ### Parameters
@@ -421,7 +445,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -437,24 +461,27 @@ void (empty response body)
 
 Delete all tiers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_instance.delete_storagepool_tiers()
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->delete_storagepool_tiers: %s\n" % e
+    print("Exception when calling StoragepoolApi->delete_storagepool_tiers: %s\n" % e)
 ```
 
 ### Parameters
@@ -466,7 +493,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -482,26 +509,29 @@ void (empty response body)
 
 Get an active compatibilities by id
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 compatibilities_class_active_id = 'compatibilities_class_active_id_example' # str | Get an active compatibilities by id
 
-try: 
+try:
     api_response = api_instance.get_compatibilities_class_active_by_id(compatibilities_class_active_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_compatibilities_class_active_by_id: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_compatibilities_class_active_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -516,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -532,25 +562,28 @@ Name | Type | Description  | Notes
 
 Get a list of available compatibilities
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_compatibilities_class_available()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_compatibilities_class_available: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_compatibilities_class_available: %s\n" % e)
 ```
 
 ### Parameters
@@ -562,7 +595,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -578,26 +611,29 @@ This endpoint does not need any parameter.
 
 Get a active ssd compatibilities by id
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 compatibilities_ssd_active_id = 'compatibilities_ssd_active_id_example' # str | Get a active ssd compatibilities by id
 
-try: 
+try:
     api_response = api_instance.get_compatibilities_ssd_active_by_id(compatibilities_ssd_active_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_compatibilities_ssd_active_by_id: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_compatibilities_ssd_active_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -612,7 +648,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -628,25 +664,28 @@ Name | Type | Description  | Notes
 
 Get a list of available ssd compatibilities
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_compatibilities_ssd_available()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_compatibilities_ssd_available: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_compatibilities_ssd_available: %s\n" % e)
 ```
 
 ### Parameters
@@ -658,7 +697,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -674,26 +713,29 @@ This endpoint does not need any parameter.
 
 Retrieve node pool information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 storagepool_nodepool_id = 'storagepool_nodepool_id_example' # str | Retrieve node pool information.
 
-try: 
+try:
     api_response = api_instance.get_storagepool_nodepool(storagepool_nodepool_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_storagepool_nodepool: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_storagepool_nodepool: %s\n" % e)
 ```
 
 ### Parameters
@@ -708,7 +750,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -724,25 +766,28 @@ Name | Type | Description  | Notes
 
 List all settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_storagepool_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_storagepool_settings: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_storagepool_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -754,7 +799,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -770,25 +815,28 @@ This endpoint does not need any parameter.
 
 List any health conditions detected.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_storagepool_status()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_storagepool_status: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_storagepool_status: %s\n" % e)
 ```
 
 ### Parameters
@@ -800,7 +848,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -816,25 +864,28 @@ This endpoint does not need any parameter.
 
 List all storage pools.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_storagepool_storagepools()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_storagepool_storagepools: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_storagepool_storagepools: %s\n" % e)
 ```
 
 ### Parameters
@@ -846,7 +897,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -862,26 +913,29 @@ This endpoint does not need any parameter.
 
 Retrieve the suggested protection policy.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 storagepool_suggested_protection_nid = 'storagepool_suggested_protection_nid_example' # str | Retrieve the suggested protection policy.
 
-try: 
+try:
     api_response = api_instance.get_storagepool_suggested_protection_nid(storagepool_suggested_protection_nid)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_storagepool_suggested_protection_nid: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_storagepool_suggested_protection_nid: %s\n" % e)
 ```
 
 ### Parameters
@@ -896,7 +950,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -912,26 +966,29 @@ Name | Type | Description  | Notes
 
 Retrieve tier information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 storagepool_tier_id = 'storagepool_tier_id_example' # str | Retrieve tier information.
 
-try: 
+try:
     api_response = api_instance.get_storagepool_tier(storagepool_tier_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_storagepool_tier: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_storagepool_tier: %s\n" % e)
 ```
 
 ### Parameters
@@ -946,7 +1003,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -962,25 +1019,28 @@ Name | Type | Description  | Notes
 
 Get the unprovisioned nodes and drives
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_storagepool_unprovisioned()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->get_storagepool_unprovisioned: %s\n" % e
+    print("Exception when calling StoragepoolApi->get_storagepool_unprovisioned: %s\n" % e)
 ```
 
 ### Parameters
@@ -992,7 +1052,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1008,25 +1068,28 @@ This endpoint does not need any parameter.
 
 Get a list of active compatibilities
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_compatibilities_class_active()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->list_compatibilities_class_active: %s\n" % e
+    print("Exception when calling StoragepoolApi->list_compatibilities_class_active: %s\n" % e)
 ```
 
 ### Parameters
@@ -1038,7 +1101,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1054,25 +1117,28 @@ This endpoint does not need any parameter.
 
 Get a list of active ssd compatibilities
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_compatibilities_ssd_active()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->list_compatibilities_ssd_active: %s\n" % e
+    print("Exception when calling StoragepoolApi->list_compatibilities_ssd_active: %s\n" % e)
 ```
 
 ### Parameters
@@ -1084,7 +1150,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1100,25 +1166,28 @@ This endpoint does not need any parameter.
 
 List all node pools.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_storagepool_nodepools()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->list_storagepool_nodepools: %s\n" % e
+    print("Exception when calling StoragepoolApi->list_storagepool_nodepools: %s\n" % e)
 ```
 
 ### Parameters
@@ -1130,7 +1199,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1146,25 +1215,28 @@ This endpoint does not need any parameter.
 
 List all tiers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_storagepool_tiers()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->list_storagepool_tiers: %s\n" % e
+    print("Exception when calling StoragepoolApi->list_storagepool_tiers: %s\n" % e)
 ```
 
 ### Parameters
@@ -1176,7 +1248,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1192,26 +1264,29 @@ This endpoint does not need any parameter.
 
 Modify an ssd compatibility by id
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
-compatibilities_ssd_active_id_params = isi_sdk.CompatibilitiesSsdActiveIdParams() # CompatibilitiesSsdActiveIdParams | 
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
+compatibilities_ssd_active_id_params = isi_sdk_8_0.CompatibilitiesSsdActiveIdParams() # CompatibilitiesSsdActiveIdParams | 
 compatibilities_ssd_active_id = 'compatibilities_ssd_active_id_example' # str | Modify an ssd compatibility by id
 
-try: 
+try:
     api_instance.update_compatibilities_ssd_active_by_id(compatibilities_ssd_active_id_params, compatibilities_ssd_active_id)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->update_compatibilities_ssd_active_by_id: %s\n" % e
+    print("Exception when calling StoragepoolApi->update_compatibilities_ssd_active_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -1227,7 +1302,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1243,26 +1318,29 @@ void (empty response body)
 
 Modify node pool. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
-storagepool_nodepool = isi_sdk.StoragepoolNodepool() # StoragepoolNodepool | 
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
+storagepool_nodepool = isi_sdk_8_0.StoragepoolNodepool() # StoragepoolNodepool | 
 storagepool_nodepool_id = 'storagepool_nodepool_id_example' # str | Modify node pool. All input fields are optional, but one or more must be supplied.
 
-try: 
+try:
     api_instance.update_storagepool_nodepool(storagepool_nodepool, storagepool_nodepool_id)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->update_storagepool_nodepool: %s\n" % e
+    print("Exception when calling StoragepoolApi->update_storagepool_nodepool: %s\n" % e)
 ```
 
 ### Parameters
@@ -1278,7 +1356,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1294,25 +1372,28 @@ void (empty response body)
 
 Modify one or more settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
-storagepool_settings = isi_sdk.StoragepoolSettingsExtended() # StoragepoolSettingsExtended | 
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
+storagepool_settings = isi_sdk_8_0.StoragepoolSettingsExtended() # StoragepoolSettingsExtended | 
 
-try: 
+try:
     api_instance.update_storagepool_settings(storagepool_settings)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->update_storagepool_settings: %s\n" % e
+    print("Exception when calling StoragepoolApi->update_storagepool_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1327,7 +1408,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1343,26 +1424,29 @@ void (empty response body)
 
 Modify tier. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StoragepoolApi()
-storagepool_tier = isi_sdk.StoragepoolTier() # StoragepoolTier | 
+api_instance = isi_sdk_8_0.StoragepoolApi(isi_sdk_8_0.ApiClient(configuration))
+storagepool_tier = isi_sdk_8_0.StoragepoolTier() # StoragepoolTier | 
 storagepool_tier_id = 'storagepool_tier_id_example' # str | Modify tier. All input fields are optional, but one or more must be supplied.
 
-try: 
+try:
     api_instance.update_storagepool_tier(storagepool_tier, storagepool_tier_id)
 except ApiException as e:
-    print "Exception when calling StoragepoolApi->update_storagepool_tier: %s\n" % e
+    print("Exception when calling StoragepoolApi->update_storagepool_tier: %s\n" % e)
 ```
 
 ### Parameters
@@ -1378,7 +1462,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

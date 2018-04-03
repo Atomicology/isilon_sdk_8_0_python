@@ -11,19 +11,19 @@ Name | Type | Description | Notes
 **findable_groups** | **list[str]** | Specifies the list of groups that can be resolved. | [optional] 
 **findable_users** | **list[str]** | Specifies the list of users that can be resolved. | [optional] 
 **group_domain** | **str** | Specifies the domain for this provider through which domains are qualified. | [optional] 
-**group_file** | **str** | Specifies the location of the file that contains information about the group. | [optional] 
+**group_file** | **str** | Specifies the location of the file that contains information about the group. | 
 **home_directory_template** | **str** | Specifies the path to the home directory template. | [optional] 
 **listable_groups** | **list[str]** | Specifies the groups that can be viewed in the provider. | [optional] 
 **listable_users** | **list[str]** | Specifies the users that can be viewed in the provider. | [optional] 
 **login_shell** | **str** | Specifies the login shell path. | [optional] 
 **modifiable_groups** | **list[str]** | Specifies the groups that can be modified in the provider. | [optional] 
 **modifiable_users** | **list[str]** | Specifies the users that can be modified in the provider. | [optional] 
-**name** | **str** | Specifies the name of the file provider. | [optional] 
+**name** | **str** | Specifies the name of the file provider. | 
 **netgroup_file** | **str** | Specifies the path to a netgroups replacement file. | [optional] 
 **normalize_groups** | **bool** | Normalizes group names to lowercase before look up. | [optional] 
 **normalize_users** | **bool** | Normalizes user names to lowercase before look up. | [optional] 
 **ntlm_support** | **str** | Specifies which NTLM versions to support for users with NTLM-compatible credentials. | [optional] 
-**password_file** | **str** | Specifies the location of the file containing information about users. | [optional] 
+**password_file** | **str** | Specifies the location of the file containing information about users. | 
 **provider_domain** | **str** | Specifies the domain for the provider. | [optional] 
 **restrict_findable** | **bool** | If true, checks the provider for filtered lists of findable and unfindable users and groups. | [optional] 
 **restrict_listable** | **bool** | If true, checks the provider for filtered lists of listable and unlistable users and groups. | [optional] 

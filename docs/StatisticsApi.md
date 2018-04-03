@@ -1,4 +1,4 @@
-# isi_sdk.StatisticsApi
+# isi_sdk_8_0.StatisticsApi
 
 All URIs are relative to *https://localhost*
 
@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**get_summary_drive**](StatisticsApi.md#get_summary_drive) | **GET** /platform/3/statistics/summary/drive | 
 [**get_summary_heat**](StatisticsApi.md#get_summary_heat) | **GET** /platform/3/statistics/summary/heat | 
 [**get_summary_protocol**](StatisticsApi.md#get_summary_protocol) | **GET** /platform/3/statistics/summary/protocol | 
+[**get_summary_protocol_stats**](StatisticsApi.md#get_summary_protocol_stats) | **GET** /platform/3/statistics/summary/protocol-stats | 
 [**get_summary_system**](StatisticsApi.md#get_summary_system) | **GET** /platform/3/statistics/summary/system | 
 
 
@@ -24,19 +25,22 @@ Method | HTTP request | Description
 
 Retrieve stats.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 timeout = 56 # int | Time in seconds to wait for results from remote nodes. (optional)
 keys = ['keys_example'] # list[str] | Multiple key names. May request matching keys or request 'all' keys. Can be comma separated list or can be used more than one time to make queries for multiple keys. May be used in conjunction with 'substr'. Also works with 'key' arguments. (optional)
 devid = ['devid_example'] # list[str] | Node devid to query. Either an <integer> or \"all\". Can be used more than one time to query multiple nodes. \"all\" queries all up nodes. 0 means query the local node. For \"cluster\" scoped keys, in any devid including 0 can be used. (optional)
@@ -45,11 +49,11 @@ key = ['key_example'] # list[str] | One key name. Can be used more than one time
 degraded = true # bool | If true, try to continue even if some stats are unavailable. In this case, errors will be present in the per-key returned data. (optional)
 expand_clientid = true # bool | If true, use name resolution to expand client addresses and other IDs. (optional)
 
-try: 
+try:
     api_response = api_instance.get_statistics_current(timeout=timeout, keys=keys, devid=devid, substr=substr, key=key, degraded=degraded, expand_clientid=expand_clientid)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_statistics_current: %s\n" % e
+    print("Exception when calling StatisticsApi->get_statistics_current: %s\n" % e)
 ```
 
 ### Parameters
@@ -70,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -86,19 +90,22 @@ Name | Type | Description  | Notes
 
 Retrieve stats.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 begin = 56 # int | Earliest time (Unix epoch seconds) of interest. Negative times are interpreted as relative (before) now. (optional)
 interval = 56 # int | Minimum sampling interval time in seconds. If native statistics are higher resolution, data will be down-sampled. (optional)
 end = 56 # int | Latest time (Unix epoch seconds) of interest. Negative times are interpreted as relative (before) now. If not supplied, use now as the end time. (optional)
@@ -112,11 +119,11 @@ degraded = true # bool | If true, try to continue even if some stats are unavail
 resolution = 56 # int | Synonymous with 'interval', if supplied supersedes interval. (optional)
 expand_clientid = true # bool | If true, use name resolution to expand client addresses and other IDs. (optional)
 
-try: 
+try:
     api_response = api_instance.get_statistics_history(begin=begin, interval=interval, end=end, timeout=timeout, substr=substr, keys=keys, devid=devid, memory_only=memory_only, key=key, degraded=degraded, resolution=resolution, expand_clientid=expand_clientid)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_statistics_history: %s\n" % e
+    print("Exception when calling StatisticsApi->get_statistics_history: %s\n" % e)
 ```
 
 ### Parameters
@@ -142,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -158,26 +165,29 @@ Name | Type | Description  | Notes
 
 List key meta-data.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 statistics_key_id = 'statistics_key_id_example' # str | List key meta-data.
 
-try: 
+try:
     api_response = api_instance.get_statistics_key(statistics_key_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_statistics_key: %s\n" % e
+    print("Exception when calling StatisticsApi->get_statistics_key: %s\n" % e)
 ```
 
 ### Parameters
@@ -192,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -208,29 +218,32 @@ Name | Type | Description  | Notes
 
 List meta-data for matching keys.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 count = true # bool | Only count matching keys, do not return meta-data. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 queryable = true # bool | Only list keys that can/cannot be queries. Default is true. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.get_statistics_keys(count=count, limit=limit, queryable=queryable, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_statistics_keys: %s\n" % e
+    print("Exception when calling StatisticsApi->get_statistics_keys: %s\n" % e)
 ```
 
 ### Parameters
@@ -248,7 +261,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -258,35 +271,42 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_statistics_operations**
-> StatisticsOperations get_statistics_operations()
+> StatisticsOperations get_statistics_operations(protocols=protocols)
 
 
 
 Retrieve operations list.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
+protocols = ['protocols_example'] # list[str] | A comma separated list. Only report operations for specified protocol(s). Default is all. (optional)
 
-try: 
-    api_response = api_instance.get_statistics_operations()
+try:
+    api_response = api_instance.get_statistics_operations(protocols=protocols)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_statistics_operations: %s\n" % e
+    print("Exception when calling StatisticsApi->get_statistics_operations: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **protocols** | [**list[str]**](str.md)| A comma separated list. Only report operations for specified protocol(s). Default is all. | [optional] 
 
 ### Return type
 
@@ -294,7 +314,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -304,35 +324,42 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_statistics_protocols**
-> StatisticsProtocols get_statistics_protocols()
+> StatisticsProtocols get_statistics_protocols(type=type)
 
 
 
 Retrieve protocol list.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
+type = 'type_example' # str | Specifies whether internal, external, or all protocols should be returned. (optional)
 
-try: 
-    api_response = api_instance.get_statistics_protocols()
+try:
+    api_response = api_instance.get_statistics_protocols(type=type)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_statistics_protocols: %s\n" % e
+    print("Exception when calling StatisticsApi->get_statistics_protocols: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **type** | **str**| Specifies whether internal, external, or all protocols should be returned. | [optional] 
 
 ### Return type
 
@@ -340,7 +367,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -350,45 +377,48 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_summary_client**
-> SummaryClient get_summary_client(sort=sort, totalby=totalby, user_names=user_names, numeric=numeric, local_names=local_names, user_ids=user_ids, classes=classes, timeout=timeout, local_addrs=local_addrs, degraded=degraded, remote_addrs=remote_addrs, remote_names=remote_names, nodes=nodes, protocols=protocols)
+> SummaryClient get_summary_client(sort=sort, totalby=totalby, user_names=user_names, remote_addresses=remote_addresses, numeric=numeric, local_names=local_names, user_ids=user_ids, classes=classes, timeout=timeout, local_addresses=local_addresses, degraded=degraded, remote_names=remote_names, nodes=nodes, protocols=protocols)
 
 
 
 
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | { drive_id | type | xfers_in | bytes_in | xfer_size_in | xfers_out | bytes_out | xfer_size_out | access_latency | access_slow | iosched_latency | iosched_queue | busy | used_bytes_percent | used_inodes } Sort data by the specified comma-separated field(s). Prepend 'asc:' or 'desc:' to a field to change the sort direction. (optional)
 totalby = 'totalby_example' # str | A comma separated list specifying what should be unique. node|protocol|class|local_addr|local_name|remote_addr|remote_name|user_id|user_name|devid (optional)
 user_names = 'user_names_example' # str | A comma seperated list. Only report statistics for operations requested by users with resolved names enumerated. (optional)
+remote_addresses = 'remote_addresses_example' # str | A comma seperated list. Only report statistics for operations requested by the remote clients with dotted-quad IP addresses enumerated. (optional)
 numeric = true # bool | Whether to convert hostnames or usernames to their human readable form. False by default. (optional)
 local_names = 'local_names_example' # str | A comma seperated list. Only report statistics for operations handled by the local hosts with resolved names enumerated. (optional)
 user_ids = 'user_ids_example' # str | A comma seperated list. Only report statistics for operations requested by users with numeric UIDs enumerated. (optional)
 classes = 'classes_example' # str | Specify class(es) for which statistics should be reported. Default is all supported classes. (optional)
 timeout = 56 # int | Timeout remote commands after NUM seconds, where NUM is the integer passed to the argument. (optional)
-local_addrs = 'local_addrs_example' # str | A comma seperated list. Only report statistics for operations handled by the local hosts with dotted-quad IP addresses enumerated. (optional)
+local_addresses = 'local_addresses_example' # str | A comma seperated list. Only report statistics for operations handled by the local hosts with dotted-quad IP addresses enumerated. (optional)
 degraded = true # bool | Continue to report if some nodes do not respond. (optional)
-remote_addrs = 'remote_addrs_example' # str | A comma seperated list. Only report statistics for operations requested by the remote clients with dotted-quad IP addresses enumerated. (optional)
 remote_names = 'remote_names_example' # str | A comma seperated list. Only report statistics for operations requested by the remote clients with resolved names enumerated. (optional)
 nodes = 'nodes_example' # str | A comma seperated list. Specify node(s) for which statistics should be reported. Default is 'all'. Zero (0) should be passed in as the sole argument to indicate local. (optional)
 protocols = 'protocols_example' # str | A comma seperated list of the protocol(s) you wish to return. Default is 'all' of the folowing: nfs3|smb1|nlm|ftp|http|siq|iscsi|smb2|nfs4|papi|jobd|irp|lsass_in|lsass_out|hdfs|internal|external (optional)
 
-try: 
-    api_response = api_instance.get_summary_client(sort=sort, totalby=totalby, user_names=user_names, numeric=numeric, local_names=local_names, user_ids=user_ids, classes=classes, timeout=timeout, local_addrs=local_addrs, degraded=degraded, remote_addrs=remote_addrs, remote_names=remote_names, nodes=nodes, protocols=protocols)
+try:
+    api_response = api_instance.get_summary_client(sort=sort, totalby=totalby, user_names=user_names, remote_addresses=remote_addresses, numeric=numeric, local_names=local_names, user_ids=user_ids, classes=classes, timeout=timeout, local_addresses=local_addresses, degraded=degraded, remote_names=remote_names, nodes=nodes, protocols=protocols)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_summary_client: %s\n" % e
+    print("Exception when calling StatisticsApi->get_summary_client: %s\n" % e)
 ```
 
 ### Parameters
@@ -398,14 +428,14 @@ Name | Type | Description  | Notes
  **sort** | **str**| { drive_id | type | xfers_in | bytes_in | xfer_size_in | xfers_out | bytes_out | xfer_size_out | access_latency | access_slow | iosched_latency | iosched_queue | busy | used_bytes_percent | used_inodes } Sort data by the specified comma-separated field(s). Prepend &#39;asc:&#39; or &#39;desc:&#39; to a field to change the sort direction. | [optional] 
  **totalby** | **str**| A comma separated list specifying what should be unique. node|protocol|class|local_addr|local_name|remote_addr|remote_name|user_id|user_name|devid | [optional] 
  **user_names** | **str**| A comma seperated list. Only report statistics for operations requested by users with resolved names enumerated. | [optional] 
+ **remote_addresses** | **str**| A comma seperated list. Only report statistics for operations requested by the remote clients with dotted-quad IP addresses enumerated. | [optional] 
  **numeric** | **bool**| Whether to convert hostnames or usernames to their human readable form. False by default. | [optional] 
  **local_names** | **str**| A comma seperated list. Only report statistics for operations handled by the local hosts with resolved names enumerated. | [optional] 
  **user_ids** | **str**| A comma seperated list. Only report statistics for operations requested by users with numeric UIDs enumerated. | [optional] 
  **classes** | **str**| Specify class(es) for which statistics should be reported. Default is all supported classes. | [optional] 
  **timeout** | **int**| Timeout remote commands after NUM seconds, where NUM is the integer passed to the argument. | [optional] 
- **local_addrs** | **str**| A comma seperated list. Only report statistics for operations handled by the local hosts with dotted-quad IP addresses enumerated. | [optional] 
+ **local_addresses** | **str**| A comma seperated list. Only report statistics for operations handled by the local hosts with dotted-quad IP addresses enumerated. | [optional] 
  **degraded** | **bool**| Continue to report if some nodes do not respond. | [optional] 
- **remote_addrs** | **str**| A comma seperated list. Only report statistics for operations requested by the remote clients with dotted-quad IP addresses enumerated. | [optional] 
  **remote_names** | **str**| A comma seperated list. Only report statistics for operations requested by the remote clients with resolved names enumerated. | [optional] 
  **nodes** | **str**| A comma seperated list. Specify node(s) for which statistics should be reported. Default is &#39;all&#39;. Zero (0) should be passed in as the sole argument to indicate local. | [optional] 
  **protocols** | **str**| A comma seperated list of the protocol(s) you wish to return. Default is &#39;all&#39; of the folowing: nfs3|smb1|nlm|ftp|http|siq|iscsi|smb2|nfs4|papi|jobd|irp|lsass_in|lsass_out|hdfs|internal|external | [optional] 
@@ -416,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -432,30 +462,33 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | { drive_id | type | xfers_in | bytes_in | xfer_size_in | xfers_out | bytes_out | xfer_size_out | access_latency | access_slow | iosched_latency | iosched_queue | busy | used_bytes_percent | used_inodes } Sort data by the specified comma-separated field(s). Prepend 'asc:' or 'desc:' to a field to change the sort direction. (optional)
 degraded = true # bool | Continue to report if some nodes do not respond. (optional)
 type = 'type_example' # str | Specify drive type(s) for which statistics should be reported. (optional)
 nodes = 'nodes_example' # str | Specify node(s) for which statistics should be reported. A comma separated set of numbers. Default is 'all'. Zero (0) should be passed in as the sole argument to indicate only the local node. (optional)
 timeout = 56 # int | Timeout remote commands after NUM seconds, where NUM is the integer passed to the argument. (optional)
 
-try: 
+try:
     api_response = api_instance.get_summary_drive(sort=sort, degraded=degraded, type=type, nodes=nodes, timeout=timeout)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_summary_drive: %s\n" % e
+    print("Exception when calling StatisticsApi->get_summary_drive: %s\n" % e)
 ```
 
 ### Parameters
@@ -474,7 +507,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -490,19 +523,22 @@ Name | Type | Description  | Notes
 
 File heat map, i.e. rate of file operations, and the type of operation listed by path/lin(s).
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | { drive_id | type | xfers_in | bytes_in | xfer_size_in | xfers_out | bytes_out | xfer_size_out | access_latency | access_slow | iosched_latency | iosched_queue | busy | used_bytes_percent | used_inodes } Sort data by the specified comma-separated field(s). Prepend 'asc:' or 'desc:' to a field to change the sort direction. (optional)
 convertlin = true # bool | Convert lin to hex. Defaults to true. (optional)
 totalby = 'totalby_example' # str | Aggregate per specified fields(s). Defaults to none. (optional)
@@ -515,11 +551,11 @@ timeout = 56 # int | Timeout remote commands after NUM seconds, where NUM is the
 nodes = 'nodes_example' # str | Specify node(s) for which statistics should be reported. A comma separated set of numbers. Default is 'all'. Zero (0) should be passed in as the sole argument to indicate only the local node. (optional)
 degraded = true # bool | Continue to report if some nodes do not respond. (optional)
 
-try: 
+try:
     api_response = api_instance.get_summary_heat(sort=sort, convertlin=convertlin, totalby=totalby, pathdepth=pathdepth, numeric=numeric, events=events, maxpath=maxpath, classes=classes, timeout=timeout, nodes=nodes, degraded=degraded)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_summary_heat: %s\n" % e
+    print("Exception when calling StatisticsApi->get_summary_heat: %s\n" % e)
 ```
 
 ### Parameters
@@ -544,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -554,40 +590,43 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_summary_protocol**
-> SummaryProtocol get_summary_protocol(operations=operations, sort=sort, protocol=protocol, totalby=totalby, zero=zero, classes=classes, timeout=timeout, degraded=degraded, nodes=nodes)
+> SummaryProtocol get_summary_protocol(operations=operations, sort=sort, totalby=totalby, zero=zero, classes=classes, timeout=timeout, degraded=degraded, nodes=nodes, protocols=protocols)
 
 
 
 
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 operations = 'operations_example' # str | Specify operation(s) for which statistics should be reported. Default is all operations. See isi-statistics man page for complete listing of operations. (optional)
 sort = 'sort_example' # str | { drive_id | type | xfers_in | bytes_in | xfer_size_in | xfers_out | bytes_out | xfer_size_out | access_latency | access_slow | iosched_latency | iosched_queue | busy | used_bytes_percent | used_inodes } Sort data by the specified comma-separated field(s). Prepend 'asc:' or 'desc:' to a field to change the sort direction. (optional)
-protocol = 'protocol_example' # str | Specify protocol(s) for which statistics should be reported. Default is all external protocols. (optional)
 totalby = 'totalby_example' # str | Aggregate per specified fields(s). Defaults to none. (optional)
 zero = true # bool | Show table entries with no values. (optional)
 classes = 'classes_example' # str | Specify class(es) for which statistics should be reported. Default is all supported classes. See [...]/platform/3/statistics/summary/filters/classes for a complete list. (optional)
 timeout = 56 # int | Timeout remote commands after NUM seconds, where NUM is the integer passed to the argument. (optional)
 degraded = true # bool | Continue to report if some nodes do not respond. (optional)
 nodes = 'nodes_example' # str | Specify node(s) for which statistics should be reported. A comma separated set of numbers. Default is 'all'. Zero (0) should be passed in as the sole argument to indicate only the local node. (optional)
+protocols = 'protocols_example' # str | Specify protocol(s) for which statistics should be reported. Default is all external protocols. (optional)
 
-try: 
-    api_response = api_instance.get_summary_protocol(operations=operations, sort=sort, protocol=protocol, totalby=totalby, zero=zero, classes=classes, timeout=timeout, degraded=degraded, nodes=nodes)
+try:
+    api_response = api_instance.get_summary_protocol(operations=operations, sort=sort, totalby=totalby, zero=zero, classes=classes, timeout=timeout, degraded=degraded, nodes=nodes, protocols=protocols)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_summary_protocol: %s\n" % e
+    print("Exception when calling StatisticsApi->get_summary_protocol: %s\n" % e)
 ```
 
 ### Parameters
@@ -596,13 +635,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **operations** | **str**| Specify operation(s) for which statistics should be reported. Default is all operations. See isi-statistics man page for complete listing of operations. | [optional] 
  **sort** | **str**| { drive_id | type | xfers_in | bytes_in | xfer_size_in | xfers_out | bytes_out | xfer_size_out | access_latency | access_slow | iosched_latency | iosched_queue | busy | used_bytes_percent | used_inodes } Sort data by the specified comma-separated field(s). Prepend &#39;asc:&#39; or &#39;desc:&#39; to a field to change the sort direction. | [optional] 
- **protocol** | **str**| Specify protocol(s) for which statistics should be reported. Default is all external protocols. | [optional] 
  **totalby** | **str**| Aggregate per specified fields(s). Defaults to none. | [optional] 
  **zero** | **bool**| Show table entries with no values. | [optional] 
  **classes** | **str**| Specify class(es) for which statistics should be reported. Default is all supported classes. See [...]/platform/3/statistics/summary/filters/classes for a complete list. | [optional] 
  **timeout** | **int**| Timeout remote commands after NUM seconds, where NUM is the integer passed to the argument. | [optional] 
  **degraded** | **bool**| Continue to report if some nodes do not respond. | [optional] 
  **nodes** | **str**| Specify node(s) for which statistics should be reported. A comma separated set of numbers. Default is &#39;all&#39;. Zero (0) should be passed in as the sole argument to indicate only the local node. | [optional] 
+ **protocols** | **str**| Specify protocol(s) for which statistics should be reported. Default is all external protocols. | [optional] 
 
 ### Return type
 
@@ -610,7 +649,66 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_summary_protocol_stats**
+> SummaryProtocolStats get_summary_protocol_stats(degraded=degraded, protocol=protocol, nodes=nodes, timeout=timeout)
+
+
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
+degraded = true # bool | Continue to report if some nodes do not respond. (optional)
+protocol = 'protocol_example' # str | Specify protocol(s) for which statistics should be reported. Default is all external protocols. (optional)
+nodes = 'nodes_example' # str | Specify node(s) for which statistics should be reported. A comma separated set of numbers. Default is 'all'. Zero (0) should be passed in as the sole argument to indicate only the local node. (optional)
+timeout = 56 # int | Timeout remote commands after NUM seconds, where NUM is the integer passed to the argument. (optional)
+
+try:
+    api_response = api_instance.get_summary_protocol_stats(degraded=degraded, protocol=protocol, nodes=nodes, timeout=timeout)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling StatisticsApi->get_summary_protocol_stats: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **degraded** | **bool**| Continue to report if some nodes do not respond. | [optional] 
+ **protocol** | **str**| Specify protocol(s) for which statistics should be reported. Default is all external protocols. | [optional] 
+ **nodes** | **str**| Specify node(s) for which statistics should be reported. A comma separated set of numbers. Default is &#39;all&#39;. Zero (0) should be passed in as the sole argument to indicate only the local node. | [optional] 
+ **timeout** | **int**| Timeout remote commands after NUM seconds, where NUM is the integer passed to the argument. | [optional] 
+
+### Return type
+
+[**SummaryProtocolStats**](SummaryProtocolStats.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -626,30 +724,33 @@ Name | Type | Description  | Notes
 
 
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.StatisticsApi()
+api_instance = isi_sdk_8_0.StatisticsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | { drive_id | type | xfers_in | bytes_in | xfer_size_in | xfers_out | bytes_out | xfer_size_out | access_latency | access_slow | iosched_latency | iosched_queue | busy | used_bytes_percent | used_inodes } Sort data by the specified comma-separated field(s). Prepend 'asc:' or 'desc:' to a field to change the sort direction. (optional)
 oprates = true # bool | Display protocol operation rate statistics rather than the default throughput statistics. (optional)
 degraded = true # bool | Continue to report if some nodes do not respond. (optional)
 nodes = 'nodes_example' # str | Specify node(s) for which statistics should be reported. A comma separated set of numbers. Default is 'all'. Zero (0) should be passed in as the sole argument to indicate only the local node. (optional)
 timeout = 56 # int | Timeout remote commands after NUM seconds, where NUM is the integer passed to the argument. (optional)
 
-try: 
+try:
     api_response = api_instance.get_summary_system(sort=sort, oprates=oprates, degraded=degraded, nodes=nodes, timeout=timeout)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling StatisticsApi->get_summary_system: %s\n" % e
+    print("Exception when calling StatisticsApi->get_summary_system: %s\n" % e)
 ```
 
 ### Parameters
@@ -668,7 +769,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

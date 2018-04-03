@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **home_directory_umask** | **int** | Specifies the permissions set on automatically created user home directories. | [optional] 
 **ifs_restricted** | [**list[GroupMember]**](GroupMember.md) | Specifies a list of users and groups that have read and write access to /ifs. | [optional] 
 **map_untrusted** | **str** | Maps untrusted domains to this NetBIOS domain during authentication. | [optional] 
-**name** | **str** | Specifies the access zone name. | [optional] 
+**name** | **str** | Specifies the access zone name. | 
 **netbios_name** | **str** | Specifies the NetBIOS name. | [optional] 
 **path** | **str** | Specifies the access zone base directory path. | [optional] 
 **skeleton_directory** | **str** | Specifies the skeleton directory that is used for user home directories. | [optional] 

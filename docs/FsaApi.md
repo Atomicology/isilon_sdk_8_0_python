@@ -1,4 +1,4 @@
-# isi_sdk.FsaApi
+# isi_sdk_8_0.FsaApi
 
 All URIs are relative to *https://localhost*
 
@@ -20,25 +20,28 @@ Method | HTTP request | Description
 
 Delete the result set.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.FsaApi()
+api_instance = isi_sdk_8_0.FsaApi(isi_sdk_8_0.ApiClient(configuration))
 fsa_result_id = 'fsa_result_id_example' # str | Delete the result set.
 
-try: 
+try:
     api_instance.delete_fsa_result(fsa_result_id)
 except ApiException as e:
-    print "Exception when calling FsaApi->delete_fsa_result: %s\n" % e
+    print("Exception when calling FsaApi->delete_fsa_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -53,7 +56,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -69,24 +72,27 @@ void (empty response body)
 
 Revert all settings to their defaults.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.FsaApi()
+api_instance = isi_sdk_8_0.FsaApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_instance.delete_fsa_settings()
 except ApiException as e:
-    print "Exception when calling FsaApi->delete_fsa_settings: %s\n" % e
+    print("Exception when calling FsaApi->delete_fsa_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -98,7 +104,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -114,26 +120,29 @@ void (empty response body)
 
 Retrieve result set information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.FsaApi()
+api_instance = isi_sdk_8_0.FsaApi(isi_sdk_8_0.ApiClient(configuration))
 fsa_result_id = 'fsa_result_id_example' # str | Retrieve result set information.
 
-try: 
+try:
     api_response = api_instance.get_fsa_result(fsa_result_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling FsaApi->get_fsa_result: %s\n" % e
+    print("Exception when calling FsaApi->get_fsa_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -148,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -164,25 +173,28 @@ Name | Type | Description  | Notes
 
 List all results.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.FsaApi()
+api_instance = isi_sdk_8_0.FsaApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_fsa_results()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling FsaApi->get_fsa_results: %s\n" % e
+    print("Exception when calling FsaApi->get_fsa_results: %s\n" % e)
 ```
 
 ### Parameters
@@ -194,7 +206,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -210,25 +222,28 @@ This endpoint does not need any parameter.
 
 List all settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.FsaApi()
+api_instance = isi_sdk_8_0.FsaApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_fsa_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling FsaApi->get_fsa_settings: %s\n" % e
+    print("Exception when calling FsaApi->get_fsa_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -240,7 +255,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -256,26 +271,29 @@ This endpoint does not need any parameter.
 
 Modify result set. Only the pinned property can be changed at this time.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.FsaApi()
-fsa_result = isi_sdk.FsaResult() # FsaResult | 
+api_instance = isi_sdk_8_0.FsaApi(isi_sdk_8_0.ApiClient(configuration))
+fsa_result = isi_sdk_8_0.FsaResult() # FsaResult | 
 fsa_result_id = 'fsa_result_id_example' # str | Modify result set. Only the pinned property can be changed at this time.
 
-try: 
+try:
     api_instance.update_fsa_result(fsa_result, fsa_result_id)
 except ApiException as e:
-    print "Exception when calling FsaApi->update_fsa_result: %s\n" % e
+    print("Exception when calling FsaApi->update_fsa_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -291,7 +309,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -307,25 +325,28 @@ void (empty response body)
 
 Modify one or more settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.FsaApi()
-fsa_settings = isi_sdk.FsaSettingsSettings() # FsaSettingsSettings | 
+api_instance = isi_sdk_8_0.FsaApi(isi_sdk_8_0.ApiClient(configuration))
+fsa_settings = isi_sdk_8_0.FsaSettingsSettings() # FsaSettingsSettings | 
 
-try: 
+try:
     api_instance.update_fsa_settings(fsa_settings)
 except ApiException as e:
-    print "Exception when calling FsaApi->update_fsa_settings: %s\n" % e
+    print("Exception when calling FsaApi->update_fsa_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -340,7 +361,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

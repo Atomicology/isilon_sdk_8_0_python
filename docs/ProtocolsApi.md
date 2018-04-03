@@ -1,4 +1,4 @@
-# isi_sdk.ProtocolsApi
+# isi_sdk_8_0.ProtocolsApi
 
 All URIs are relative to *https://localhost*
 
@@ -6,8 +6,9 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_hdfs_proxyuser**](ProtocolsApi.md#create_hdfs_proxyuser) | **POST** /platform/1/protocols/hdfs/proxyusers | 
 [**create_hdfs_rack**](ProtocolsApi.md#create_hdfs_rack) | **POST** /platform/1/protocols/hdfs/racks | 
+[**create_ndmp_settings_variable**](ProtocolsApi.md#create_ndmp_settings_variable) | **POST** /platform/3/protocols/ndmp/settings/variables/{NdmpSettingsVariableId} | 
 [**create_ndmp_user**](ProtocolsApi.md#create_ndmp_user) | **POST** /platform/3/protocols/ndmp/users | 
-[**create_nfs_aliase**](ProtocolsApi.md#create_nfs_aliase) | **POST** /platform/2/protocols/nfs/aliases | 
+[**create_nfs_alias**](ProtocolsApi.md#create_nfs_alias) | **POST** /platform/2/protocols/nfs/aliases | 
 [**create_nfs_export**](ProtocolsApi.md#create_nfs_export) | **POST** /platform/2/protocols/nfs/exports | 
 [**create_nfs_netgroup_check_item**](ProtocolsApi.md#create_nfs_netgroup_check_item) | **POST** /platform/3/protocols/nfs/netgroup/check | 
 [**create_nfs_netgroup_flush_item**](ProtocolsApi.md#create_nfs_netgroup_flush_item) | **POST** /platform/3/protocols/nfs/netgroup/flush | 
@@ -19,8 +20,14 @@ Method | HTTP request | Description
 [**create_swift_account**](ProtocolsApi.md#create_swift_account) | **POST** /platform/3/protocols/swift/accounts | 
 [**delete_hdfs_proxyuser**](ProtocolsApi.md#delete_hdfs_proxyuser) | **DELETE** /platform/1/protocols/hdfs/proxyusers/{HdfsProxyuserId} | 
 [**delete_hdfs_rack**](ProtocolsApi.md#delete_hdfs_rack) | **DELETE** /platform/1/protocols/hdfs/racks/{HdfsRackId} | 
+[**delete_ndmp_contexts_backup_by_id**](ProtocolsApi.md#delete_ndmp_contexts_backup_by_id) | **DELETE** /platform/3/protocols/ndmp/contexts/backup/{NdmpContextsBackupId} | 
+[**delete_ndmp_contexts_bre_by_id**](ProtocolsApi.md#delete_ndmp_contexts_bre_by_id) | **DELETE** /platform/3/protocols/ndmp/contexts/bre/{NdmpContextsBreId} | 
+[**delete_ndmp_contexts_restore_by_id**](ProtocolsApi.md#delete_ndmp_contexts_restore_by_id) | **DELETE** /platform/3/protocols/ndmp/contexts/restore/{NdmpContextsRestoreId} | 
+[**delete_ndmp_dumpdate**](ProtocolsApi.md#delete_ndmp_dumpdate) | **DELETE** /platform/3/protocols/ndmp/dumpdates/{NdmpDumpdateId} | 
+[**delete_ndmp_session**](ProtocolsApi.md#delete_ndmp_session) | **DELETE** /platform/3/protocols/ndmp/sessions/{NdmpSessionId} | 
+[**delete_ndmp_settings_variable**](ProtocolsApi.md#delete_ndmp_settings_variable) | **DELETE** /platform/3/protocols/ndmp/settings/variables/{NdmpSettingsVariableId} | 
 [**delete_ndmp_user**](ProtocolsApi.md#delete_ndmp_user) | **DELETE** /platform/3/protocols/ndmp/users/{NdmpUserId} | 
-[**delete_nfs_aliase**](ProtocolsApi.md#delete_nfs_aliase) | **DELETE** /platform/2/protocols/nfs/aliases/{NfsAliaseId} | 
+[**delete_nfs_alias**](ProtocolsApi.md#delete_nfs_alias) | **DELETE** /platform/2/protocols/nfs/aliases/{NfsAliasId} | 
 [**delete_nfs_export**](ProtocolsApi.md#delete_nfs_export) | **DELETE** /platform/2/protocols/nfs/exports/{NfsExportId} | 
 [**delete_nfs_nlm_session**](ProtocolsApi.md#delete_nfs_nlm_session) | **DELETE** /platform/3/protocols/nfs/nlm/sessions/{NfsNlmSessionId} | 
 [**delete_ntp_server**](ProtocolsApi.md#delete_ntp_server) | **DELETE** /platform/3/protocols/ntp/servers/{NtpServerId} | 
@@ -39,13 +46,22 @@ Method | HTTP request | Description
 [**get_hdfs_rack**](ProtocolsApi.md#get_hdfs_rack) | **GET** /platform/1/protocols/hdfs/racks/{HdfsRackId} | 
 [**get_hdfs_settings**](ProtocolsApi.md#get_hdfs_settings) | **GET** /platform/3/protocols/hdfs/settings | 
 [**get_http_settings**](ProtocolsApi.md#get_http_settings) | **GET** /platform/3/protocols/http/settings | 
+[**get_ndmp_contexts_backup**](ProtocolsApi.md#get_ndmp_contexts_backup) | **GET** /platform/3/protocols/ndmp/contexts/backup | 
+[**get_ndmp_contexts_backup_by_id**](ProtocolsApi.md#get_ndmp_contexts_backup_by_id) | **GET** /platform/3/protocols/ndmp/contexts/backup/{NdmpContextsBackupId} | 
 [**get_ndmp_contexts_bre**](ProtocolsApi.md#get_ndmp_contexts_bre) | **GET** /platform/3/protocols/ndmp/contexts/bre | 
+[**get_ndmp_contexts_bre_by_id**](ProtocolsApi.md#get_ndmp_contexts_bre_by_id) | **GET** /platform/3/protocols/ndmp/contexts/bre/{NdmpContextsBreId} | 
+[**get_ndmp_contexts_restore**](ProtocolsApi.md#get_ndmp_contexts_restore) | **GET** /platform/3/protocols/ndmp/contexts/restore | 
+[**get_ndmp_contexts_restore_by_id**](ProtocolsApi.md#get_ndmp_contexts_restore_by_id) | **GET** /platform/3/protocols/ndmp/contexts/restore/{NdmpContextsRestoreId} | 
 [**get_ndmp_diagnostics**](ProtocolsApi.md#get_ndmp_diagnostics) | **GET** /platform/3/protocols/ndmp/diagnostics | 
+[**get_ndmp_dumpdate**](ProtocolsApi.md#get_ndmp_dumpdate) | **GET** /platform/3/protocols/ndmp/dumpdates/{NdmpDumpdateId} | 
 [**get_ndmp_logs**](ProtocolsApi.md#get_ndmp_logs) | **GET** /platform/3/protocols/ndmp/logs | 
+[**get_ndmp_session**](ProtocolsApi.md#get_ndmp_session) | **GET** /platform/3/protocols/ndmp/sessions/{NdmpSessionId} | 
 [**get_ndmp_sessions**](ProtocolsApi.md#get_ndmp_sessions) | **GET** /platform/3/protocols/ndmp/sessions | 
+[**get_ndmp_settings_dmas**](ProtocolsApi.md#get_ndmp_settings_dmas) | **GET** /platform/3/protocols/ndmp/settings/dmas | 
 [**get_ndmp_settings_global**](ProtocolsApi.md#get_ndmp_settings_global) | **GET** /platform/3/protocols/ndmp/settings/global | 
+[**get_ndmp_settings_variable**](ProtocolsApi.md#get_ndmp_settings_variable) | **GET** /platform/3/protocols/ndmp/settings/variables/{NdmpSettingsVariableId} | 
 [**get_ndmp_user**](ProtocolsApi.md#get_ndmp_user) | **GET** /platform/3/protocols/ndmp/users/{NdmpUserId} | 
-[**get_nfs_aliase**](ProtocolsApi.md#get_nfs_aliase) | **GET** /platform/2/protocols/nfs/aliases/{NfsAliaseId} | 
+[**get_nfs_alias**](ProtocolsApi.md#get_nfs_alias) | **GET** /platform/2/protocols/nfs/aliases/{NfsAliasId} | 
 [**get_nfs_check**](ProtocolsApi.md#get_nfs_check) | **GET** /platform/2/protocols/nfs/check | 
 [**get_nfs_export**](ProtocolsApi.md#get_nfs_export) | **GET** /platform/2/protocols/nfs/exports/{NfsExportId} | 
 [**get_nfs_exports_summary**](ProtocolsApi.md#get_nfs_exports_summary) | **GET** /platform/2/protocols/nfs/exports-summary | 
@@ -87,8 +103,9 @@ Method | HTTP request | Description
 [**update_http_settings**](ProtocolsApi.md#update_http_settings) | **PUT** /platform/3/protocols/http/settings | 
 [**update_ndmp_diagnostics**](ProtocolsApi.md#update_ndmp_diagnostics) | **PUT** /platform/3/protocols/ndmp/diagnostics | 
 [**update_ndmp_settings_global**](ProtocolsApi.md#update_ndmp_settings_global) | **PUT** /platform/3/protocols/ndmp/settings/global | 
+[**update_ndmp_settings_variable**](ProtocolsApi.md#update_ndmp_settings_variable) | **PUT** /platform/3/protocols/ndmp/settings/variables/{NdmpSettingsVariableId} | 
 [**update_ndmp_user**](ProtocolsApi.md#update_ndmp_user) | **PUT** /platform/3/protocols/ndmp/users/{NdmpUserId} | 
-[**update_nfs_aliase**](ProtocolsApi.md#update_nfs_aliase) | **PUT** /platform/2/protocols/nfs/aliases/{NfsAliaseId} | 
+[**update_nfs_alias**](ProtocolsApi.md#update_nfs_alias) | **PUT** /platform/2/protocols/nfs/aliases/{NfsAliasId} | 
 [**update_nfs_export**](ProtocolsApi.md#update_nfs_export) | **PUT** /platform/2/protocols/nfs/exports/{NfsExportId} | 
 [**update_nfs_log_level**](ProtocolsApi.md#update_nfs_log_level) | **PUT** /platform/3/protocols/nfs/log-level | 
 [**update_nfs_netgroup**](ProtocolsApi.md#update_nfs_netgroup) | **PUT** /platform/3/protocols/nfs/netgroup | 
@@ -106,32 +123,36 @@ Method | HTTP request | Description
 
 
 # **create_hdfs_proxyuser**
-> CreateResponse create_hdfs_proxyuser(hdfs_proxyuser)
+> CreateResponse create_hdfs_proxyuser(hdfs_proxyuser, zone=zone)
 
 
 
 Create a new HDFS proxyuser.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-hdfs_proxyuser = isi_sdk.HdfsProxyuserCreateParams() # HdfsProxyuserCreateParams | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+hdfs_proxyuser = isi_sdk_8_0.HdfsProxyuserCreateParams() # HdfsProxyuserCreateParams | 
+zone = 'zone_example' # str | Access zone which contains HDFS proxyuser. (optional)
 
-try: 
-    api_response = api_instance.create_hdfs_proxyuser(hdfs_proxyuser)
+try:
+    api_response = api_instance.create_hdfs_proxyuser(hdfs_proxyuser, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_hdfs_proxyuser: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_hdfs_proxyuser: %s\n" % e)
 ```
 
 ### Parameters
@@ -139,6 +160,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hdfs_proxyuser** | [**HdfsProxyuserCreateParams**](HdfsProxyuserCreateParams.md)|  | 
+ **zone** | **str**| Access zone which contains HDFS proxyuser. | [optional] 
 
 ### Return type
 
@@ -146,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -156,32 +178,36 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_hdfs_rack**
-> CreateResponse create_hdfs_rack(hdfs_rack)
+> CreateResponse create_hdfs_rack(hdfs_rack, zone=zone)
 
 
 
 Create a new HDFS rack.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-hdfs_rack = isi_sdk.HdfsRackCreateParams() # HdfsRackCreateParams | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+hdfs_rack = isi_sdk_8_0.HdfsRackCreateParams() # HdfsRackCreateParams | 
+zone = 'zone_example' # str | Access zone which contains HDFS rack. (optional)
 
-try: 
-    api_response = api_instance.create_hdfs_rack(hdfs_rack)
+try:
+    api_response = api_instance.create_hdfs_rack(hdfs_rack, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_hdfs_rack: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_hdfs_rack: %s\n" % e)
 ```
 
 ### Parameters
@@ -189,6 +215,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hdfs_rack** | [**HdfsRackCreateParams**](HdfsRackCreateParams.md)|  | 
+ **zone** | **str**| Access zone which contains HDFS rack. | [optional] 
 
 ### Return type
 
@@ -196,7 +223,62 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_ndmp_settings_variable**
+> Empty create_ndmp_settings_variable(ndmp_settings_variable, ndmp_settings_variable_id)
+
+
+
+Create a preferred NDMP environment variable.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_settings_variable = isi_sdk_8_0.NdmpSettingsVariableCreateParams() # NdmpSettingsVariableCreateParams | 
+ndmp_settings_variable_id = 'ndmp_settings_variable_id_example' # str | Create a preferred NDMP environment variable.
+
+try:
+    api_response = api_instance.create_ndmp_settings_variable(ndmp_settings_variable, ndmp_settings_variable_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->create_ndmp_settings_variable: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_settings_variable** | [**NdmpSettingsVariableCreateParams**](NdmpSettingsVariableCreateParams.md)|  | 
+ **ndmp_settings_variable_id** | **str**| Create a preferred NDMP environment variable. | 
+
+### Return type
+
+[**Empty**](Empty.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -212,26 +294,29 @@ Name | Type | Description  | Notes
 
 Created a new user.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-ndmp_user = isi_sdk.NdmpUserCreateParams() # NdmpUserCreateParams | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_user = isi_sdk_8_0.NdmpUserCreateParams() # NdmpUserCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_ndmp_user(ndmp_user)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_ndmp_user: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_ndmp_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -246,7 +331,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -255,50 +340,53 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_nfs_aliase**
-> CreateNfsAliaseResponse create_nfs_aliase(nfs_aliase, zone=zone)
+# **create_nfs_alias**
+> CreateNfsAliasResponse create_nfs_alias(nfs_alias, zone=zone)
 
 
 
 Create a new NFS alias.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_aliase = isi_sdk.NfsAliaseCreateParams() # NfsAliaseCreateParams | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_alias = isi_sdk_8_0.NfsAliasCreateParams() # NfsAliasCreateParams | 
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
-    api_response = api_instance.create_nfs_aliase(nfs_aliase, zone=zone)
+try:
+    api_response = api_instance.create_nfs_alias(nfs_alias, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_nfs_aliase: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_nfs_alias: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nfs_aliase** | [**NfsAliaseCreateParams**](NfsAliaseCreateParams.md)|  | 
+ **nfs_alias** | [**NfsAliasCreateParams**](NfsAliasCreateParams.md)|  | 
  **zone** | **str**| Access zone | [optional] 
 
 ### Return type
 
-[**CreateNfsAliaseResponse**](CreateNfsAliaseResponse.md)
+[**CreateNfsAliasResponse**](CreateNfsAliasResponse.md)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -308,34 +396,41 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_nfs_export**
-> CreateQuotaReportResponse create_nfs_export(nfs_export, force=force, zone=zone)
+> CreateQuotaReportResponse create_nfs_export(nfs_export, force=force, ignore_unresolvable_hosts=ignore_unresolvable_hosts, zone=zone, ignore_conflicts=ignore_conflicts, ignore_bad_paths=ignore_bad_paths, ignore_bad_auth=ignore_bad_auth)
 
 
 
 Create a new NFS export.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_export = isi_sdk.NfsExportCreateParams() # NfsExportCreateParams | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_export = isi_sdk_8_0.NfsExportCreateParams() # NfsExportCreateParams | 
 force = true # bool | If true, the export will be created even if it conflicts with another export. (optional)
+ignore_unresolvable_hosts = true # bool | Ignore unresolvable hosts. (optional)
 zone = 'zone_example' # str | Access zone (optional)
+ignore_conflicts = true # bool | Ignore conflicts with existing exports. (optional)
+ignore_bad_paths = true # bool | Ignore nonexistent or otherwise bad paths. (optional)
+ignore_bad_auth = true # bool | Ignore invalid users. (optional)
 
-try: 
-    api_response = api_instance.create_nfs_export(nfs_export, force=force, zone=zone)
+try:
+    api_response = api_instance.create_nfs_export(nfs_export, force=force, ignore_unresolvable_hosts=ignore_unresolvable_hosts, zone=zone, ignore_conflicts=ignore_conflicts, ignore_bad_paths=ignore_bad_paths, ignore_bad_auth=ignore_bad_auth)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_nfs_export: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_nfs_export: %s\n" % e)
 ```
 
 ### Parameters
@@ -344,7 +439,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nfs_export** | [**NfsExportCreateParams**](NfsExportCreateParams.md)|  | 
  **force** | **bool**| If true, the export will be created even if it conflicts with another export. | [optional] 
+ **ignore_unresolvable_hosts** | **bool**| Ignore unresolvable hosts. | [optional] 
  **zone** | **str**| Access zone | [optional] 
+ **ignore_conflicts** | **bool**| Ignore conflicts with existing exports. | [optional] 
+ **ignore_bad_paths** | **bool**| Ignore nonexistent or otherwise bad paths. | [optional] 
+ **ignore_bad_auth** | **bool**| Ignore invalid users. | [optional] 
 
 ### Return type
 
@@ -352,7 +451,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -368,27 +467,30 @@ Name | Type | Description  | Notes
 
 Update the NFS netgroups in the cache.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_netgroup_check_item = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_netgroup_check_item = isi_sdk_8_0.Empty() # Empty | 
 host = 'host_example' # str | IP address of node to update. If unspecified, the local nodes cache is updated. (optional)
 
-try: 
+try:
     api_response = api_instance.create_nfs_netgroup_check_item(nfs_netgroup_check_item, host=host)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_nfs_netgroup_check_item: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_nfs_netgroup_check_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -404,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -420,27 +522,30 @@ Name | Type | Description  | Notes
 
 Flush the NFS netgroups in the cache.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_netgroup_flush_item = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_netgroup_flush_item = isi_sdk_8_0.Empty() # Empty | 
 host = 'host_example' # str | IP address of node to flush. If unspecified, all nodes on the cluster are flushed. (optional)
 
-try: 
+try:
     api_response = api_instance.create_nfs_netgroup_flush_item(nfs_netgroup_flush_item, host=host)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_nfs_netgroup_flush_item: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_nfs_netgroup_flush_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -456,7 +561,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -466,34 +571,37 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_nfs_nlm_sessions_check_item**
-> CreateNfsNlmSessionsCheckItemResponse create_nfs_nlm_sessions_check_item(nfs_nlm_sessions_check_item, ip=ip, zone=zone)
+> CreateNfsNlmSessionsCheckItemResponse create_nfs_nlm_sessions_check_item(nfs_nlm_sessions_check_item, cluster_ip=cluster_ip, zone=zone)
 
 
 
 Perform an active scan for lost NFSv3 locks.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_nlm_sessions_check_item = isi_sdk.Empty() # Empty | 
-ip = 'ip_example' # str | An IP address for which NSM has client records (optional)
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_nlm_sessions_check_item = isi_sdk_8_0.Empty() # Empty | 
+cluster_ip = 'cluster_ip_example' # str | An IP address for which NSM has client records (optional)
 zone = 'zone_example' # str | Represents an extant auth zone (optional)
 
-try: 
-    api_response = api_instance.create_nfs_nlm_sessions_check_item(nfs_nlm_sessions_check_item, ip=ip, zone=zone)
+try:
+    api_response = api_instance.create_nfs_nlm_sessions_check_item(nfs_nlm_sessions_check_item, cluster_ip=cluster_ip, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_nfs_nlm_sessions_check_item: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_nfs_nlm_sessions_check_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -501,7 +609,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nfs_nlm_sessions_check_item** | [**Empty**](Empty.md)|  | 
- **ip** | **str**| An IP address for which NSM has client records | [optional] 
+ **cluster_ip** | **str**| An IP address for which NSM has client records | [optional] 
  **zone** | **str**| Represents an extant auth zone | [optional] 
 
 ### Return type
@@ -510,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -526,27 +634,30 @@ Name | Type | Description  | Notes
 
 Reload default NFS export configuration.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_reload_item = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_reload_item = isi_sdk_8_0.Empty() # Empty | 
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
+try:
     api_response = api_instance.create_nfs_reload_item(nfs_reload_item, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_nfs_reload_item: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_nfs_reload_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -562,7 +673,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -578,26 +689,29 @@ Name | Type | Description  | Notes
 
 Create an NTP server entry.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-ntp_server = isi_sdk.NtpServerCreateParams() # NtpServerCreateParams | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ntp_server = isi_sdk_8_0.NtpServerCreateParams() # NtpServerCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_ntp_server(ntp_server)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_ntp_server: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_ntp_server: %s\n" % e)
 ```
 
 ### Parameters
@@ -612,7 +726,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -628,26 +742,29 @@ Name | Type | Description  | Notes
 
 Add an SMB log filter.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-smb_log_level_filter = isi_sdk.SmbLogLevelFilter() # SmbLogLevelFilter | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+smb_log_level_filter = isi_sdk_8_0.SmbLogLevelFilter() # SmbLogLevelFilter | 
 
-try: 
+try:
     api_response = api_instance.create_smb_log_level_filter(smb_log_level_filter)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_smb_log_level_filter: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_smb_log_level_filter: %s\n" % e)
 ```
 
 ### Parameters
@@ -662,7 +779,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -678,27 +795,30 @@ Name | Type | Description  | Notes
 
 Create a new share.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-smb_share = isi_sdk.SmbShareCreateParams() # SmbShareCreateParams | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+smb_share = isi_sdk_8_0.SmbShareCreateParams() # SmbShareCreateParams | 
 zone = 'zone_example' # str | Zone which contains this share. (optional)
 
-try: 
+try:
     api_response = api_instance.create_smb_share(smb_share, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_smb_share: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_smb_share: %s\n" % e)
 ```
 
 ### Parameters
@@ -714,7 +834,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -724,32 +844,36 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_swift_account**
-> CreateResponse create_swift_account(swift_account)
+> CreateResponse create_swift_account(swift_account, zone=zone)
 
 
 
 Create a new Swift account
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-swift_account = isi_sdk.SwiftAccount() # SwiftAccount | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+swift_account = isi_sdk_8_0.SwiftAccount() # SwiftAccount | 
+zone = 'zone_example' # str | Access zone which contains Swift account. (optional)
 
-try: 
-    api_response = api_instance.create_swift_account(swift_account)
+try:
+    api_response = api_instance.create_swift_account(swift_account, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->create_swift_account: %s\n" % e
+    print("Exception when calling ProtocolsApi->create_swift_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -757,6 +881,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **swift_account** | [**SwiftAccount**](SwiftAccount.md)|  | 
+ **zone** | **str**| Access zone which contains Swift account. | [optional] 
 
 ### Return type
 
@@ -764,7 +889,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -774,38 +899,43 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_hdfs_proxyuser**
-> delete_hdfs_proxyuser(hdfs_proxyuser_id)
+> delete_hdfs_proxyuser(hdfs_proxyuser_id, zone=zone)
 
 
 
-Delete a a HDFS proxyuser.
+Delete an HDFS proxyuser.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-hdfs_proxyuser_id = 'hdfs_proxyuser_id_example' # str | Delete a a HDFS proxyuser.
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+hdfs_proxyuser_id = 'hdfs_proxyuser_id_example' # str | Delete an HDFS proxyuser.
+zone = 'zone_example' # str | Access zone which contains HDFS proxyuser. (optional)
 
-try: 
-    api_instance.delete_hdfs_proxyuser(hdfs_proxyuser_id)
+try:
+    api_instance.delete_hdfs_proxyuser(hdfs_proxyuser_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_hdfs_proxyuser: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_hdfs_proxyuser: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hdfs_proxyuser_id** | **str**| Delete a a HDFS proxyuser. | 
+ **hdfs_proxyuser_id** | **str**| Delete an HDFS proxyuser. | 
+ **zone** | **str**| Access zone which contains HDFS proxyuser. | [optional] 
 
 ### Return type
 
@@ -813,7 +943,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -823,31 +953,35 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_hdfs_rack**
-> delete_hdfs_rack(hdfs_rack_id)
+> delete_hdfs_rack(hdfs_rack_id, zone=zone)
 
 
 
 Delete the HDFS rack.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 hdfs_rack_id = 'hdfs_rack_id_example' # str | Delete the HDFS rack.
+zone = 'zone_example' # str | Access zone which contains HDFS rack. (optional)
 
-try: 
-    api_instance.delete_hdfs_rack(hdfs_rack_id)
+try:
+    api_instance.delete_hdfs_rack(hdfs_rack_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_hdfs_rack: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_hdfs_rack: %s\n" % e)
 ```
 
 ### Parameters
@@ -855,6 +989,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hdfs_rack_id** | **str**| Delete the HDFS rack. | 
+ **zone** | **str**| Access zone which contains HDFS rack. | [optional] 
 
 ### Return type
 
@@ -862,7 +997,325 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_ndmp_contexts_backup_by_id**
+> delete_ndmp_contexts_backup_by_id(ndmp_contexts_backup_id)
+
+
+
+Delete a backup context
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_contexts_backup_id = 'ndmp_contexts_backup_id_example' # str | Delete a backup context
+
+try:
+    api_instance.delete_ndmp_contexts_backup_by_id(ndmp_contexts_backup_id)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->delete_ndmp_contexts_backup_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_contexts_backup_id** | **str**| Delete a backup context | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_ndmp_contexts_bre_by_id**
+> delete_ndmp_contexts_bre_by_id(ndmp_contexts_bre_id)
+
+
+
+Delete a NDMP BRE context
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_contexts_bre_id = 'ndmp_contexts_bre_id_example' # str | Delete a NDMP BRE context
+
+try:
+    api_instance.delete_ndmp_contexts_bre_by_id(ndmp_contexts_bre_id)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->delete_ndmp_contexts_bre_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_contexts_bre_id** | **str**| Delete a NDMP BRE context | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_ndmp_contexts_restore_by_id**
+> delete_ndmp_contexts_restore_by_id(ndmp_contexts_restore_id)
+
+
+
+Delete a restore context
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_contexts_restore_id = 'ndmp_contexts_restore_id_example' # str | Delete a restore context
+
+try:
+    api_instance.delete_ndmp_contexts_restore_by_id(ndmp_contexts_restore_id)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->delete_ndmp_contexts_restore_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_contexts_restore_id** | **str**| Delete a restore context | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_ndmp_dumpdate**
+> delete_ndmp_dumpdate(ndmp_dumpdate_id, level=level)
+
+
+
+Delete dumpdates entries of a specified path.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_dumpdate_id = 'ndmp_dumpdate_id_example' # str | Delete dumpdates entries of a specified path.
+level = 56 # int | Level is an input from 0 to 10. (optional)
+
+try:
+    api_instance.delete_ndmp_dumpdate(ndmp_dumpdate_id, level=level)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->delete_ndmp_dumpdate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_dumpdate_id** | **str**| Delete dumpdates entries of a specified path. | 
+ **level** | **int**| Level is an input from 0 to 10. | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_ndmp_session**
+> delete_ndmp_session(ndmp_session_id, lnn=lnn)
+
+
+
+Delete the ndmp session.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_session_id = 'ndmp_session_id_example' # str | Delete the ndmp session.
+lnn = 'lnn_example' # str | Logical node number. (optional)
+
+try:
+    api_instance.delete_ndmp_session(ndmp_session_id, lnn=lnn)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->delete_ndmp_session: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_session_id** | **str**| Delete the ndmp session. | 
+ **lnn** | **str**| Logical node number. | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_ndmp_settings_variable**
+> delete_ndmp_settings_variable(ndmp_settings_variable_id, name=name)
+
+
+
+Delete preferred environment variable entries
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_settings_variable_id = 'ndmp_settings_variable_id_example' # str | Delete preferred environment variable entries
+name = 'name_example' # str | Name of the variable to delete. (optional)
+
+try:
+    api_instance.delete_ndmp_settings_variable(ndmp_settings_variable_id, name=name)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->delete_ndmp_settings_variable: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_settings_variable_id** | **str**| Delete preferred environment variable entries | 
+ **name** | **str**| Name of the variable to delete. | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -878,25 +1331,28 @@ void (empty response body)
 
 Delete the user.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 ndmp_user_id = 'ndmp_user_id_example' # str | Delete the user.
 
-try: 
+try:
     api_instance.delete_ndmp_user(ndmp_user_id)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_ndmp_user: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_ndmp_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -911,7 +1367,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -920,40 +1376,43 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_nfs_aliase**
-> delete_nfs_aliase(nfs_aliase_id, zone=zone)
+# **delete_nfs_alias**
+> delete_nfs_alias(nfs_alias_id, zone=zone)
 
 
 
 Delete the export.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_aliase_id = 'nfs_aliase_id_example' # str | Delete the export.
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_alias_id = 'nfs_alias_id_example' # str | Delete the export.
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
-    api_instance.delete_nfs_aliase(nfs_aliase_id, zone=zone)
+try:
+    api_instance.delete_nfs_alias(nfs_alias_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_nfs_aliase: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_nfs_alias: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nfs_aliase_id** | **str**| Delete the export. | 
+ **nfs_alias_id** | **str**| Delete the export. | 
  **zone** | **str**| Access zone | [optional] 
 
 ### Return type
@@ -962,7 +1421,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -978,26 +1437,29 @@ void (empty response body)
 
 Delete the export.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 nfs_export_id = 'nfs_export_id_example' # str | Delete the export.
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
+try:
     api_instance.delete_nfs_export(nfs_export_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_nfs_export: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_nfs_export: %s\n" % e)
 ```
 
 ### Parameters
@@ -1013,7 +1475,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1023,34 +1485,37 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_nfs_nlm_session**
-> delete_nfs_nlm_session(nfs_nlm_session_id, ip=ip, zone=zone, refresh=refresh)
+> delete_nfs_nlm_session(nfs_nlm_session_id, cluster_ip=cluster_ip, zone=zone, refresh=refresh)
 
 
 
 Delete all lock state for this host.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 nfs_nlm_session_id = 'nfs_nlm_session_id_example' # str | Delete all lock state for this host.
-ip = 'ip_example' # str | An IP address for which NSM has client records (optional)
+cluster_ip = 'cluster_ip_example' # str | An IP address for which NSM has client records (optional)
 zone = 'zone_example' # str | Represents an extant auth zone (optional)
 refresh = true # bool | if set to true, the client will be given a chance to reclaim its locks before they are destroyed (optional)
 
-try: 
-    api_instance.delete_nfs_nlm_session(nfs_nlm_session_id, ip=ip, zone=zone, refresh=refresh)
+try:
+    api_instance.delete_nfs_nlm_session(nfs_nlm_session_id, cluster_ip=cluster_ip, zone=zone, refresh=refresh)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_nfs_nlm_session: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_nfs_nlm_session: %s\n" % e)
 ```
 
 ### Parameters
@@ -1058,7 +1523,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nfs_nlm_session_id** | **str**| Delete all lock state for this host. | 
- **ip** | **str**| An IP address for which NSM has client records | [optional] 
+ **cluster_ip** | **str**| An IP address for which NSM has client records | [optional] 
  **zone** | **str**| Represents an extant auth zone | [optional] 
  **refresh** | **bool**| if set to true, the client will be given a chance to reclaim its locks before they are destroyed | [optional] 
 
@@ -1068,7 +1533,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1084,25 +1549,28 @@ void (empty response body)
 
 Delete an NTP server entry.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 ntp_server_id = 'ntp_server_id_example' # str | Delete an NTP server entry.
 
-try: 
+try:
     api_instance.delete_ntp_server(ntp_server_id)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_ntp_server: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_ntp_server: %s\n" % e)
 ```
 
 ### Parameters
@@ -1117,7 +1585,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1133,24 +1601,27 @@ void (empty response body)
 
 Delete all NTP server entries.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_instance.delete_ntp_servers()
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_ntp_servers: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_ntp_servers: %s\n" % e)
 ```
 
 ### Parameters
@@ -1162,7 +1633,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1178,25 +1649,28 @@ void (empty response body)
 
 Delete log filter.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 smb_log_level_filter_id = 'smb_log_level_filter_id_example' # str | Delete log filter.
 
-try: 
+try:
     api_instance.delete_smb_log_level_filter(smb_log_level_filter_id)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_smb_log_level_filter: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_smb_log_level_filter: %s\n" % e)
 ```
 
 ### Parameters
@@ -1211,7 +1685,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1221,34 +1695,41 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_smb_log_level_filters**
-> delete_smb_log_level_filters()
+> delete_smb_log_level_filters(level=level)
 
 
 
-Delete an existing SMB log filter.
+Delete existing SMB log filters.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+level = 'level_example' # str | Only return results with a given level. (optional)
 
-try: 
-    api_instance.delete_smb_log_level_filters()
+try:
+    api_instance.delete_smb_log_level_filters(level=level)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_smb_log_level_filters: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_smb_log_level_filters: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **level** | **str**| Only return results with a given level. | [optional] 
 
 ### Return type
 
@@ -1256,7 +1737,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1272,25 +1753,28 @@ void (empty response body)
 
 Close the file in the SMB server.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 smb_openfile_id = 'smb_openfile_id_example' # str | Close the file in the SMB server.
 
-try: 
+try:
     api_instance.delete_smb_openfile(smb_openfile_id)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_smb_openfile: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_smb_openfile: %s\n" % e)
 ```
 
 ### Parameters
@@ -1305,7 +1789,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1321,25 +1805,28 @@ void (empty response body)
 
 Close the SMB session.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 smb_session_id = 'smb_session_id_example' # str | Close the SMB session.
 
-try: 
+try:
     api_instance.delete_smb_session(smb_session_id)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_smb_session: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_smb_session: %s\n" % e)
 ```
 
 ### Parameters
@@ -1354,7 +1841,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1370,26 +1857,29 @@ void (empty response body)
 
 Close the SMB session.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 smb_sessions_computer_user = 'smb_sessions_computer_user_example' # str | Close the SMB session.
 computer = 'computer_example' # str | 
 
-try: 
+try:
     api_instance.delete_smb_sessions_computer_user(smb_sessions_computer_user, computer)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_smb_sessions_computer_user: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_smb_sessions_computer_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -1405,7 +1895,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1421,26 +1911,29 @@ void (empty response body)
 
 Delete the share.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 smb_share_id = 'smb_share_id_example' # str | Delete the share.
 zone = 'zone_example' # str | Zone which contains this share. (optional)
 
-try: 
+try:
     api_instance.delete_smb_share(smb_share_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_smb_share: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_smb_share: %s\n" % e)
 ```
 
 ### Parameters
@@ -1456,7 +1949,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1472,24 +1965,27 @@ void (empty response body)
 
 Delete multiple smb shares.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_instance.delete_smb_shares()
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_smb_shares: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_smb_shares: %s\n" % e)
 ```
 
 ### Parameters
@@ -1501,7 +1997,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1511,31 +2007,35 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_swift_account**
-> delete_swift_account(swift_account_id)
+> delete_swift_account(swift_account_id, zone=zone)
 
 
 
 Delete a Swift account.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 swift_account_id = 'swift_account_id_example' # str | Delete a Swift account.
+zone = 'zone_example' # str | Access zone which contains Swift account. (optional)
 
-try: 
-    api_instance.delete_swift_account(swift_account_id)
+try:
+    api_instance.delete_swift_account(swift_account_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->delete_swift_account: %s\n" % e
+    print("Exception when calling ProtocolsApi->delete_swift_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -1543,6 +2043,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **swift_account_id** | **str**| Delete a Swift account. | 
+ **zone** | **str**| Access zone which contains Swift account. | [optional] 
 
 ### Return type
 
@@ -1550,7 +2051,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1566,25 +2067,28 @@ void (empty response body)
 
 Retrieve the FTP settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_ftp_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ftp_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ftp_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1596,7 +2100,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1612,25 +2116,28 @@ This endpoint does not need any parameter.
 
 Retrieve the HDFS service log-level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_hdfs_log_level()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_hdfs_log_level: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_hdfs_log_level: %s\n" % e)
 ```
 
 ### Parameters
@@ -1642,7 +2149,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1652,39 +2159,44 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_hdfs_proxyuser**
-> HdfsProxyusers get_hdfs_proxyuser(hdfs_proxyuser_id)
+> HdfsProxyusers get_hdfs_proxyuser(hdfs_proxyuser_id, zone=zone)
 
 
 
-List all proxyusers.
+View the proxyuser.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-hdfs_proxyuser_id = 'hdfs_proxyuser_id_example' # str | List all proxyusers.
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+hdfs_proxyuser_id = 'hdfs_proxyuser_id_example' # str | View the proxyuser.
+zone = 'zone_example' # str | Access zone which contains HDFS proxyuser. (optional)
 
-try: 
-    api_response = api_instance.get_hdfs_proxyuser(hdfs_proxyuser_id)
+try:
+    api_response = api_instance.get_hdfs_proxyuser(hdfs_proxyuser_id, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_hdfs_proxyuser: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_hdfs_proxyuser: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **hdfs_proxyuser_id** | **str**| List all proxyusers. | 
+ **hdfs_proxyuser_id** | **str**| View the proxyuser. | 
+ **zone** | **str**| Access zone which contains HDFS proxyuser. | [optional] 
 
 ### Return type
 
@@ -1692,7 +2204,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1702,32 +2214,36 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_hdfs_rack**
-> HdfsRacks get_hdfs_rack(hdfs_rack_id)
+> HdfsRacks get_hdfs_rack(hdfs_rack_id, zone=zone)
 
 
 
 Retrieve the HDFS rack.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 hdfs_rack_id = 'hdfs_rack_id_example' # str | Retrieve the HDFS rack.
+zone = 'zone_example' # str | Access zone which contains HDFS rack. (optional)
 
-try: 
-    api_response = api_instance.get_hdfs_rack(hdfs_rack_id)
+try:
+    api_response = api_instance.get_hdfs_rack(hdfs_rack_id, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_hdfs_rack: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_hdfs_rack: %s\n" % e)
 ```
 
 ### Parameters
@@ -1735,6 +2251,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hdfs_rack_id** | **str**| Retrieve the HDFS rack. | 
+ **zone** | **str**| Access zone which contains HDFS rack. | [optional] 
 
 ### Return type
 
@@ -1742,7 +2259,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1752,35 +2269,42 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_hdfs_settings**
-> HdfsSettings get_hdfs_settings()
+> HdfsSettings get_hdfs_settings(zone=zone)
 
 
 
 Retrieve HDFS properties.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+zone = 'zone_example' # str | Access zone which contains HDFS settings. (optional)
 
-try: 
-    api_response = api_instance.get_hdfs_settings()
+try:
+    api_response = api_instance.get_hdfs_settings(zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_hdfs_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_hdfs_settings: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **zone** | **str**| Access zone which contains HDFS settings. | [optional] 
 
 ### Return type
 
@@ -1788,7 +2312,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1804,25 +2328,28 @@ This endpoint does not need any parameter.
 
 Retrieve HTTP properties.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_http_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_http_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_http_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1834,7 +2361,115 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_contexts_backup**
+> NdmpContextsBackupExtended get_ndmp_contexts_backup(limit=limit, resume=resume)
+
+
+
+Get List of NDMP Backup Contexts.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
+
+try:
+    api_response = api_instance.get_ndmp_contexts_backup(limit=limit, resume=resume)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_contexts_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
+
+### Return type
+
+[**NdmpContextsBackupExtended**](NdmpContextsBackupExtended.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_contexts_backup_by_id**
+> NdmpContextsBackup get_ndmp_contexts_backup_by_id(ndmp_contexts_backup_id)
+
+
+
+View a NDMP backup context
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_contexts_backup_id = 'ndmp_contexts_backup_id_example' # str | View a NDMP backup context
+
+try:
+    api_response = api_instance.get_ndmp_contexts_backup_by_id(ndmp_contexts_backup_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_contexts_backup_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_contexts_backup_id** | **str**| View a NDMP backup context | 
+
+### Return type
+
+[**NdmpContextsBackup**](NdmpContextsBackup.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1844,35 +2479,97 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ndmp_contexts_bre**
-> NdmpContextsBre get_ndmp_contexts_bre()
+> NdmpContextsBreExtended get_ndmp_contexts_bre(limit=limit, resume=resume)
 
 
 
 Get list of NDMP BRE Contexts.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
-    api_response = api_instance.get_ndmp_contexts_bre()
+try:
+    api_response = api_instance.get_ndmp_contexts_bre(limit=limit, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ndmp_contexts_bre: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ndmp_contexts_bre: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
+
+### Return type
+
+[**NdmpContextsBreExtended**](NdmpContextsBreExtended.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_contexts_bre_by_id**
+> NdmpContextsBre get_ndmp_contexts_bre_by_id(ndmp_contexts_bre_id)
+
+
+
+View a NDMP BRE context
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_contexts_bre_id = 'ndmp_contexts_bre_id_example' # str | View a NDMP BRE context
+
+try:
+    api_response = api_instance.get_ndmp_contexts_bre_by_id(ndmp_contexts_bre_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_contexts_bre_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_contexts_bre_id** | **str**| View a NDMP BRE context | 
 
 ### Return type
 
@@ -1880,7 +2577,115 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_contexts_restore**
+> NdmpContextsBackupExtended get_ndmp_contexts_restore(limit=limit, resume=resume)
+
+
+
+Get List of NDMP Restore Contexts.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
+
+try:
+    api_response = api_instance.get_ndmp_contexts_restore(limit=limit, resume=resume)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_contexts_restore: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
+
+### Return type
+
+[**NdmpContextsBackupExtended**](NdmpContextsBackupExtended.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_contexts_restore_by_id**
+> NdmpContextsBackup get_ndmp_contexts_restore_by_id(ndmp_contexts_restore_id)
+
+
+
+View a NDMP restore context
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_contexts_restore_id = 'ndmp_contexts_restore_id_example' # str | View a NDMP restore context
+
+try:
+    api_response = api_instance.get_ndmp_contexts_restore_by_id(ndmp_contexts_restore_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_contexts_restore_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_contexts_restore_id** | **str**| View a NDMP restore context | 
+
+### Return type
+
+[**NdmpContextsBackup**](NdmpContextsBackup.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1896,25 +2701,28 @@ This endpoint does not need any parameter.
 
 List ndmp diagnostics settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_ndmp_diagnostics()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ndmp_diagnostics: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ndmp_diagnostics: %s\n" % e)
 ```
 
 ### Parameters
@@ -1926,7 +2734,72 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_dumpdate**
+> NdmpDumpdates get_ndmp_dumpdate(ndmp_dumpdate_id, sort=sort, resume=resume, level=level, limit=limit, path=path, dir=dir)
+
+
+
+List of dumpdates entries.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_dumpdate_id = 'ndmp_dumpdate_id_example' # str | List of dumpdates entries.
+sort = 'sort_example' # str | The field that will be used for sorting. (optional)
+resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
+level = 56 # int | Filter by dumpdate level. (optional)
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+path = 'path_example' # str | Filter by file path. (optional)
+dir = 'dir_example' # str | The direction of the sort. (optional)
+
+try:
+    api_response = api_instance.get_ndmp_dumpdate(ndmp_dumpdate_id, sort=sort, resume=resume, level=level, limit=limit, path=path, dir=dir)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_dumpdate: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_dumpdate_id** | **str**| List of dumpdates entries. | 
+ **sort** | **str**| The field that will be used for sorting. | [optional] 
+ **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
+ **level** | **int**| Filter by dumpdate level. | [optional] 
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **path** | **str**| Filter by file path. | [optional] 
+ **dir** | **str**| The direction of the sort. | [optional] 
+
+### Return type
+
+[**NdmpDumpdates**](NdmpDumpdates.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1942,25 +2815,28 @@ This endpoint does not need any parameter.
 
 Get NDMP logs
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_ndmp_logs()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ndmp_logs: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ndmp_logs: %s\n" % e)
 ```
 
 ### Parameters
@@ -1972,7 +2848,62 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_session**
+> NdmpSessions get_ndmp_session(ndmp_session_id, lnn=lnn)
+
+
+
+Retrieve the ndmp session.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_session_id = 'ndmp_session_id_example' # str | Retrieve the ndmp session.
+lnn = 'lnn_example' # str | Logical node number. (optional)
+
+try:
+    api_response = api_instance.get_ndmp_session(ndmp_session_id, lnn=lnn)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_session: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_session_id** | **str**| Retrieve the ndmp session. | 
+ **lnn** | **str**| Logical node number. | [optional] 
+
+### Return type
+
+[**NdmpSessions**](NdmpSessions.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1982,31 +2913,95 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ndmp_sessions**
-> NdmpSessions get_ndmp_sessions()
+> NdmpSessionsExtended get_ndmp_sessions(consolidate=consolidate, node=node, session=session, limit=limit, resume=resume)
 
 
 
 List all ndmp sessions.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+consolidate = true # bool | Combine sessions in the same context. (optional)
+node = 'node_example' # str | Only return sessions of the node. (optional)
+session = 'session_example' # str | Only return the specified session. (optional)
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
-    api_response = api_instance.get_ndmp_sessions()
+try:
+    api_response = api_instance.get_ndmp_sessions(consolidate=consolidate, node=node, session=session, limit=limit, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ndmp_sessions: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ndmp_sessions: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **consolidate** | **bool**| Combine sessions in the same context. | [optional] 
+ **node** | **str**| Only return sessions of the node. | [optional] 
+ **session** | **str**| Only return the specified session. | [optional] 
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
+
+### Return type
+
+[**NdmpSessionsExtended**](NdmpSessionsExtended.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_settings_dmas**
+> NdmpSettingsDmas get_ndmp_settings_dmas()
+
+
+
+List of supported dma vendors.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+
+try:
+    api_response = api_instance.get_ndmp_settings_dmas()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_settings_dmas: %s\n" % e)
 ```
 
 ### Parameters
@@ -2014,11 +3009,11 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**NdmpSessions**](NdmpSessions.md)
+[**NdmpSettingsDmas**](NdmpSettingsDmas.md)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2034,25 +3029,28 @@ This endpoint does not need any parameter.
 
 List global ndmp settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_ndmp_settings_global()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ndmp_settings_global: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ndmp_settings_global: %s\n" % e)
 ```
 
 ### Parameters
@@ -2064,7 +3062,66 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ndmp_settings_variable**
+> NdmpSettingsVariables get_ndmp_settings_variable(ndmp_settings_variable_id, path=path, limit=limit, resume=resume)
+
+
+
+List of preferred environment variables.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_settings_variable_id = 'ndmp_settings_variable_id_example' # str | List of preferred environment variables.
+path = 'path_example' # str | Return variables of the path. (optional)
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
+
+try:
+    api_response = api_instance.get_ndmp_settings_variable(ndmp_settings_variable_id, path=path, limit=limit, resume=resume)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->get_ndmp_settings_variable: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_settings_variable_id** | **str**| List of preferred environment variables. | 
+ **path** | **str**| Return variables of the path. | [optional] 
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
+
+### Return type
+
+[**NdmpSettingsVariables**](NdmpSettingsVariables.md)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2080,26 +3137,29 @@ This endpoint does not need any parameter.
 
 Retrieve the user.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 ndmp_user_id = 'ndmp_user_id_example' # str | Retrieve the user.
 
-try: 
+try:
     api_response = api_instance.get_ndmp_user(ndmp_user_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ndmp_user: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ndmp_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -2114,7 +3174,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2123,43 +3183,48 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_nfs_aliase**
-> NfsAliases get_nfs_aliase(nfs_aliase_id, scope=scope, zone=zone)
+# **get_nfs_alias**
+> NfsAliases get_nfs_alias(nfs_alias_id, scope=scope, check=check, zone=zone)
 
 
 
 Retrieve export information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_aliase_id = 'nfs_aliase_id_example' # str | Retrieve export information.
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_alias_id = 'nfs_alias_id_example' # str | Retrieve export information.
 scope = 'scope_example' # str | When specified as 'effective', or not specified, all fields are returned. When specified as 'user', only fields with non-default values are shown. When specified as 'default', the original values are returned. (optional)
+check = true # bool | Check for conflicts when viewing alias. (optional)
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
-    api_response = api_instance.get_nfs_aliase(nfs_aliase_id, scope=scope, zone=zone)
+try:
+    api_response = api_instance.get_nfs_alias(nfs_alias_id, scope=scope, check=check, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_aliase: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_alias: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nfs_aliase_id** | **str**| Retrieve export information. | 
+ **nfs_alias_id** | **str**| Retrieve export information. | 
  **scope** | **str**| When specified as &#39;effective&#39;, or not specified, all fields are returned. When specified as &#39;user&#39;, only fields with non-default values are shown. When specified as &#39;default&#39;, the original values are returned. | [optional] 
+ **check** | **bool**| Check for conflicts when viewing alias. | [optional] 
  **zone** | **str**| Access zone | [optional] 
 
 ### Return type
@@ -2168,7 +3233,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2178,39 +3243,48 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nfs_check**
-> NfsCheckExtended get_nfs_check(zone=zone)
+> NfsCheckExtended get_nfs_check(ignore_bad_paths=ignore_bad_paths, ignore_bad_auth=ignore_bad_auth, zone=zone, ignore_unresolvable_hosts=ignore_unresolvable_hosts)
 
 
 
 Retrieve NFS export validation information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ignore_bad_paths = true # bool | Ignore nonexistent or otherwise bad paths. (optional)
+ignore_bad_auth = true # bool | Ignore invalid users. (optional)
 zone = 'zone_example' # str | Access zone (optional)
+ignore_unresolvable_hosts = true # bool | Ignore unresolvable hosts. (optional)
 
-try: 
-    api_response = api_instance.get_nfs_check(zone=zone)
+try:
+    api_response = api_instance.get_nfs_check(ignore_bad_paths=ignore_bad_paths, ignore_bad_auth=ignore_bad_auth, zone=zone, ignore_unresolvable_hosts=ignore_unresolvable_hosts)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_check: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_check: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **ignore_bad_paths** | **bool**| Ignore nonexistent or otherwise bad paths. | [optional] 
+ **ignore_bad_auth** | **bool**| Ignore invalid users. | [optional] 
  **zone** | **str**| Access zone | [optional] 
+ **ignore_unresolvable_hosts** | **bool**| Ignore unresolvable hosts. | [optional] 
 
 ### Return type
 
@@ -2218,7 +3292,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2234,28 +3308,31 @@ Name | Type | Description  | Notes
 
 Retrieve export information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 nfs_export_id = 'nfs_export_id_example' # str | Retrieve export information.
 scope = 'scope_example' # str | When specified as 'effective', or not specified, all fields are returned. When specified as 'user', only fields with non-default values are shown. When specified as 'default', the original values are returned. (optional)
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
+try:
     api_response = api_instance.get_nfs_export(nfs_export_id, scope=scope, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_export: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_export: %s\n" % e)
 ```
 
 ### Parameters
@@ -2272,7 +3349,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2288,26 +3365,29 @@ Name | Type | Description  | Notes
 
 Retrieve NFS export summary information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
+try:
     api_response = api_instance.get_nfs_exports_summary(zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_exports_summary: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_exports_summary: %s\n" % e)
 ```
 
 ### Parameters
@@ -2322,7 +3402,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2338,25 +3418,28 @@ Name | Type | Description  | Notes
 
 Get the current NFS service logging level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_nfs_log_level()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_log_level: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_log_level: %s\n" % e)
 ```
 
 ### Parameters
@@ -2368,7 +3451,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2384,26 +3467,29 @@ This endpoint does not need any parameter.
 
 Get the current NFS netgroup cache settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 host = 'host_example' # str | Host to retrieve netgroup cache settings from. (optional)
 
-try: 
+try:
     api_response = api_instance.get_nfs_netgroup(host=host)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_netgroup: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_netgroup: %s\n" % e)
 ```
 
 ### Parameters
@@ -2418,7 +3504,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2428,35 +3514,43 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nfs_nlm_locks**
-> NfsNlmLocks get_nfs_nlm_locks(sort=sort, limit=limit, dir=dir, resume=resume)
+> NfsNlmLocks get_nfs_nlm_locks(sort=sort, created=created, lin=lin, resume=resume, client=client, limit=limit, client_id=client_id, path=path, dir=dir)
 
 
 
 List all NLM locks.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
-limit = 56 # int | Return no more than this many results at once (see resume). (optional)
-dir = 'dir_example' # str | The direction of the sort. (optional)
+created = 'created_example' # str | Return locks created after the specified unix epoch time. (optional)
+lin = 'lin_example' # str | Filter locks by the specified LIN in /ifs that is locked. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
+client = 'client_example' # str | Filter locks by the specified client host name and IP address. (optional)
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+client_id = 'client_id_example' # str | Filter locks by the specified client ID. (optional)
+path = 'path_example' # str | Filter locks by the specified path under /ifs. (optional)
+dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
-    api_response = api_instance.get_nfs_nlm_locks(sort=sort, limit=limit, dir=dir, resume=resume)
+try:
+    api_response = api_instance.get_nfs_nlm_locks(sort=sort, created=created, lin=lin, resume=resume, client=client, limit=limit, client_id=client_id, path=path, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_nlm_locks: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_nlm_locks: %s\n" % e)
 ```
 
 ### Parameters
@@ -2464,9 +3558,14 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **str**| The field that will be used for sorting. | [optional] 
- **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
- **dir** | **str**| The direction of the sort. | [optional] 
+ **created** | **str**| Return locks created after the specified unix epoch time. | [optional] 
+ **lin** | **str**| Filter locks by the specified LIN in /ifs that is locked. | [optional] 
  **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
+ **client** | **str**| Filter locks by the specified client host name and IP address. | [optional] 
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **client_id** | **str**| Filter locks by the specified client ID. | [optional] 
+ **path** | **str**| Filter locks by the specified path under /ifs. | [optional] 
+ **dir** | **str**| The direction of the sort. | [optional] 
 
 ### Return type
 
@@ -2474,7 +3573,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2484,34 +3583,37 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nfs_nlm_session**
-> NfsNlmSessions get_nfs_nlm_session(nfs_nlm_session_id, ip=ip, zone=zone)
+> NfsNlmSessions get_nfs_nlm_session(nfs_nlm_session_id, cluster_ip=cluster_ip, zone=zone)
 
 
 
 Retrieve all lock state for a single client.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 nfs_nlm_session_id = 'nfs_nlm_session_id_example' # str | Retrieve all lock state for a single client.
-ip = 'ip_example' # str | An IP address for which NSM has client records (optional)
+cluster_ip = 'cluster_ip_example' # str | An IP address for which NSM has client records (optional)
 zone = 'zone_example' # str | Represents an extant auth zone (optional)
 
-try: 
-    api_response = api_instance.get_nfs_nlm_session(nfs_nlm_session_id, ip=ip, zone=zone)
+try:
+    api_response = api_instance.get_nfs_nlm_session(nfs_nlm_session_id, cluster_ip=cluster_ip, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_nlm_session: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_nlm_session: %s\n" % e)
 ```
 
 ### Parameters
@@ -2519,7 +3621,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nfs_nlm_session_id** | **str**| Retrieve all lock state for a single client. | 
- **ip** | **str**| An IP address for which NSM has client records | [optional] 
+ **cluster_ip** | **str**| An IP address for which NSM has client records | [optional] 
  **zone** | **str**| Represents an extant auth zone | [optional] 
 
 ### Return type
@@ -2528,7 +3630,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2538,41 +3640,50 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nfs_nlm_sessions**
-> NfsNlmSessionsExtended get_nfs_nlm_sessions(ip=ip, zone=zone)
+> NfsNlmSessionsExtended get_nfs_nlm_sessions(sort=sort, ip=ip, limit=limit, zone=zone, dir=dir)
 
 
 
 List all NSM clients (optionally filtered by either zone or IP)
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 ip = 'ip_example' # str | An IP address for which NSM has client records (optional)
+limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 zone = 'zone_example' # str | Represents an extant auth zone (optional)
+dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
-    api_response = api_instance.get_nfs_nlm_sessions(ip=ip, zone=zone)
+try:
+    api_response = api_instance.get_nfs_nlm_sessions(sort=sort, ip=ip, limit=limit, zone=zone, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_nlm_sessions: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_nlm_sessions: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **sort** | **str**| The field that will be used for sorting. | [optional] 
  **ip** | **str**| An IP address for which NSM has client records | [optional] 
+ **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
  **zone** | **str**| Represents an extant auth zone | [optional] 
+ **dir** | **str**| The direction of the sort. | [optional] 
 
 ### Return type
 
@@ -2580,7 +3691,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2596,29 +3707,32 @@ Name | Type | Description  | Notes
 
 List all NLM lock waiters.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.get_nfs_nlm_waiters(sort=sort, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_nlm_waiters: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_nlm_waiters: %s\n" % e)
 ```
 
 ### Parameters
@@ -2636,7 +3750,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2652,27 +3766,30 @@ Name | Type | Description  | Notes
 
 Retrieve export information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
+try:
     api_response = api_instance.get_nfs_settings_export(scope=scope, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_settings_export: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_settings_export: %s\n" % e)
 ```
 
 ### Parameters
@@ -2688,7 +3805,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2704,25 +3821,28 @@ Name | Type | Description  | Notes
 
 Retrieve the NFS configuration.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_nfs_settings_global()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_settings_global: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_settings_global: %s\n" % e)
 ```
 
 ### Parameters
@@ -2734,7 +3854,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2744,35 +3864,42 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_nfs_settings_zone**
-> NfsSettingsZone get_nfs_settings_zone()
+> NfsSettingsZone get_nfs_settings_zone(zone=zone)
 
 
 
 Retrieve the NFS server settings for this zone.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+zone = 'zone_example' # str | Access zone (optional)
 
-try: 
-    api_response = api_instance.get_nfs_settings_zone()
+try:
+    api_response = api_instance.get_nfs_settings_zone(zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_nfs_settings_zone: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_nfs_settings_zone: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **zone** | **str**| Access zone | [optional] 
 
 ### Return type
 
@@ -2780,7 +3907,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2796,26 +3923,29 @@ This endpoint does not need any parameter.
 
 Retrieve one NTP server.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 ntp_server_id = 'ntp_server_id_example' # str | Retrieve one NTP server.
 
-try: 
+try:
     api_response = api_instance.get_ntp_server(ntp_server_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ntp_server: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ntp_server: %s\n" % e)
 ```
 
 ### Parameters
@@ -2830,7 +3960,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2846,25 +3976,28 @@ Name | Type | Description  | Notes
 
 Retrieve the NTP settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_ntp_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_ntp_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_ntp_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -2876,7 +4009,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2892,25 +4025,28 @@ This endpoint does not need any parameter.
 
 Get the current SMB logging level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_smb_log_level()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_smb_log_level: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_smb_log_level: %s\n" % e)
 ```
 
 ### Parameters
@@ -2922,7 +4058,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2938,26 +4074,29 @@ This endpoint does not need any parameter.
 
 View log filter.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 smb_log_level_filter_id = 'smb_log_level_filter_id_example' # str | View log filter.
 
-try: 
+try:
     api_response = api_instance.get_smb_log_level_filter(smb_log_level_filter_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_smb_log_level_filter: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_smb_log_level_filter: %s\n" % e)
 ```
 
 ### Parameters
@@ -2972,7 +4111,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -2988,29 +4127,32 @@ Name | Type | Description  | Notes
 
 List open files.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | Order results by this field. Default is id. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.get_smb_openfiles(sort=sort, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_smb_openfiles: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_smb_openfiles: %s\n" % e)
 ```
 
 ### Parameters
@@ -3028,7 +4170,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3044,29 +4186,32 @@ Name | Type | Description  | Notes
 
 List open sessions.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | Order results by this field. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.get_smb_sessions(sort=sort, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_smb_sessions: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_smb_sessions: %s\n" % e)
 ```
 
 ### Parameters
@@ -3084,7 +4229,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3100,26 +4245,29 @@ Name | Type | Description  | Notes
 
 List all settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 
-try: 
+try:
     api_response = api_instance.get_smb_settings_global(scope=scope)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_smb_settings_global: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_smb_settings_global: %s\n" % e)
 ```
 
 ### Parameters
@@ -3134,7 +4282,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3150,27 +4298,30 @@ Name | Type | Description  | Notes
 
 List all settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 zone = 'zone_example' # str | Zone which contains these share settings. (optional)
 
-try: 
+try:
     api_response = api_instance.get_smb_settings_share(scope=scope, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_smb_settings_share: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_smb_settings_share: %s\n" % e)
 ```
 
 ### Parameters
@@ -3186,7 +4337,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3202,29 +4353,32 @@ Name | Type | Description  | Notes
 
 Retrieve share.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 smb_share_id = 'smb_share_id_example' # str | Retrieve share.
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 resolve_names = true # bool | If true, resolve group and user names in personas. (optional)
 zone = 'zone_example' # str | Zone which contains this share. (optional)
 
-try: 
+try:
     api_response = api_instance.get_smb_share(smb_share_id, scope=scope, resolve_names=resolve_names, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_smb_share: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_smb_share: %s\n" % e)
 ```
 
 ### Parameters
@@ -3242,7 +4396,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3252,35 +4406,42 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_smb_shares_summary**
-> SmbSharesSummary get_smb_shares_summary()
+> SmbSharesSummary get_smb_shares_summary(zone=zone)
 
 
 
 Return summary information about shares.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+zone = 'zone_example' # str | Specifies which access zone or zones to use. (optional)
 
-try: 
-    api_response = api_instance.get_smb_shares_summary()
+try:
+    api_response = api_instance.get_smb_shares_summary(zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_smb_shares_summary: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_smb_shares_summary: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **zone** | **str**| Specifies which access zone or zones to use. | [optional] 
 
 ### Return type
 
@@ -3288,7 +4449,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3304,25 +4465,28 @@ This endpoint does not need any parameter.
 
 Retrieve the SNMP settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_snmp_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_snmp_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_snmp_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -3334,7 +4498,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3344,32 +4508,36 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_swift_account**
-> SwiftAccounts get_swift_account(swift_account_id)
+> SwiftAccounts get_swift_account(swift_account_id, zone=zone)
 
 
 
 List a swift account.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 swift_account_id = 'swift_account_id_example' # str | List a swift account.
+zone = 'zone_example' # str | Access zone which contains Swift account. (optional)
 
-try: 
-    api_response = api_instance.get_swift_account(swift_account_id)
+try:
+    api_response = api_instance.get_swift_account(swift_account_id, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->get_swift_account: %s\n" % e
+    print("Exception when calling ProtocolsApi->get_swift_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -3377,6 +4545,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **swift_account_id** | **str**| List a swift account. | 
+ **zone** | **str**| Access zone which contains Swift account. | [optional] 
 
 ### Return type
 
@@ -3384,7 +4553,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3394,35 +4563,42 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_hdfs_proxyusers**
-> HdfsProxyusers list_hdfs_proxyusers()
+> HdfsProxyusers list_hdfs_proxyusers(zone=zone)
 
 
 
 List all proxyusers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+zone = 'zone_example' # str | Access zone which contains HDFS proxyusers. (optional)
 
-try: 
-    api_response = api_instance.list_hdfs_proxyusers()
+try:
+    api_response = api_instance.list_hdfs_proxyusers(zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_hdfs_proxyusers: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_hdfs_proxyusers: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **zone** | **str**| Access zone which contains HDFS proxyusers. | [optional] 
 
 ### Return type
 
@@ -3430,7 +4606,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3440,35 +4616,42 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_hdfs_racks**
-> HdfsRacksExtended list_hdfs_racks()
+> HdfsRacksExtended list_hdfs_racks(zone=zone)
 
 
 
 List all racks.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+zone = 'zone_example' # str | Access zone which contains HDFS racks. (optional)
 
-try: 
-    api_response = api_instance.list_hdfs_racks()
+try:
+    api_response = api_instance.list_hdfs_racks(zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_hdfs_racks: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_hdfs_racks: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **zone** | **str**| Access zone which contains HDFS racks. | [optional] 
 
 ### Return type
 
@@ -3476,7 +4659,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3492,25 +4675,28 @@ This endpoint does not need any parameter.
 
 List all ndmp administrators.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_ndmp_users()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_ndmp_users: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_ndmp_users: %s\n" % e)
 ```
 
 ### Parameters
@@ -3522,7 +4708,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3538,31 +4724,34 @@ This endpoint does not need any parameter.
 
 List all NFS aliases.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 zone = 'zone_example' # str | Access zone (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
-check = true # bool | Check for conflicts when listing exports. (optional)
+check = true # bool | Check for conflicts when listing aliases. (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.list_nfs_aliases(sort=sort, zone=zone, resume=resume, limit=limit, check=check, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_nfs_aliases: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_nfs_aliases: %s\n" % e)
 ```
 
 ### Parameters
@@ -3573,7 +4762,7 @@ Name | Type | Description  | Notes
  **zone** | **str**| Access zone | [optional] 
  **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
  **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
- **check** | **bool**| Check for conflicts when listing exports. | [optional] 
+ **check** | **bool**| Check for conflicts when listing aliases. | [optional] 
  **dir** | **str**| The direction of the sort. | [optional] 
 
 ### Return type
@@ -3582,7 +4771,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3592,39 +4781,42 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_nfs_exports**
-> NfsExportsExtended list_nfs_exports(sort=sort, paths=paths, zone=zone, resume=resume, limit=limit, scope=scope, check=check, dir=dir)
+> NfsExportsExtended list_nfs_exports(sort=sort, zone=zone, resume=resume, limit=limit, scope=scope, path=path, check=check, dir=dir)
 
 
 
 List all NFS exports.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
-paths = 'paths_example' # str | If specified, only exports that explicitly reference at least one of the given paths will be returned. (optional)
 zone = 'zone_example' # str | Access zone (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 scope = 'scope_example' # str | When specified as 'effective', or not specified, all fields are returned. When specified as 'user', only fields with non-default values are shown. When specified as 'default', the original values are returned. (optional)
+path = 'path_example' # str | If specified, only exports that explicitly reference at least one of the given paths will be returned. (optional)
 check = true # bool | Check for conflicts when listing exports. (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
-    api_response = api_instance.list_nfs_exports(sort=sort, paths=paths, zone=zone, resume=resume, limit=limit, scope=scope, check=check, dir=dir)
+try:
+    api_response = api_instance.list_nfs_exports(sort=sort, zone=zone, resume=resume, limit=limit, scope=scope, path=path, check=check, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_nfs_exports: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_nfs_exports: %s\n" % e)
 ```
 
 ### Parameters
@@ -3632,11 +4824,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **sort** | **str**| The field that will be used for sorting. | [optional] 
- **paths** | **str**| If specified, only exports that explicitly reference at least one of the given paths will be returned. | [optional] 
  **zone** | **str**| Access zone | [optional] 
  **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
  **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
  **scope** | **str**| When specified as &#39;effective&#39;, or not specified, all fields are returned. When specified as &#39;user&#39;, only fields with non-default values are shown. When specified as &#39;default&#39;, the original values are returned. | [optional] 
+ **path** | **str**| If specified, only exports that explicitly reference at least one of the given paths will be returned. | [optional] 
  **check** | **bool**| Check for conflicts when listing exports. | [optional] 
  **dir** | **str**| The direction of the sort. | [optional] 
 
@@ -3646,7 +4838,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3662,29 +4854,32 @@ Name | Type | Description  | Notes
 
 List all NTP servers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_ntp_servers(sort=sort, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_ntp_servers: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_ntp_servers: %s\n" % e)
 ```
 
 ### Parameters
@@ -3702,7 +4897,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3712,35 +4907,46 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_smb_log_level_filters**
-> SmbLogLevelFiltersExtended list_smb_log_level_filters()
+> SmbLogLevelFiltersExtended list_smb_log_level_filters(sort=sort, dir=dir, level=level)
 
 
 
 Get the current SMB log filters.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+sort = 'sort_example' # str | The field that will be used for sorting. (optional)
+dir = 'dir_example' # str | The direction of the sort. (optional)
+level = 'level_example' # str | Only return results with a given level. (optional)
 
-try: 
-    api_response = api_instance.list_smb_log_level_filters()
+try:
+    api_response = api_instance.list_smb_log_level_filters(sort=sort, dir=dir, level=level)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_smb_log_level_filters: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_smb_log_level_filters: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sort** | **str**| The field that will be used for sorting. | [optional] 
+ **dir** | **str**| The direction of the sort. | [optional] 
+ **level** | **str**| Only return results with a given level. | [optional] 
 
 ### Return type
 
@@ -3748,7 +4954,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3764,19 +4970,22 @@ This endpoint does not need any parameter.
 
 List all shares.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | Order results by this field. Default is id. (optional)
 zone = 'zone_example' # str | Zone which contains this share. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
@@ -3785,11 +4994,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 scope = 'scope_example' # str | If specified as \"effective\" or not specified, all fields are returned.  If specified as \"user\", only fields with non-default values are shown.  If specified as \"default\", the original values are returned. (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.list_smb_shares(sort=sort, zone=zone, resume=resume, resolve_names=resolve_names, limit=limit, scope=scope, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_smb_shares: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_smb_shares: %s\n" % e)
 ```
 
 ### Parameters
@@ -3810,7 +5019,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3820,35 +5029,42 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_swift_accounts**
-> SwiftAccounts list_swift_accounts()
+> SwiftAccounts list_swift_accounts(zone=zone)
 
 
 
 List all swift accounts.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+zone = 'zone_example' # str | Access zone which contains Swift accounts. (optional)
 
-try: 
-    api_response = api_instance.list_swift_accounts()
+try:
+    api_response = api_instance.list_swift_accounts(zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->list_swift_accounts: %s\n" % e
+    print("Exception when calling ProtocolsApi->list_swift_accounts: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **zone** | **str**| Access zone which contains Swift accounts. | [optional] 
 
 ### Return type
 
@@ -3856,7 +5072,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3872,32 +5088,35 @@ This endpoint does not need any parameter.
 
 Modify the FTP settings. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-ftp_settings = isi_sdk.FtpSettingsSettings() # FtpSettingsSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ftp_settings = isi_sdk_8_0.FtpSettingsExtended() # FtpSettingsExtended | 
 
-try: 
+try:
     api_instance.update_ftp_settings(ftp_settings)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_ftp_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_ftp_settings: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ftp_settings** | [**FtpSettingsSettings**](FtpSettingsSettings.md)|  | 
+ **ftp_settings** | [**FtpSettingsExtended**](FtpSettingsExtended.md)|  | 
 
 ### Return type
 
@@ -3905,7 +5124,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3921,25 +5140,28 @@ void (empty response body)
 
 Modify the HDFS service log-level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-hdfs_log_level = isi_sdk.HdfsLogLevel() # HdfsLogLevel | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+hdfs_log_level = isi_sdk_8_0.HdfsLogLevel() # HdfsLogLevel | 
 
-try: 
+try:
     api_instance.update_hdfs_log_level(hdfs_log_level)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_hdfs_log_level: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_hdfs_log_level: %s\n" % e)
 ```
 
 ### Parameters
@@ -3954,7 +5176,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -3964,32 +5186,36 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_hdfs_proxyuser**
-> update_hdfs_proxyuser(hdfs_proxyuser, hdfs_proxyuser_id)
+> update_hdfs_proxyuser(hdfs_proxyuser, hdfs_proxyuser_id, zone=zone)
 
 
 
-Create a new HDFS proxyuser.
+Modify an HDFS proxyuser.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-hdfs_proxyuser = isi_sdk.Empty() # Empty | 
-hdfs_proxyuser_id = 'hdfs_proxyuser_id_example' # str | Create a new HDFS proxyuser.
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+hdfs_proxyuser = isi_sdk_8_0.Empty() # Empty | 
+hdfs_proxyuser_id = 'hdfs_proxyuser_id_example' # str | Modify an HDFS proxyuser.
+zone = 'zone_example' # str | Access zone which contains HDFS proxyuser. (optional)
 
-try: 
-    api_instance.update_hdfs_proxyuser(hdfs_proxyuser, hdfs_proxyuser_id)
+try:
+    api_instance.update_hdfs_proxyuser(hdfs_proxyuser, hdfs_proxyuser_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_hdfs_proxyuser: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_hdfs_proxyuser: %s\n" % e)
 ```
 
 ### Parameters
@@ -3997,7 +5223,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hdfs_proxyuser** | [**Empty**](Empty.md)|  | 
- **hdfs_proxyuser_id** | **str**| Create a new HDFS proxyuser. | 
+ **hdfs_proxyuser_id** | **str**| Modify an HDFS proxyuser. | 
+ **zone** | **str**| Access zone which contains HDFS proxyuser. | [optional] 
 
 ### Return type
 
@@ -4005,7 +5232,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4015,32 +5242,36 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_hdfs_rack**
-> update_hdfs_rack(hdfs_rack, hdfs_rack_id)
+> update_hdfs_rack(hdfs_rack, hdfs_rack_id, zone=zone)
 
 
 
 Modify the HDFS rack
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-hdfs_rack = isi_sdk.HdfsRack() # HdfsRack | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+hdfs_rack = isi_sdk_8_0.HdfsRack() # HdfsRack | 
 hdfs_rack_id = 'hdfs_rack_id_example' # str | Modify the HDFS rack
+zone = 'zone_example' # str | Access zone which contains HDFS rack. (optional)
 
-try: 
-    api_instance.update_hdfs_rack(hdfs_rack, hdfs_rack_id)
+try:
+    api_instance.update_hdfs_rack(hdfs_rack, hdfs_rack_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_hdfs_rack: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_hdfs_rack: %s\n" % e)
 ```
 
 ### Parameters
@@ -4049,6 +5280,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hdfs_rack** | [**HdfsRack**](HdfsRack.md)|  | 
  **hdfs_rack_id** | **str**| Modify the HDFS rack | 
+ **zone** | **str**| Access zone which contains HDFS rack. | [optional] 
 
 ### Return type
 
@@ -4056,7 +5288,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4066,31 +5298,35 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_hdfs_settings**
-> update_hdfs_settings(hdfs_settings)
+> update_hdfs_settings(hdfs_settings, zone=zone)
 
 
 
 Modify HDFS properties.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-hdfs_settings = isi_sdk.HdfsSettingsSettings() # HdfsSettingsSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+hdfs_settings = isi_sdk_8_0.HdfsSettingsSettings() # HdfsSettingsSettings | 
+zone = 'zone_example' # str | Access zone which contains HDFS settings. (optional)
 
-try: 
-    api_instance.update_hdfs_settings(hdfs_settings)
+try:
+    api_instance.update_hdfs_settings(hdfs_settings, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_hdfs_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_hdfs_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -4098,6 +5334,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **hdfs_settings** | [**HdfsSettingsSettings**](HdfsSettingsSettings.md)|  | 
+ **zone** | **str**| Access zone which contains HDFS settings. | [optional] 
 
 ### Return type
 
@@ -4105,7 +5342,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4121,25 +5358,28 @@ void (empty response body)
 
 Modify HTTP properties.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-http_settings = isi_sdk.HttpSettingsSettings() # HttpSettingsSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+http_settings = isi_sdk_8_0.HttpSettingsSettings() # HttpSettingsSettings | 
 
-try: 
+try:
     api_instance.update_http_settings(http_settings)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_http_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_http_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -4154,7 +5394,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4170,25 +5410,28 @@ void (empty response body)
 
 Modify ndmp diagnostics settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-ndmp_diagnostics = isi_sdk.NdmpDiagnosticsDiagnostics() # NdmpDiagnosticsDiagnostics | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_diagnostics = isi_sdk_8_0.NdmpDiagnosticsDiagnostics() # NdmpDiagnosticsDiagnostics | 
 
-try: 
+try:
     api_instance.update_ndmp_diagnostics(ndmp_diagnostics)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_ndmp_diagnostics: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_ndmp_diagnostics: %s\n" % e)
 ```
 
 ### Parameters
@@ -4203,7 +5446,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4219,25 +5462,28 @@ void (empty response body)
 
 Modify one or more settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-ndmp_settings_global = isi_sdk.NdmpSettingsGlobalGlobal() # NdmpSettingsGlobalGlobal | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_settings_global = isi_sdk_8_0.NdmpSettingsGlobalGlobal() # NdmpSettingsGlobalGlobal | 
 
-try: 
+try:
     api_instance.update_ndmp_settings_global(ndmp_settings_global)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_ndmp_settings_global: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_ndmp_settings_global: %s\n" % e)
 ```
 
 ### Parameters
@@ -4252,7 +5498,63 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_ndmp_settings_variable**
+> update_ndmp_settings_variable(ndmp_settings_variable, ndmp_settings_variable_id, name=name)
+
+
+
+Modify or create a NDMP preferred environment variable.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_settings_variable = isi_sdk_8_0.NdmpSettingsVariable() # NdmpSettingsVariable | 
+ndmp_settings_variable_id = 'ndmp_settings_variable_id_example' # str | Modify or create a NDMP preferred environment variable.
+name = 'name_example' # str | Name of the variable to modify. (optional)
+
+try:
+    api_instance.update_ndmp_settings_variable(ndmp_settings_variable, ndmp_settings_variable_id, name=name)
+except ApiException as e:
+    print("Exception when calling ProtocolsApi->update_ndmp_settings_variable: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ndmp_settings_variable** | [**NdmpSettingsVariable**](NdmpSettingsVariable.md)|  | 
+ **ndmp_settings_variable_id** | **str**| Modify or create a NDMP preferred environment variable. | 
+ **name** | **str**| Name of the variable to modify. | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4268,26 +5570,29 @@ void (empty response body)
 
 Modify the user
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-ndmp_user = isi_sdk.NdmpUser() # NdmpUser | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ndmp_user = isi_sdk_8_0.NdmpUser() # NdmpUser | 
 ndmp_user_id = 'ndmp_user_id_example' # str | Modify the user
 
-try: 
+try:
     api_instance.update_ndmp_user(ndmp_user, ndmp_user_id)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_ndmp_user: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_ndmp_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -4303,7 +5608,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4312,42 +5617,45 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_nfs_aliase**
-> update_nfs_aliase(nfs_aliase, nfs_aliase_id, zone=zone)
+# **update_nfs_alias**
+> update_nfs_alias(nfs_alias, nfs_alias_id, zone=zone)
 
 
 
 Modify the alias. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_aliase = isi_sdk.NfsAliase() # NfsAliase | 
-nfs_aliase_id = 'nfs_aliase_id_example' # str | Modify the alias. All input fields are optional, but one or more must be supplied.
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_alias = isi_sdk_8_0.NfsAlias() # NfsAlias | 
+nfs_alias_id = 'nfs_alias_id_example' # str | Modify the alias. All input fields are optional, but one or more must be supplied.
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
-    api_instance.update_nfs_aliase(nfs_aliase, nfs_aliase_id, zone=zone)
+try:
+    api_instance.update_nfs_alias(nfs_alias, nfs_alias_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_nfs_aliase: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_nfs_alias: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **nfs_aliase** | [**NfsAliase**](NfsAliase.md)|  | 
- **nfs_aliase_id** | **str**| Modify the alias. All input fields are optional, but one or more must be supplied. | 
+ **nfs_alias** | [**NfsAlias**](NfsAlias.md)|  | 
+ **nfs_alias_id** | **str**| Modify the alias. All input fields are optional, but one or more must be supplied. | 
  **zone** | **str**| Access zone | [optional] 
 
 ### Return type
@@ -4356,7 +5664,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4366,34 +5674,41 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_nfs_export**
-> update_nfs_export(nfs_export, nfs_export_id, force=force, zone=zone)
+> update_nfs_export(nfs_export, nfs_export_id, force=force, ignore_unresolvable_hosts=ignore_unresolvable_hosts, zone=zone, ignore_conflicts=ignore_conflicts, ignore_bad_paths=ignore_bad_paths, ignore_bad_auth=ignore_bad_auth)
 
 
 
 Modify the export. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_export = isi_sdk.NfsExport() # NfsExport | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_export = isi_sdk_8_0.NfsExport() # NfsExport | 
 nfs_export_id = 'nfs_export_id_example' # str | Modify the export. All input fields are optional, but one or more must be supplied.
 force = true # bool | If true, the export will be updated even if that change conflicts with another export. (optional)
+ignore_unresolvable_hosts = true # bool | Ignore unresolvable hosts. (optional)
 zone = 'zone_example' # str | Access zone (optional)
+ignore_conflicts = true # bool | Ignore conflicts with existing exports. (optional)
+ignore_bad_paths = true # bool | Ignore nonexistent or otherwise bad paths. (optional)
+ignore_bad_auth = true # bool | Ignore invalid users. (optional)
 
-try: 
-    api_instance.update_nfs_export(nfs_export, nfs_export_id, force=force, zone=zone)
+try:
+    api_instance.update_nfs_export(nfs_export, nfs_export_id, force=force, ignore_unresolvable_hosts=ignore_unresolvable_hosts, zone=zone, ignore_conflicts=ignore_conflicts, ignore_bad_paths=ignore_bad_paths, ignore_bad_auth=ignore_bad_auth)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_nfs_export: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_nfs_export: %s\n" % e)
 ```
 
 ### Parameters
@@ -4403,7 +5718,11 @@ Name | Type | Description  | Notes
  **nfs_export** | [**NfsExport**](NfsExport.md)|  | 
  **nfs_export_id** | **str**| Modify the export. All input fields are optional, but one or more must be supplied. | 
  **force** | **bool**| If true, the export will be updated even if that change conflicts with another export. | [optional] 
+ **ignore_unresolvable_hosts** | **bool**| Ignore unresolvable hosts. | [optional] 
  **zone** | **str**| Access zone | [optional] 
+ **ignore_conflicts** | **bool**| Ignore conflicts with existing exports. | [optional] 
+ **ignore_bad_paths** | **bool**| Ignore nonexistent or otherwise bad paths. | [optional] 
+ **ignore_bad_auth** | **bool**| Ignore invalid users. | [optional] 
 
 ### Return type
 
@@ -4411,7 +5730,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4427,25 +5746,28 @@ void (empty response body)
 
 Set the current NFS service logging level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_log_level = isi_sdk.NfsLogLevel() # NfsLogLevel | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_log_level = isi_sdk_8_0.NfsLogLevel() # NfsLogLevel | 
 
-try: 
+try:
     api_instance.update_nfs_log_level(nfs_log_level)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_nfs_log_level: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_nfs_log_level: %s\n" % e)
 ```
 
 ### Parameters
@@ -4460,7 +5782,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4476,26 +5798,29 @@ void (empty response body)
 
 Modify the current NFS netgroup settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_netgroup = isi_sdk.NfsNetgroup() # NfsNetgroup | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_netgroup = isi_sdk_8_0.NfsNetgroup() # NfsNetgroup | 
 host = 'host_example' # str | Host to retrieve netgroup cache settings for. (optional)
 
-try: 
+try:
     api_instance.update_nfs_netgroup(nfs_netgroup, host=host)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_nfs_netgroup: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_nfs_netgroup: %s\n" % e)
 ```
 
 ### Parameters
@@ -4511,7 +5836,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4527,26 +5852,29 @@ void (empty response body)
 
 Modify the default values for NFS exports. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_settings_export = isi_sdk.NfsSettingsExportSettings() # NfsSettingsExportSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_settings_export = isi_sdk_8_0.NfsSettingsExportSettings() # NfsSettingsExportSettings | 
 zone = 'zone_example' # str | Access zone (optional)
 
-try: 
+try:
     api_instance.update_nfs_settings_export(nfs_settings_export, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_nfs_settings_export: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_nfs_settings_export: %s\n" % e)
 ```
 
 ### Parameters
@@ -4562,7 +5890,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4578,25 +5906,28 @@ void (empty response body)
 
 Modify the default values for NFS exports. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_settings_global = isi_sdk.NfsSettingsGlobalSettings() # NfsSettingsGlobalSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_settings_global = isi_sdk_8_0.NfsSettingsGlobalSettings() # NfsSettingsGlobalSettings | 
 
-try: 
+try:
     api_instance.update_nfs_settings_global(nfs_settings_global)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_nfs_settings_global: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_nfs_settings_global: %s\n" % e)
 ```
 
 ### Parameters
@@ -4611,7 +5942,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4621,31 +5952,35 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_nfs_settings_zone**
-> update_nfs_settings_zone(nfs_settings_zone)
+> update_nfs_settings_zone(nfs_settings_zone, zone=zone)
 
 
 
 Modify the NFS server settings for this zone.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-nfs_settings_zone = isi_sdk.NfsSettingsZoneSettings() # NfsSettingsZoneSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+nfs_settings_zone = isi_sdk_8_0.NfsSettingsZoneSettings() # NfsSettingsZoneSettings | 
+zone = 'zone_example' # str | Access zone (optional)
 
-try: 
-    api_instance.update_nfs_settings_zone(nfs_settings_zone)
+try:
+    api_instance.update_nfs_settings_zone(nfs_settings_zone, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_nfs_settings_zone: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_nfs_settings_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -4653,6 +5988,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **nfs_settings_zone** | [**NfsSettingsZoneSettings**](NfsSettingsZoneSettings.md)|  | 
+ **zone** | **str**| Access zone | [optional] 
 
 ### Return type
 
@@ -4660,7 +5996,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4676,26 +6012,29 @@ void (empty response body)
 
 Modify the key value for an NTP server.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-ntp_server = isi_sdk.NtpServer() # NtpServer | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ntp_server = isi_sdk_8_0.NtpServer() # NtpServer | 
 ntp_server_id = 'ntp_server_id_example' # str | Modify the key value for an NTP server.
 
-try: 
+try:
     api_instance.update_ntp_server(ntp_server, ntp_server_id)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_ntp_server: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_ntp_server: %s\n" % e)
 ```
 
 ### Parameters
@@ -4711,7 +6050,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4727,25 +6066,28 @@ void (empty response body)
 
 Modify the NTP settings. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-ntp_settings = isi_sdk.NtpSettingsSettings() # NtpSettingsSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+ntp_settings = isi_sdk_8_0.NtpSettingsSettings() # NtpSettingsSettings | 
 
-try: 
+try:
     api_instance.update_ntp_settings(ntp_settings)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_ntp_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_ntp_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -4760,7 +6102,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4776,25 +6118,28 @@ void (empty response body)
 
 Set the current SMB logging level.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-smb_log_level = isi_sdk.SmbLogLevel() # SmbLogLevel | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+smb_log_level = isi_sdk_8_0.SmbLogLevel() # SmbLogLevel | 
 
-try: 
+try:
     api_instance.update_smb_log_level(smb_log_level)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_smb_log_level: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_smb_log_level: %s\n" % e)
 ```
 
 ### Parameters
@@ -4809,7 +6154,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4825,32 +6170,35 @@ void (empty response body)
 
 Modify one or more settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-smb_settings_global = isi_sdk.SmbSettingsGlobalSettings() # SmbSettingsGlobalSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+smb_settings_global = isi_sdk_8_0.SmbSettingsGlobalExtended() # SmbSettingsGlobalExtended | 
 
-try: 
+try:
     api_instance.update_smb_settings_global(smb_settings_global)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_smb_settings_global: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_smb_settings_global: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smb_settings_global** | [**SmbSettingsGlobalSettings**](SmbSettingsGlobalSettings.md)|  | 
+ **smb_settings_global** | [**SmbSettingsGlobalExtended**](SmbSettingsGlobalExtended.md)|  | 
 
 ### Return type
 
@@ -4858,7 +6206,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4874,33 +6222,36 @@ void (empty response body)
 
 Modify one or more settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-smb_settings_share = isi_sdk.SmbSettingsShareSettings() # SmbSettingsShareSettings | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+smb_settings_share = isi_sdk_8_0.SmbSettingsShareExtended() # SmbSettingsShareExtended | 
 zone = 'zone_example' # str | Zone which contains these share settings. (optional)
 
-try: 
+try:
     api_instance.update_smb_settings_share(smb_settings_share, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_smb_settings_share: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_smb_settings_share: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **smb_settings_share** | [**SmbSettingsShareSettings**](SmbSettingsShareSettings.md)|  | 
+ **smb_settings_share** | [**SmbSettingsShareExtended**](SmbSettingsShareExtended.md)|  | 
  **zone** | **str**| Zone which contains these share settings. | [optional] 
 
 ### Return type
@@ -4909,7 +6260,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4923,29 +6274,32 @@ void (empty response body)
 
 
 
-Modify share. All input fields are optional, but one or must be supplied.
+Modify share. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-smb_share = isi_sdk.SmbShare() # SmbShare | 
-smb_share_id = 'smb_share_id_example' # str | Modify share. All input fields are optional, but one or must be supplied.
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+smb_share = isi_sdk_8_0.SmbShare() # SmbShare | 
+smb_share_id = 'smb_share_id_example' # str | Modify share. All input fields are optional, but one or more must be supplied.
 zone = 'zone_example' # str | Zone which contains this share. (optional)
 
-try: 
+try:
     api_instance.update_smb_share(smb_share, smb_share_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_smb_share: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_smb_share: %s\n" % e)
 ```
 
 ### Parameters
@@ -4953,7 +6307,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **smb_share** | [**SmbShare**](SmbShare.md)|  | 
- **smb_share_id** | **str**| Modify share. All input fields are optional, but one or must be supplied. | 
+ **smb_share_id** | **str**| Modify share. All input fields are optional, but one or more must be supplied. | 
  **zone** | **str**| Zone which contains this share. | [optional] 
 
 ### Return type
@@ -4962,7 +6316,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -4978,25 +6332,28 @@ void (empty response body)
 
 Modify the SNMO settings. All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-snmp_settings = isi_sdk.SnmpSettingsExtended() # SnmpSettingsExtended | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+snmp_settings = isi_sdk_8_0.SnmpSettingsExtended() # SnmpSettingsExtended | 
 
-try: 
+try:
     api_instance.update_snmp_settings(snmp_settings)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_snmp_settings: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_snmp_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -5011,7 +6368,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -5021,32 +6378,36 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_swift_account**
-> update_swift_account(swift_account, swift_account_id)
+> update_swift_account(swift_account, swift_account_id, zone=zone)
 
 
 
 Modify a Swift account
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsApi()
-swift_account = isi_sdk.SwiftAccount() # SwiftAccount | 
+api_instance = isi_sdk_8_0.ProtocolsApi(isi_sdk_8_0.ApiClient(configuration))
+swift_account = isi_sdk_8_0.SwiftAccount() # SwiftAccount | 
 swift_account_id = 'swift_account_id_example' # str | Modify a Swift account
+zone = 'zone_example' # str | Access zone which contains Swift account. (optional)
 
-try: 
-    api_instance.update_swift_account(swift_account, swift_account_id)
+try:
+    api_instance.update_swift_account(swift_account, swift_account_id, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsApi->update_swift_account: %s\n" % e
+    print("Exception when calling ProtocolsApi->update_swift_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -5055,6 +6416,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **swift_account** | [**SwiftAccount**](SwiftAccount.md)|  | 
  **swift_account_id** | **str**| Modify a Swift account | 
+ **zone** | **str**| Access zone which contains Swift account. | [optional] 
 
 ### Return type
 
@@ -5062,7 +6424,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

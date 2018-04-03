@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**enabled** | **bool** | Whether the job type is enabled and able to run. | [optional] 
-**policy** | **str** | Default impact policy of this job type. | [optional] 
-**priority** | **int** | Default priority of this job type; lower numbers preempt higher numbers. | [optional] 
+**enabled** | **bool** | Whether the job type is enabled and able to run. | 
+**policy** | **str** | Default impact policy of this job type. | 
+**priority** | **int** | Default priority of this job type; lower numbers preempt higher numbers. | 
 **schedule** | **str** | The schedule on which this job type is queued, if any. | [optional] 
 **allow_multiple_instances** | **bool** | Whether multiple instances of this job type may run simultaneously. | 
 **description** | **str** | Brief description of the job type. | 

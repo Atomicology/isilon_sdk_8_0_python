@@ -1,4 +1,4 @@
-# isi_sdk.NetworkGroupnetsSubnetsApi
+# isi_sdk_8_0.NetworkGroupnetsSubnetsApi
 
 All URIs are relative to *https://localhost*
 
@@ -22,29 +22,32 @@ Method | HTTP request | Description
 
 Rebalance IP addresses in specified pool.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
-pools_pool_rebalance_ip = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
+pools_pool_rebalance_ip = isi_sdk_8_0.Empty() # Empty | 
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
 
-try: 
+try:
     api_response = api_instance.create_pools_pool_rebalance_ip(pools_pool_rebalance_ip, groupnet, subnet, pool)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->create_pools_pool_rebalance_ip: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->create_pools_pool_rebalance_ip: %s\n" % e)
 ```
 
 ### Parameters
@@ -62,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -78,29 +81,32 @@ Name | Type | Description  | Notes
 
 Create a new rule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
-pools_pool_rule = isi_sdk.PoolsPoolRuleCreateParams() # PoolsPoolRuleCreateParams | 
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
+pools_pool_rule = isi_sdk_8_0.PoolsPoolRuleCreateParams() # PoolsPoolRuleCreateParams | 
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
 
-try: 
+try:
     api_response = api_instance.create_pools_pool_rule(pools_pool_rule, groupnet, subnet, pool)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->create_pools_pool_rule: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->create_pools_pool_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -118,7 +124,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -134,29 +140,32 @@ Name | Type | Description  | Notes
 
 Resume suspended nodes.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
-pools_pool_sc_resume_node = isi_sdk.PoolsPoolScResumeNode() # PoolsPoolScResumeNode | 
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
+pools_pool_sc_resume_node = isi_sdk_8_0.PoolsPoolScResumeNode() # PoolsPoolScResumeNode | 
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
 
-try: 
+try:
     api_response = api_instance.create_pools_pool_sc_resume_node(pools_pool_sc_resume_node, groupnet, subnet, pool)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->create_pools_pool_sc_resume_node: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->create_pools_pool_sc_resume_node: %s\n" % e)
 ```
 
 ### Parameters
@@ -174,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -190,29 +199,32 @@ Name | Type | Description  | Notes
 
 Suspend nodes.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
-pools_pool_sc_suspend_node = isi_sdk.PoolsPoolScResumeNode() # PoolsPoolScResumeNode | 
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
+pools_pool_sc_suspend_node = isi_sdk_8_0.PoolsPoolScResumeNode() # PoolsPoolScResumeNode | 
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
 
-try: 
+try:
     api_response = api_instance.create_pools_pool_sc_suspend_node(pools_pool_sc_suspend_node, groupnet, subnet, pool)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->create_pools_pool_sc_suspend_node: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->create_pools_pool_sc_suspend_node: %s\n" % e)
 ```
 
 ### Parameters
@@ -230,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -246,28 +258,31 @@ Name | Type | Description  | Notes
 
 Delete a network rule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
 pools_pool_rule_id = 'pools_pool_rule_id_example' # str | Delete a network rule.
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
 
-try: 
+try:
     api_instance.delete_pools_pool_rule(pools_pool_rule_id, groupnet, subnet, pool)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->delete_pools_pool_rule: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->delete_pools_pool_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -285,7 +300,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -301,19 +316,22 @@ void (empty response body)
 
 Get a list of interfaces.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
@@ -323,11 +341,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 dir = 'dir_example' # str | The direction of the sort. (optional)
 lnns = 'lnns_example' # str | Get a list of interfaces for the specified lnn. (optional)
 
-try: 
+try:
     api_response = api_instance.get_pools_pool_interfaces(groupnet, subnet, pool, sort=sort, resume=resume, limit=limit, dir=dir, lnns=lnns)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->get_pools_pool_interfaces: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->get_pools_pool_interfaces: %s\n" % e)
 ```
 
 ### Parameters
@@ -349,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -365,29 +383,32 @@ Name | Type | Description  | Notes
 
 View a single network rule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
 pools_pool_rule_id = 'pools_pool_rule_id_example' # str | View a single network rule.
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
 
-try: 
+try:
     api_response = api_instance.get_pools_pool_rule(pools_pool_rule_id, groupnet, subnet, pool)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->get_pools_pool_rule: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->get_pools_pool_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -405,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -421,19 +442,22 @@ Name | Type | Description  | Notes
 
 Get a list of network rules.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
@@ -442,11 +466,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_pools_pool_rules(groupnet, subnet, pool, sort=sort, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->list_pools_pool_rules: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->list_pools_pool_rules: %s\n" % e)
 ```
 
 ### Parameters
@@ -467,7 +491,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -483,29 +507,32 @@ Name | Type | Description  | Notes
 
 Modify a network rule.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.NetworkGroupnetsSubnetsApi()
-pools_pool_rule = isi_sdk.PoolsPoolRule() # PoolsPoolRule | 
+api_instance = isi_sdk_8_0.NetworkGroupnetsSubnetsApi(isi_sdk_8_0.ApiClient(configuration))
+pools_pool_rule = isi_sdk_8_0.PoolsPoolRule() # PoolsPoolRule | 
 pools_pool_rule_id = 'pools_pool_rule_id_example' # str | Modify a network rule.
 groupnet = 'groupnet_example' # str | 
 subnet = 'subnet_example' # str | 
 pool = 'pool_example' # str | 
 
-try: 
+try:
     api_instance.update_pools_pool_rule(pools_pool_rule, pools_pool_rule_id, groupnet, subnet, pool)
 except ApiException as e:
-    print "Exception when calling NetworkGroupnetsSubnetsApi->update_pools_pool_rule: %s\n" % e
+    print("Exception when calling NetworkGroupnetsSubnetsApi->update_pools_pool_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -524,7 +551,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

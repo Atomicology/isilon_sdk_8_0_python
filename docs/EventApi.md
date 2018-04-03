@@ -1,4 +1,4 @@
-# isi_sdk.EventApi
+# isi_sdk_8_0.EventApi
 
 All URIs are relative to *https://localhost*
 
@@ -37,26 +37,29 @@ Method | HTTP request | Description
 
 Create a new alert condition.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
-event_alert_condition = isi_sdk.EventAlertConditionCreateParams() # EventAlertConditionCreateParams | 
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
+event_alert_condition = isi_sdk_8_0.EventAlertConditionCreateParams() # EventAlertConditionCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_event_alert_condition(event_alert_condition)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->create_event_alert_condition: %s\n" % e
+    print("Exception when calling EventApi->create_event_alert_condition: %s\n" % e)
 ```
 
 ### Parameters
@@ -71,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -87,26 +90,29 @@ Name | Type | Description  | Notes
 
 Create a new channel.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
-event_channel = isi_sdk.EventChannelCreateParams() # EventChannelCreateParams | 
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
+event_channel = isi_sdk_8_0.EventChannelCreateParams() # EventChannelCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_event_channel(event_channel)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->create_event_channel: %s\n" % e
+    print("Exception when calling EventApi->create_event_channel: %s\n" % e)
 ```
 
 ### Parameters
@@ -121,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -137,26 +143,29 @@ Name | Type | Description  | Notes
 
 Create a test event.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
-event_event = isi_sdk.EventEvent() # EventEvent | 
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
+event_event = isi_sdk_8_0.EventEvent() # EventEvent | 
 
-try: 
+try:
     api_response = api_instance.create_event_event(event_event)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->create_event_event: %s\n" % e
+    print("Exception when calling EventApi->create_event_event: %s\n" % e)
 ```
 
 ### Parameters
@@ -171,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -187,25 +196,28 @@ Name | Type | Description  | Notes
 
 Delete the alert-condition.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_alert_condition_id = 'event_alert_condition_id_example' # str | Delete the alert-condition.
 
-try: 
+try:
     api_instance.delete_event_alert_condition(event_alert_condition_id)
 except ApiException as e:
-    print "Exception when calling EventApi->delete_event_alert_condition: %s\n" % e
+    print("Exception when calling EventApi->delete_event_alert_condition: %s\n" % e)
 ```
 
 ### Parameters
@@ -220,7 +232,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -236,25 +248,28 @@ void (empty response body)
 
 Bulk delete of alert conditions.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 channel = 'channel_example' # str | Delete only conditions for this channel (optional)
 
-try: 
+try:
     api_instance.delete_event_alert_conditions(channel=channel)
 except ApiException as e:
-    print "Exception when calling EventApi->delete_event_alert_conditions: %s\n" % e
+    print("Exception when calling EventApi->delete_event_alert_conditions: %s\n" % e)
 ```
 
 ### Parameters
@@ -269,7 +284,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -285,25 +300,28 @@ void (empty response body)
 
 Delete the alert-condition.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_channel_id = 'event_channel_id_example' # str | Delete the alert-condition.
 
-try: 
+try:
     api_instance.delete_event_channel(event_channel_id)
 except ApiException as e:
-    print "Exception when calling EventApi->delete_event_channel: %s\n" % e
+    print("Exception when calling EventApi->delete_event_channel: %s\n" % e)
 ```
 
 ### Parameters
@@ -318,7 +336,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -334,26 +352,29 @@ void (empty response body)
 
 Retrieve the alert-condition.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_alert_condition_id = 'event_alert_condition_id_example' # str | Retrieve the alert-condition.
 
-try: 
+try:
     api_response = api_instance.get_event_alert_condition(event_alert_condition_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_alert_condition: %s\n" % e
+    print("Exception when calling EventApi->get_event_alert_condition: %s\n" % e)
 ```
 
 ### Parameters
@@ -368,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -384,27 +405,30 @@ Name | Type | Description  | Notes
 
 List all eventgroup categories.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.get_event_categories(limit=limit, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_categories: %s\n" % e
+    print("Exception when calling EventApi->get_event_categories: %s\n" % e)
 ```
 
 ### Parameters
@@ -420,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -436,26 +460,29 @@ Name | Type | Description  | Notes
 
 Retrieve the eventgroup category.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_category_id = 'event_category_id_example' # str | Retrieve the eventgroup category.
 
-try: 
+try:
     api_response = api_instance.get_event_category(event_category_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_category: %s\n" % e
+    print("Exception when calling EventApi->get_event_category: %s\n" % e)
 ```
 
 ### Parameters
@@ -470,7 +497,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -486,26 +513,29 @@ Name | Type | Description  | Notes
 
 Retrieve the alert-condition.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_channel_id = 'event_channel_id_example' # str | Retrieve the alert-condition.
 
-try: 
+try:
     api_response = api_instance.get_event_channel(event_channel_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_channel: %s\n" % e
+    print("Exception when calling EventApi->get_event_channel: %s\n" % e)
 ```
 
 ### Parameters
@@ -520,7 +550,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -536,26 +566,29 @@ Name | Type | Description  | Notes
 
 Retrieve the eventgroup definition.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_eventgroup_definition_id = 'event_eventgroup_definition_id_example' # str | Retrieve the eventgroup definition.
 
-try: 
+try:
     api_response = api_instance.get_event_eventgroup_definition(event_eventgroup_definition_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_eventgroup_definition: %s\n" % e
+    print("Exception when calling EventApi->get_event_eventgroup_definition: %s\n" % e)
 ```
 
 ### Parameters
@@ -570,7 +603,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -586,28 +619,31 @@ Name | Type | Description  | Notes
 
 List all eventgroup definitions.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 category = 56 # int | Return eventgroups in the specified category (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.get_event_eventgroup_definitions(category=category, limit=limit, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_eventgroup_definitions: %s\n" % e
+    print("Exception when calling EventApi->get_event_eventgroup_definitions: %s\n" % e)
 ```
 
 ### Parameters
@@ -624,7 +660,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -640,26 +676,29 @@ Name | Type | Description  | Notes
 
 Retrieve individual eventgroup occurrence.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_eventgroup_occurrence_id = 'event_eventgroup_occurrence_id_example' # str | Retrieve individual eventgroup occurrence.
 
-try: 
+try:
     api_response = api_instance.get_event_eventgroup_occurrence(event_eventgroup_occurrence_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_eventgroup_occurrence: %s\n" % e
+    print("Exception when calling EventApi->get_event_eventgroup_occurrence: %s\n" % e)
 ```
 
 ### Parameters
@@ -674,7 +713,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -690,19 +729,22 @@ Name | Type | Description  | Notes
 
 List all eventgroup occurrences.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 resolved = true # bool | Filter for resolved eventgroups (optional)
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 begin = 56 # int | events that are in progress after this time (optional)
@@ -715,11 +757,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 cause = 'cause_example' # str | Filter for cause (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.get_event_eventgroup_occurrences(resolved=resolved, sort=sort, begin=begin, end=end, event_count=event_count, resume=resume, fixer=fixer, ignore=ignore, limit=limit, cause=cause, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_eventgroup_occurrences: %s\n" % e
+    print("Exception when calling EventApi->get_event_eventgroup_occurrences: %s\n" % e)
 ```
 
 ### Parameters
@@ -744,7 +786,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -760,26 +802,29 @@ Name | Type | Description  | Notes
 
 Retrieve the list of events for a eventgroup occureence.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_eventlist_id = 'event_eventlist_id_example' # str | Retrieve the list of events for a eventgroup occureence.
 
-try: 
+try:
     api_response = api_instance.get_event_eventlist(event_eventlist_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_eventlist: %s\n" % e
+    print("Exception when calling EventApi->get_event_eventlist: %s\n" % e)
 ```
 
 ### Parameters
@@ -794,7 +839,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -804,34 +849,38 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_event_eventlists**
-> EventEventlistsExtended get_event_eventlists(event_instance=event_instance, limit=limit, resume=resume)
+> EventEventlistsExtended get_event_eventlists(event_instance=event_instance, limit=limit, severity=severity, resume=resume)
 
 
 
 List all event occurrences grouped by eventgroup occurrence.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 event_instance = 'event_instance_example' # str | Return only this event occurrence (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
+severity = 'severity_example' # str | Minimum severity of returned events. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
-    api_response = api_instance.get_event_eventlists(event_instance=event_instance, limit=limit, resume=resume)
+try:
+    api_response = api_instance.get_event_eventlists(event_instance=event_instance, limit=limit, severity=severity, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_eventlists: %s\n" % e
+    print("Exception when calling EventApi->get_event_eventlists: %s\n" % e)
 ```
 
 ### Parameters
@@ -840,6 +889,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **event_instance** | **str**| Return only this event occurrence | [optional] 
  **limit** | **int**| Return no more than this many results at once (see resume). | [optional] 
+ **severity** | **str**| Minimum severity of returned events. | [optional] 
  **resume** | **str**| Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). | [optional] 
 
 ### Return type
@@ -848,7 +898,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -864,25 +914,28 @@ Name | Type | Description  | Notes
 
 Retrieve the settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_event_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->get_event_settings: %s\n" % e
+    print("Exception when calling EventApi->get_event_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -894,7 +947,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -910,30 +963,33 @@ This endpoint does not need any parameter.
 
 List all alert conditions.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 channel_ids = 'channel_ids_example' # str | Return only conditions for the specified channel: (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_event_alert_conditions(sort=sort, channel_ids=channel_ids, limit=limit, dir=dir, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->list_event_alert_conditions: %s\n" % e
+    print("Exception when calling EventApi->list_event_alert_conditions: %s\n" % e)
 ```
 
 ### Parameters
@@ -952,7 +1008,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -968,27 +1024,30 @@ Name | Type | Description  | Notes
 
 List all channels.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
 
-try: 
+try:
     api_response = api_instance.list_event_channels(limit=limit, resume=resume)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling EventApi->list_event_channels: %s\n" % e
+    print("Exception when calling EventApi->list_event_channels: %s\n" % e)
 ```
 
 ### Parameters
@@ -1004,7 +1063,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1020,26 +1079,29 @@ Name | Type | Description  | Notes
 
 Modify the alert-condition
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
-event_alert_condition = isi_sdk.EventAlertCondition() # EventAlertCondition | 
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
+event_alert_condition = isi_sdk_8_0.EventAlertCondition() # EventAlertCondition | 
 event_alert_condition_id = 'event_alert_condition_id_example' # str | Modify the alert-condition
 
-try: 
+try:
     api_instance.update_event_alert_condition(event_alert_condition, event_alert_condition_id)
 except ApiException as e:
-    print "Exception when calling EventApi->update_event_alert_condition: %s\n" % e
+    print("Exception when calling EventApi->update_event_alert_condition: %s\n" % e)
 ```
 
 ### Parameters
@@ -1055,7 +1117,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1071,26 +1133,29 @@ void (empty response body)
 
 Modify the alert-condition
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
-event_channel = isi_sdk.EventChannel() # EventChannel | 
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
+event_channel = isi_sdk_8_0.EventChannel() # EventChannel | 
 event_channel_id = 'event_channel_id_example' # str | Modify the alert-condition
 
-try: 
+try:
     api_instance.update_event_channel(event_channel, event_channel_id)
 except ApiException as e:
-    print "Exception when calling EventApi->update_event_channel: %s\n" % e
+    print("Exception when calling EventApi->update_event_channel: %s\n" % e)
 ```
 
 ### Parameters
@@ -1106,7 +1171,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1122,26 +1187,29 @@ void (empty response body)
 
 modify eventgroup occurrence.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
-event_eventgroup_occurrence = isi_sdk.EventEventgroupOccurrence() # EventEventgroupOccurrence | 
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
+event_eventgroup_occurrence = isi_sdk_8_0.EventEventgroupOccurrence() # EventEventgroupOccurrence | 
 event_eventgroup_occurrence_id = 'event_eventgroup_occurrence_id_example' # str | modify eventgroup occurrence.
 
-try: 
+try:
     api_instance.update_event_eventgroup_occurrence(event_eventgroup_occurrence, event_eventgroup_occurrence_id)
 except ApiException as e:
-    print "Exception when calling EventApi->update_event_eventgroup_occurrence: %s\n" % e
+    print("Exception when calling EventApi->update_event_eventgroup_occurrence: %s\n" % e)
 ```
 
 ### Parameters
@@ -1157,7 +1225,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1173,25 +1241,28 @@ void (empty response body)
 
 Modify all eventgroup occurrences, resolve or ignore all
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
-event_eventgroup_occurrences = isi_sdk.EventEventgroupOccurrence() # EventEventgroupOccurrence | 
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
+event_eventgroup_occurrences = isi_sdk_8_0.EventEventgroupOccurrence() # EventEventgroupOccurrence | 
 
-try: 
+try:
     api_instance.update_event_eventgroup_occurrences(event_eventgroup_occurrences)
 except ApiException as e:
-    print "Exception when calling EventApi->update_event_eventgroup_occurrences: %s\n" % e
+    print("Exception when calling EventApi->update_event_eventgroup_occurrences: %s\n" % e)
 ```
 
 ### Parameters
@@ -1206,7 +1277,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1222,25 +1293,28 @@ void (empty response body)
 
 Update settings
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.EventApi()
-event_settings = isi_sdk.EventSettings() # EventSettings | 
+api_instance = isi_sdk_8_0.EventApi(isi_sdk_8_0.ApiClient(configuration))
+event_settings = isi_sdk_8_0.EventSettings() # EventSettings | 
 
-try: 
+try:
     api_instance.update_event_settings(event_settings)
 except ApiException as e:
-    print "Exception when calling EventApi->update_event_settings: %s\n" % e
+    print("Exception when calling EventApi->update_event_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1255,7 +1329,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

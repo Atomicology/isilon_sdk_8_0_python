@@ -1,4 +1,4 @@
-# isi_sdk.CloudApi
+# isi_sdk_8_0.CloudApi
 
 All URIs are relative to *https://localhost*
 
@@ -38,26 +38,29 @@ Method | HTTP request | Description
 
 Add a cluster identifier to access list.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-cloud_access_item = isi_sdk.CloudAccessItem() # CloudAccessItem | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+cloud_access_item = isi_sdk_8_0.CloudAccessItem() # CloudAccessItem | 
 
-try: 
+try:
     api_response = api_instance.create_cloud_access_item(cloud_access_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->create_cloud_access_item: %s\n" % e
+    print("Exception when calling CloudApi->create_cloud_access_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -72,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -88,26 +91,29 @@ Name | Type | Description  | Notes
 
 Create a new account.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-cloud_account = isi_sdk.CloudAccountCreateParams() # CloudAccountCreateParams | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+cloud_account = isi_sdk_8_0.CloudAccountCreateParams() # CloudAccountCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_cloud_account(cloud_account)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->create_cloud_account: %s\n" % e
+    print("Exception when calling CloudApi->create_cloud_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -122,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -138,26 +144,29 @@ Name | Type | Description  | Notes
 
 Create a new job.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-cloud_job = isi_sdk.CloudJobCreateParams() # CloudJobCreateParams | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+cloud_job = isi_sdk_8_0.CloudJobCreateParams() # CloudJobCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_cloud_job(cloud_job)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->create_cloud_job: %s\n" % e
+    print("Exception when calling CloudApi->create_cloud_job: %s\n" % e)
 ```
 
 ### Parameters
@@ -172,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -188,26 +197,29 @@ Name | Type | Description  | Notes
 
 Create a new pool.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-cloud_pool = isi_sdk.CloudPoolCreateParams() # CloudPoolCreateParams | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+cloud_pool = isi_sdk_8_0.CloudPoolCreateParams() # CloudPoolCreateParams | 
 
-try: 
+try:
     api_response = api_instance.create_cloud_pool(cloud_pool)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->create_cloud_pool: %s\n" % e
+    print("Exception when calling CloudApi->create_cloud_pool: %s\n" % e)
 ```
 
 ### Parameters
@@ -222,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -238,25 +250,28 @@ Name | Type | Description  | Notes
 
 Regenerate master encryption key.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.create_settings_encryption_key_item()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->create_settings_encryption_key_item: %s\n" % e
+    print("Exception when calling CloudApi->create_settings_encryption_key_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -268,7 +283,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -284,26 +299,29 @@ This endpoint does not need any parameter.
 
 Accept telemetry collection EULA.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-settings_reporting_eula_item = isi_sdk.SettingsReportingEulaItem() # SettingsReportingEulaItem | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+settings_reporting_eula_item = isi_sdk_8_0.SettingsReportingEulaItem() # SettingsReportingEulaItem | 
 
-try: 
+try:
     api_response = api_instance.create_settings_reporting_eula_item(settings_reporting_eula_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->create_settings_reporting_eula_item: %s\n" % e
+    print("Exception when calling CloudApi->create_settings_reporting_eula_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -318,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -334,25 +352,28 @@ Name | Type | Description  | Notes
 
 Delete cloud access.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 cloud_access_guid = 'cloud_access_guid_example' # str | Delete cloud access.
 
-try: 
+try:
     api_instance.delete_cloud_access_guid(cloud_access_guid)
 except ApiException as e:
-    print "Exception when calling CloudApi->delete_cloud_access_guid: %s\n" % e
+    print("Exception when calling CloudApi->delete_cloud_access_guid: %s\n" % e)
 ```
 
 ### Parameters
@@ -367,7 +388,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -377,31 +398,35 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_cloud_account**
-> delete_cloud_account(cloud_account_id)
+> delete_cloud_account(cloud_account_id, acknowledge_force_delete=acknowledge_force_delete)
 
 
 
 Delete cloud account.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 cloud_account_id = 'cloud_account_id_example' # str | Delete cloud account.
+acknowledge_force_delete = 'acknowledge_force_delete_example' # str | A value of 1 acknowledges that the user is deleting data. (optional)
 
-try: 
-    api_instance.delete_cloud_account(cloud_account_id)
+try:
+    api_instance.delete_cloud_account(cloud_account_id, acknowledge_force_delete=acknowledge_force_delete)
 except ApiException as e:
-    print "Exception when calling CloudApi->delete_cloud_account: %s\n" % e
+    print("Exception when calling CloudApi->delete_cloud_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -409,6 +434,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_account_id** | **str**| Delete cloud account. | 
+ **acknowledge_force_delete** | **str**| A value of 1 acknowledges that the user is deleting data. | [optional] 
 
 ### Return type
 
@@ -416,7 +442,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -426,31 +452,35 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_cloud_pool**
-> delete_cloud_pool(cloud_pool_id)
+> delete_cloud_pool(cloud_pool_id, acknowledge_force_delete=acknowledge_force_delete)
 
 
 
 Delete a cloud pool.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 cloud_pool_id = 'cloud_pool_id_example' # str | Delete a cloud pool.
+acknowledge_force_delete = 'acknowledge_force_delete_example' # str | A value of 1 acknowledges that the user is deleting data. (optional)
 
-try: 
-    api_instance.delete_cloud_pool(cloud_pool_id)
+try:
+    api_instance.delete_cloud_pool(cloud_pool_id, acknowledge_force_delete=acknowledge_force_delete)
 except ApiException as e:
-    print "Exception when calling CloudApi->delete_cloud_pool: %s\n" % e
+    print("Exception when calling CloudApi->delete_cloud_pool: %s\n" % e)
 ```
 
 ### Parameters
@@ -458,6 +488,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pool_id** | **str**| Delete a cloud pool. | 
+ **acknowledge_force_delete** | **str**| A value of 1 acknowledges that the user is deleting data. | [optional] 
 
 ### Return type
 
@@ -465,7 +496,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -481,24 +512,27 @@ void (empty response body)
 
 Revoke acceptance of telemetry collection EULA.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_instance.delete_settings_reporting_eula()
 except ApiException as e:
-    print "Exception when calling CloudApi->delete_settings_reporting_eula: %s\n" % e
+    print("Exception when calling CloudApi->delete_settings_reporting_eula: %s\n" % e)
 ```
 
 ### Parameters
@@ -510,7 +544,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -526,26 +560,29 @@ void (empty response body)
 
 Retrieve cloud access information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 cloud_access_guid = 'cloud_access_guid_example' # str | Retrieve cloud access information.
 
-try: 
+try:
     api_response = api_instance.get_cloud_access_guid(cloud_access_guid)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->get_cloud_access_guid: %s\n" % e
+    print("Exception when calling CloudApi->get_cloud_access_guid: %s\n" % e)
 ```
 
 ### Parameters
@@ -560,7 +597,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -576,26 +613,29 @@ Name | Type | Description  | Notes
 
 Retrieve cloud account information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 cloud_account_id = 'cloud_account_id_example' # str | Retrieve cloud account information.
 
-try: 
+try:
     api_response = api_instance.get_cloud_account(cloud_account_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->get_cloud_account: %s\n" % e
+    print("Exception when calling CloudApi->get_cloud_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -610,7 +650,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -626,26 +666,29 @@ Name | Type | Description  | Notes
 
 Retrieve cloudpool job information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 cloud_job_id = 'cloud_job_id_example' # str | Retrieve cloudpool job information.
 
-try: 
+try:
     api_response = api_instance.get_cloud_job(cloud_job_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->get_cloud_job: %s\n" % e
+    print("Exception when calling CloudApi->get_cloud_job: %s\n" % e)
 ```
 
 ### Parameters
@@ -660,7 +703,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -676,19 +719,22 @@ Name | Type | Description  | Notes
 
 Retrieve files associated with a cloudpool job.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 cloud_jobs_file_id = 'cloud_jobs_file_id_example' # str | Retrieve files associated with a cloudpool job.
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
@@ -697,11 +743,11 @@ limit = 56 # int | Return no more than this many results at once (see resume). (
 page = 56 # int | Works only when \"batch\" parameter and \"limit\" parameters are specified.  Indicates which the page index of results to be returned (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.get_cloud_jobs_file(cloud_jobs_file_id, sort=sort, resume=resume, batch=batch, limit=limit, page=page, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->get_cloud_jobs_file: %s\n" % e
+    print("Exception when calling CloudApi->get_cloud_jobs_file: %s\n" % e)
 ```
 
 ### Parameters
@@ -722,7 +768,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -738,26 +784,29 @@ Name | Type | Description  | Notes
 
 Retrieve cloud pool information
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 cloud_pool_id = 'cloud_pool_id_example' # str | Retrieve cloud pool information
 
-try: 
+try:
     api_response = api_instance.get_cloud_pool(cloud_pool_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->get_cloud_pool: %s\n" % e
+    print("Exception when calling CloudApi->get_cloud_pool: %s\n" % e)
 ```
 
 ### Parameters
@@ -772,7 +821,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -788,25 +837,28 @@ Name | Type | Description  | Notes
 
 List all cloud settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cloud_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->get_cloud_settings: %s\n" % e
+    print("Exception when calling CloudApi->get_cloud_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -818,7 +870,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -834,28 +886,31 @@ This endpoint does not need any parameter.
 
 List all accessible cluster identifiers.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.list_cloud_access(sort=sort, limit=limit, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->list_cloud_access: %s\n" % e
+    print("Exception when calling CloudApi->list_cloud_access: %s\n" % e)
 ```
 
 ### Parameters
@@ -872,7 +927,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -888,28 +943,31 @@ Name | Type | Description  | Notes
 
 List all accounts.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.list_cloud_accounts(sort=sort, limit=limit, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->list_cloud_accounts: %s\n" % e
+    print("Exception when calling CloudApi->list_cloud_accounts: %s\n" % e)
 ```
 
 ### Parameters
@@ -926,7 +984,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -942,28 +1000,31 @@ Name | Type | Description  | Notes
 
 List all cloudpools jobs.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.list_cloud_jobs(sort=sort, limit=limit, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->list_cloud_jobs: %s\n" % e
+    print("Exception when calling CloudApi->list_cloud_jobs: %s\n" % e)
 ```
 
 ### Parameters
@@ -980,7 +1041,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -996,28 +1057,31 @@ Name | Type | Description  | Notes
 
 List all pools.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.list_cloud_pools(sort=sort, limit=limit, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->list_cloud_pools: %s\n" % e
+    print("Exception when calling CloudApi->list_cloud_pools: %s\n" % e)
 ```
 
 ### Parameters
@@ -1034,7 +1098,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1050,25 +1114,28 @@ Name | Type | Description  | Notes
 
 View telemetry collection EULA acceptance and content URI.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.list_settings_reporting_eula()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling CloudApi->list_settings_reporting_eula: %s\n" % e
+    print("Exception when calling CloudApi->list_settings_reporting_eula: %s\n" % e)
 ```
 
 ### Parameters
@@ -1080,7 +1147,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1096,26 +1163,29 @@ This endpoint does not need any parameter.
 
 Modify cloud account.  All fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-cloud_account = isi_sdk.CloudAccount() # CloudAccount | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+cloud_account = isi_sdk_8_0.CloudAccount() # CloudAccount | 
 cloud_account_id = 'cloud_account_id_example' # str | Modify cloud account.  All fields are optional, but one or more must be supplied.
 
-try: 
+try:
     api_instance.update_cloud_account(cloud_account, cloud_account_id)
 except ApiException as e:
-    print "Exception when calling CloudApi->update_cloud_account: %s\n" % e
+    print("Exception when calling CloudApi->update_cloud_account: %s\n" % e)
 ```
 
 ### Parameters
@@ -1131,7 +1201,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1147,26 +1217,29 @@ void (empty response body)
 
 Modify a cloud job or operation.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-cloud_job = isi_sdk.CloudJob() # CloudJob | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+cloud_job = isi_sdk_8_0.CloudJob() # CloudJob | 
 cloud_job_id = 'cloud_job_id_example' # str | Modify a cloud job or operation.
 
-try: 
+try:
     api_instance.update_cloud_job(cloud_job, cloud_job_id)
 except ApiException as e:
-    print "Exception when calling CloudApi->update_cloud_job: %s\n" % e
+    print("Exception when calling CloudApi->update_cloud_job: %s\n" % e)
 ```
 
 ### Parameters
@@ -1182,7 +1255,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1198,26 +1271,29 @@ void (empty response body)
 
 Modify a cloud pool.  All fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-cloud_pool = isi_sdk.CloudPool() # CloudPool | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+cloud_pool = isi_sdk_8_0.CloudPool() # CloudPool | 
 cloud_pool_id = 'cloud_pool_id_example' # str | Modify a cloud pool.  All fields are optional, but one or more must be supplied.
 
-try: 
+try:
     api_instance.update_cloud_pool(cloud_pool, cloud_pool_id)
 except ApiException as e:
-    print "Exception when calling CloudApi->update_cloud_pool: %s\n" % e
+    print("Exception when calling CloudApi->update_cloud_pool: %s\n" % e)
 ```
 
 ### Parameters
@@ -1233,7 +1309,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -1249,25 +1325,28 @@ void (empty response body)
 
 Modify one or more settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.CloudApi()
-cloud_settings = isi_sdk.CloudSettingsSettings() # CloudSettingsSettings | 
+api_instance = isi_sdk_8_0.CloudApi(isi_sdk_8_0.ApiClient(configuration))
+cloud_settings = isi_sdk_8_0.CloudSettingsSettings() # CloudSettingsSettings | 
 
-try: 
+try:
     api_instance.update_cloud_settings(cloud_settings)
 except ApiException as e:
-    print "Exception when calling CloudApi->update_cloud_settings: %s\n" % e
+    print("Exception when calling CloudApi->update_cloud_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1282,7 +1361,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

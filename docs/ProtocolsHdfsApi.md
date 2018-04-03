@@ -1,4 +1,4 @@
-# isi_sdk.ProtocolsHdfsApi
+# isi_sdk_8_0.ProtocolsHdfsApi
 
 All URIs are relative to *https://localhost*
 
@@ -11,33 +11,37 @@ Method | HTTP request | Description
 
 
 # **create_proxyusers_name_member**
-> CreateResponse create_proxyusers_name_member(proxyusers_name_member, name)
+> CreateResponse create_proxyusers_name_member(proxyusers_name_member, name, zone=zone)
 
 
 
 Add a member to the HDFS proxyuser.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsHdfsApi()
-proxyusers_name_member = isi_sdk.GroupMember() # GroupMember | 
+api_instance = isi_sdk_8_0.ProtocolsHdfsApi(isi_sdk_8_0.ApiClient(configuration))
+proxyusers_name_member = isi_sdk_8_0.GroupMember() # GroupMember | 
 name = 'name_example' # str | 
+zone = 'zone_example' # str | Specifies which access zone or zones to use. (optional)
 
-try: 
-    api_response = api_instance.create_proxyusers_name_member(proxyusers_name_member, name)
+try:
+    api_response = api_instance.create_proxyusers_name_member(proxyusers_name_member, name, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsHdfsApi->create_proxyusers_name_member: %s\n" % e
+    print("Exception when calling ProtocolsHdfsApi->create_proxyusers_name_member: %s\n" % e)
 ```
 
 ### Parameters
@@ -46,6 +50,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **proxyusers_name_member** | [**GroupMember**](GroupMember.md)|  | 
  **name** | **str**|  | 
+ **zone** | **str**| Specifies which access zone or zones to use. | [optional] 
 
 ### Return type
 
@@ -53,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -63,32 +68,36 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_proxyusers_name_member**
-> delete_proxyusers_name_member(proxyusers_name_member_id, name)
+> delete_proxyusers_name_member(proxyusers_name_member_id, name, zone=zone)
 
 
 
 Remove a member from the HDFS proxyuser.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsHdfsApi()
+api_instance = isi_sdk_8_0.ProtocolsHdfsApi(isi_sdk_8_0.ApiClient(configuration))
 proxyusers_name_member_id = 'proxyusers_name_member_id_example' # str | Remove a member from the HDFS proxyuser.
 name = 'name_example' # str | 
+zone = 'zone_example' # str | Specifies which access zone or zones to use. (optional)
 
-try: 
-    api_instance.delete_proxyusers_name_member(proxyusers_name_member_id, name)
+try:
+    api_instance.delete_proxyusers_name_member(proxyusers_name_member_id, name, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsHdfsApi->delete_proxyusers_name_member: %s\n" % e
+    print("Exception when calling ProtocolsHdfsApi->delete_proxyusers_name_member: %s\n" % e)
 ```
 
 ### Parameters
@@ -97,6 +106,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **proxyusers_name_member_id** | **str**| Remove a member from the HDFS proxyuser. | 
  **name** | **str**|  | 
+ **zone** | **str**| Specifies which access zone or zones to use. | [optional] 
 
 ### Return type
 
@@ -104,7 +114,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -114,32 +124,36 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_proxyusers_name_members**
-> GroupMembers list_proxyusers_name_members(name)
+> GroupMembers list_proxyusers_name_members(name, zone=zone)
 
 
 
 List all the members of the HDFS proxyuser.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsHdfsApi()
+api_instance = isi_sdk_8_0.ProtocolsHdfsApi(isi_sdk_8_0.ApiClient(configuration))
 name = 'name_example' # str | 
+zone = 'zone_example' # str | Specifies which access zone or zones to use. (optional)
 
-try: 
-    api_response = api_instance.list_proxyusers_name_members(name)
+try:
+    api_response = api_instance.list_proxyusers_name_members(name, zone=zone)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ProtocolsHdfsApi->list_proxyusers_name_members: %s\n" % e
+    print("Exception when calling ProtocolsHdfsApi->list_proxyusers_name_members: %s\n" % e)
 ```
 
 ### Parameters
@@ -147,6 +161,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **str**|  | 
+ **zone** | **str**| Specifies which access zone or zones to use. | [optional] 
 
 ### Return type
 
@@ -154,7 +169,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -164,33 +179,37 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_proxyusers_name_member**
-> update_proxyusers_name_member(proxyusers_name_member, proxyusers_name_member_id, name)
+> update_proxyusers_name_member(proxyusers_name_member, proxyusers_name_member_id, name, zone=zone)
 
 
 
 Create a new HDFS proxyuser.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ProtocolsHdfsApi()
-proxyusers_name_member = isi_sdk.Empty() # Empty | 
+api_instance = isi_sdk_8_0.ProtocolsHdfsApi(isi_sdk_8_0.ApiClient(configuration))
+proxyusers_name_member = isi_sdk_8_0.Empty() # Empty | 
 proxyusers_name_member_id = 'proxyusers_name_member_id_example' # str | Create a new HDFS proxyuser.
 name = 'name_example' # str | 
+zone = 'zone_example' # str | Specifies which access zone or zones to use. (optional)
 
-try: 
-    api_instance.update_proxyusers_name_member(proxyusers_name_member, proxyusers_name_member_id, name)
+try:
+    api_instance.update_proxyusers_name_member(proxyusers_name_member, proxyusers_name_member_id, name, zone=zone)
 except ApiException as e:
-    print "Exception when calling ProtocolsHdfsApi->update_proxyusers_name_member: %s\n" % e
+    print("Exception when calling ProtocolsHdfsApi->update_proxyusers_name_member: %s\n" % e)
 ```
 
 ### Parameters
@@ -200,6 +219,7 @@ Name | Type | Description  | Notes
  **proxyusers_name_member** | [**Empty**](Empty.md)|  | 
  **proxyusers_name_member_id** | **str**| Create a new HDFS proxyuser. | 
  **name** | **str**|  | 
+ **zone** | **str**| Specifies which access zone or zones to use. | [optional] 
 
 ### Return type
 
@@ -207,7 +227,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

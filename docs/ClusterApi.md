@@ -1,4 +1,4 @@
-# isi_sdk.ClusterApi
+# isi_sdk_8_0.ClusterApi
 
 All URIs are relative to *https://localhost*
 
@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**create_cluster_add_node_item**](ClusterApi.md#create_cluster_add_node_item) | **POST** /platform/3/cluster/add-node | 
 [**get_cluster_config**](ClusterApi.md#get_cluster_config) | **GET** /platform/3/cluster/config | 
 [**get_cluster_email**](ClusterApi.md#get_cluster_email) | **GET** /platform/1/cluster/email | 
+[**get_cluster_external_ips**](ClusterApi.md#get_cluster_external_ips) | **GET** /platform/2/cluster/external-ips | 
 [**get_cluster_identity**](ClusterApi.md#get_cluster_identity) | **GET** /platform/3/cluster/identity | 
 [**get_cluster_node**](ClusterApi.md#get_cluster_node) | **GET** /platform/3/cluster/nodes/{ClusterNodeId} | 
 [**get_cluster_nodes**](ClusterApi.md#get_cluster_nodes) | **GET** /platform/3/cluster/nodes | 
@@ -34,26 +35,29 @@ Method | HTTP request | Description
 
 Serial number and arguments of node to add.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
-cluster_add_node_item = isi_sdk.ClusterAddNodeItem() # ClusterAddNodeItem | 
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+cluster_add_node_item = isi_sdk_8_0.ClusterAddNodeItem() # ClusterAddNodeItem | 
 
-try: 
+try:
     api_response = api_instance.create_cluster_add_node_item(cluster_add_node_item)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->create_cluster_add_node_item: %s\n" % e
+    print("Exception when calling ClusterApi->create_cluster_add_node_item: %s\n" % e)
 ```
 
 ### Parameters
@@ -68,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -84,25 +88,28 @@ Name | Type | Description  | Notes
 
 Retrieve the cluster information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_config()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_config: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_config: %s\n" % e)
 ```
 
 ### Parameters
@@ -114,7 +121,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -130,25 +137,28 @@ This endpoint does not need any parameter.
 
 Get the cluster email notification settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_email()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_email: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_email: %s\n" % e)
 ```
 
 ### Parameters
@@ -160,7 +170,56 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_cluster_external_ips**
+> list[str] get_cluster_external_ips()
+
+
+
+Retrieve the cluster IP addresses including IPV4 and IPV6.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+
+try:
+    api_response = api_instance.get_cluster_external_ips()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ClusterApi->get_cluster_external_ips: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**list[str]**
+
+### Authorization
+
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -176,25 +235,28 @@ This endpoint does not need any parameter.
 
 Retrieve the login information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_identity()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_identity: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_identity: %s\n" % e)
 ```
 
 ### Parameters
@@ -206,7 +268,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -222,26 +284,29 @@ This endpoint does not need any parameter.
 
 Retrieve node information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 cluster_node_id = 56 # int | Retrieve node information.
 
-try: 
+try:
     api_response = api_instance.get_cluster_node(cluster_node_id)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_node: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_node: %s\n" % e)
 ```
 
 ### Parameters
@@ -256,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -272,25 +337,28 @@ Name | Type | Description  | Notes
 
 List the nodes on this cluster.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_nodes()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_nodes: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_nodes: %s\n" % e)
 ```
 
 ### Parameters
@@ -302,7 +370,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -318,25 +386,28 @@ This endpoint does not need any parameter.
 
 List all nodes that are available to add to this cluster.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_nodes_available()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_nodes_available: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_nodes_available: %s\n" % e)
 ```
 
 ### Parameters
@@ -348,7 +419,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -364,25 +435,28 @@ This endpoint does not need any parameter.
 
 Get the cluster contact info settings
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_owner()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_owner: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_owner: %s\n" % e)
 ```
 
 ### Parameters
@@ -394,7 +468,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -410,25 +484,28 @@ This endpoint does not need any parameter.
 
 Retrieve the filesystem statistics.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_statfs()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_statfs: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_statfs: %s\n" % e)
 ```
 
 ### Parameters
@@ -440,7 +517,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -456,25 +533,28 @@ This endpoint does not need any parameter.
 
 Retrieve the current time as reported by each node.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_time()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_time: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_time: %s\n" % e)
 ```
 
 ### Parameters
@@ -486,7 +566,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -502,25 +582,28 @@ This endpoint does not need any parameter.
 
 Get the cluster timezone.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_timezone()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_timezone: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_timezone: %s\n" % e)
 ```
 
 ### Parameters
@@ -532,7 +615,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -548,25 +631,28 @@ This endpoint does not need any parameter.
 
 Retrieve the OneFS version as reported by each node.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_cluster_version()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_cluster_version: %s\n" % e
+    print("Exception when calling ClusterApi->get_cluster_version: %s\n" % e)
 ```
 
 ### Parameters
@@ -578,7 +664,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -594,19 +680,22 @@ This endpoint does not need any parameter.
 
 List timezone regions.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 timezone_region_id = 'timezone_region_id_example' # str | List timezone regions.
 sort = 'sort_example' # str | The field that will be used for sorting. (optional)
 resume = 'resume_example' # str | Continue returning results from previous call using this token (token should come from the previous call, resume cannot be used with other options). (optional)
@@ -615,11 +704,11 @@ dst_reset = true # bool | This query arg is not needed in normal use cases. (opt
 limit = 56 # int | Return no more than this many results at once (see resume). (optional)
 dir = 'dir_example' # str | The direction of the sort. (optional)
 
-try: 
+try:
     api_response = api_instance.get_timezone_region(timezone_region_id, sort=sort, resume=resume, show_all=show_all, dst_reset=dst_reset, limit=limit, dir=dir)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_timezone_region: %s\n" % e
+    print("Exception when calling ClusterApi->get_timezone_region: %s\n" % e)
 ```
 
 ### Parameters
@@ -640,7 +729,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -656,25 +745,28 @@ Name | Type | Description  | Notes
 
 Retrieve the cluster timezone.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
 
-try: 
+try:
     api_response = api_instance.get_timezone_settings()
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ClusterApi->get_timezone_settings: %s\n" % e
+    print("Exception when calling ClusterApi->get_timezone_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -686,7 +778,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -702,25 +794,28 @@ This endpoint does not need any parameter.
 
 Modify the cluster email notification settings.  All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
-cluster_email = isi_sdk.ClusterEmailExtended() # ClusterEmailExtended | 
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+cluster_email = isi_sdk_8_0.ClusterEmailExtended() # ClusterEmailExtended | 
 
-try: 
+try:
     api_instance.update_cluster_email(cluster_email)
 except ApiException as e:
-    print "Exception when calling ClusterApi->update_cluster_email: %s\n" % e
+    print("Exception when calling ClusterApi->update_cluster_email: %s\n" % e)
 ```
 
 ### Parameters
@@ -735,7 +830,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -751,25 +846,28 @@ void (empty response body)
 
 Modify the login information.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
-cluster_identity = isi_sdk.ClusterIdentityExtended() # ClusterIdentityExtended | 
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+cluster_identity = isi_sdk_8_0.ClusterIdentityExtended() # ClusterIdentityExtended | 
 
-try: 
+try:
     api_instance.update_cluster_identity(cluster_identity)
 except ApiException as e:
-    print "Exception when calling ClusterApi->update_cluster_identity: %s\n" % e
+    print("Exception when calling ClusterApi->update_cluster_identity: %s\n" % e)
 ```
 
 ### Parameters
@@ -784,7 +882,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -800,26 +898,29 @@ void (empty response body)
 
 Modify one or more node settings.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
-cluster_node = isi_sdk.ClusterNode() # ClusterNode | 
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+cluster_node = isi_sdk_8_0.ClusterNode() # ClusterNode | 
 cluster_node_id = 56 # int | Modify one or more node settings.
 
-try: 
+try:
     api_instance.update_cluster_node(cluster_node, cluster_node_id)
 except ApiException as e:
-    print "Exception when calling ClusterApi->update_cluster_node: %s\n" % e
+    print("Exception when calling ClusterApi->update_cluster_node: %s\n" % e)
 ```
 
 ### Parameters
@@ -835,7 +936,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -851,25 +952,28 @@ void (empty response body)
 
 Modify the cluster contact info settings.  All input fields are optional, but one or more must be supplied.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
-cluster_owner = isi_sdk.ClusterOwner() # ClusterOwner | 
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+cluster_owner = isi_sdk_8_0.ClusterOwner() # ClusterOwner | 
 
-try: 
+try:
     api_instance.update_cluster_owner(cluster_owner)
 except ApiException as e:
-    print "Exception when calling ClusterApi->update_cluster_owner: %s\n" % e
+    print("Exception when calling ClusterApi->update_cluster_owner: %s\n" % e)
 ```
 
 ### Parameters
@@ -884,7 +988,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -900,25 +1004,28 @@ void (empty response body)
 
 Set cluster time.  Time will mostly be synchronized across nodes, but there may be slight drift.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
-cluster_time = isi_sdk.ClusterTimeExtended() # ClusterTimeExtended | 
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+cluster_time = isi_sdk_8_0.ClusterTimeExtended() # ClusterTimeExtended | 
 
-try: 
+try:
     api_instance.update_cluster_time(cluster_time)
 except ApiException as e:
-    print "Exception when calling ClusterApi->update_cluster_time: %s\n" % e
+    print("Exception when calling ClusterApi->update_cluster_time: %s\n" % e)
 ```
 
 ### Parameters
@@ -933,7 +1040,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -949,25 +1056,28 @@ void (empty response body)
 
 Set a new timezone for the cluster.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
-cluster_timezone = isi_sdk.ClusterTimezoneExtended() # ClusterTimezoneExtended | 
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+cluster_timezone = isi_sdk_8_0.ClusterTimezoneExtended() # ClusterTimezoneExtended | 
 
-try: 
+try:
     api_instance.update_cluster_timezone(cluster_timezone)
 except ApiException as e:
-    print "Exception when calling ClusterApi->update_cluster_timezone: %s\n" % e
+    print("Exception when calling ClusterApi->update_cluster_timezone: %s\n" % e)
 ```
 
 ### Parameters
@@ -982,7 +1092,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -998,25 +1108,28 @@ void (empty response body)
 
 Modify the cluster timezone.
 
-### Example 
+### Example
 ```python
+from __future__ import print_function
 import time
-import isi_sdk
-from isi_sdk.rest import ApiException
+import isi_sdk_8_0
+from isi_sdk_8_0.rest import ApiException
 from pprint import pprint
 
-# Configure HTTP basic authorization: basic_auth
-isi_sdk.configuration.username = 'YOUR_USERNAME'
-isi_sdk.configuration.password = 'YOUR_PASSWORD'
+# Configure API key authorization: sessionAuth
+configuration = isi_sdk_8_0.Configuration()
+configuration.api_key['cookie'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['cookie'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = isi_sdk.ClusterApi()
-timezone_settings = isi_sdk.TimezoneRegionTimezone() # TimezoneRegionTimezone | 
+api_instance = isi_sdk_8_0.ClusterApi(isi_sdk_8_0.ApiClient(configuration))
+timezone_settings = isi_sdk_8_0.TimezoneRegionTimezone() # TimezoneRegionTimezone | 
 
-try: 
+try:
     api_instance.update_timezone_settings(timezone_settings)
 except ApiException as e:
-    print "Exception when calling ClusterApi->update_timezone_settings: %s\n" % e
+    print("Exception when calling ClusterApi->update_timezone_settings: %s\n" % e)
 ```
 
 ### Parameters
@@ -1031,7 +1144,7 @@ void (empty response body)
 
 ### Authorization
 
-[basic_auth](../README.md#basic_auth)
+[sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
