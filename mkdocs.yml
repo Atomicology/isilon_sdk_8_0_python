@@ -1,0 +1,9 @@
+site_name: Isilon SDK for Python
+site_url: https://github.com/Isilon/isilon_sdk
+site_description: Python language bindings for the OneFS API.
+site_author: Brandon Krueger
+
+repo_url: https://github.com/Atomicology/isilon_sdk_python/
+
+pages:
+    - Home: index.md
