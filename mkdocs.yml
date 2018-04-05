@@ -7,3 +7,10 @@ repo_url: https://github.com/Atomicology/isilon_sdk_python/
 
 pages:
     - Home: index.md
+    - APIs:
+        - Antivirus: AntivirusApi.md
+        - Audit: AuditApi.md
+        - Auth: AuthApi.md
+        - Cloud: CloudApi.md
+        - Cluster: ClusterApi.md
+    - Reference: ../README.md
